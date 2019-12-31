@@ -2,7 +2,9 @@
 title: 给二弟三弟
 date: 2019-12-30 14:44:58
 tags:
-- 测试
+- python
+- robotframework
+- schema
 categories:
 - 测试
 ---
