@@ -10,6 +10,9 @@ tags:
 categories:
 - work-code
 ---
+# 简要介绍
+   工作中常见或遇到过的问题汇总
+<!--more-->
 # 1. **monitor平台**
    - 1.系统传参。
       在monitor平台中通过接口管理传递参数时，在robot测试用例中必须包含*** Variables ***字段，哪怕用例中实际用不到也得添加。传递其他参数时同样通过接口管理的param下的param里添加key-value的形式添加参数名和值，然后在测试计划的配置列表中添加param字段，在里面的value字段中添加key-value，同样测试用例中需有Variables，用例中使用${key}来使用此参数。

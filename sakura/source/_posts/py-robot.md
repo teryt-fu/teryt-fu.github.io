@@ -8,6 +8,9 @@ tags:
 categories:
 - 测试
 ---
+# 简要介绍
+   python+robotframework测试接口
+<!--more-->
 1. **python安装库**
    - `pip install requests`
    - `pip install robotframework`

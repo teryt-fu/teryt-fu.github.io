@@ -6,6 +6,9 @@ tags:
 categories:
 - 其他
 ---
+# 简要介绍
+   markdown语法的简单使用
+<!--more-->
 # 标题
   ```
     # 这是一级标题

@@ -10,6 +10,7 @@ categories:
 ---
 # 简要介绍
   基于Hexo博客框架，使用markdown语法写文章，通过hexo编译成静态网页，搭配GitHub Pages的{yourname}.github.io的仓库，来搭建自己的网站。
+<!--more-->
 # 准备步骤
   1. 创建github帐号。
   2. 新建一个仓库(Repository)，名称必须为{yourname}.github.io，{yourname}必须为你github帐号的用户名。
@@ -242,6 +243,24 @@ categories:
        ```
        $ cd themes/next
        $ git clone https://github.com/theme-next/theme-next-pjax source/lib/pjax
+       ```
+     - 访问量统计
+       使用主题集成的不蒜子统计，在配置文件中找到busuanzi_count，修改配置：
+       ```
+       busuanzi_count:
+       enable: true
+       total_visitors: true
+       total_visitors_icon: user
+       total_views: true
+       total_views_icon: eye
+       post_views: true
+       post_views_icon: eye
+       ```
+       此时页面最下文会用icon显示总访问人数和人次，如想自定义，则将`total_visitors`和`total_views`的值改为:false，进入/themes/next/layout/_partials/footer.swig，在最后添加内容如下：
+       ```
+        <span id="busuanzi_container_site_uv">
+          本站访问次数：<span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+        </span>
        ```
 
 # 日常使用
