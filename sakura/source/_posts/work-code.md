@@ -25,6 +25,8 @@ categories:
       `ln -s /usr/bin/python3.6 /usr/bin/python` 通过这条命令，把需要jenkins使用的pythonX 变更为python
    - 2.环境依赖
       jenkins和本地环境不一致，可直接使用jenkins shell脚本在jenkins添加环境
+   - 3.全局配置
+      安装完下面提示的插件后，在系统配置中需要配置git和mail相关。其中如是gitlab，则先在gitlab中获取访问令牌，再添加ssh-key。在mail配置中需要选择smtp，填写邮箱用户名密码，再在计划的设置中的mail配置中设置相关选项才能正确发送邮件。
 # 3. **python相关**
    - 1、在 python2中，str 其实是 bytes，而不是 unicode，在代码中声明了编码方式为 utf-8，并将该参数存入到了 DB 中，导致下次请求传递的还是 DB 中的 utf-8 类型的 port，而不是 int 或者 string，port给int型
    - 2、配置文件ini中不得加上`coding: utf-8`。python函数获取当前文件名的方法是：`os.path.basename(sys.argv[0]).split('.')[0]`，但当用其他文件中方法调用此函数时不能返回当前文件名，此时需用：`__file__.split('/')[-1].split('.')[0]`。
@@ -100,3 +102,6 @@ ubuntu系统加速方式为，更换为国内的镜像作为加速器，首先�
        4. git push origin source  # 提交分支
       ```
       推送后在仓库的Settings中的Branches中更改默认分支显示即可。
+
+# 8. **ubuntu(linux)相关**
+   - 1. ubuntu16.04系统，设置点击启动栏图标后应用最小化功能：`gsettings set org.compiz.unityshell:/org/compiz/profiles/unity/plugins/unityshell/ launcher-minimize-window true`，此方法已经过验证，如不行，则可以尝试`gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'`，如果要预览是否打开了相同应用程序的多个窗口，请改用以下命令：`gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize-or-overview'`，如果想还原则使用：`gsettings reset org.gnome.shell.extensions.dash-to-dock click-action`。
