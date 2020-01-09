@@ -47,6 +47,7 @@ categories:
       sj = json.loads(s.decode('gbk').encode('utf-8'))
       print(sj['_srcdata'])
    ```
+   - 11、thrift文件生成后运行时报`SyntaxError: Non-ASCII character '\xe8' in file gen-py/ai_course/ttypes.py on line 23, but no encoding declared`，是因为thrift文件中的中文注释用了`/**/`，将所有注释改为`//`再重新生成即可。
 # 4. **MYSQL数据库**
    - 1、查询数据库中的状态
      >use databasename;
