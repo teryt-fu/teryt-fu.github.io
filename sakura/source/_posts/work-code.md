@@ -175,14 +175,27 @@ categories:
          ```
 
    - 5. robotframework工作环境
+      thrift安装：
+         安装thrift依赖：
+         ```
+           sudo apt-get install libboost-dev libboost-test-dev libboost-program-options-dev libevent-dev automake libtool flex bison pkg-config g++ libssl-dev
+         ```
+         解压编译：
+         ```
+            tar -zxvf thrift-0.11.0.tar.gz
+            cd thrift-0.11.0
+            ./configure --with-cpp --with-boost --with-python --without-csharp --with-java --without-erlang --without-perl --with-php --without-php_extension --without-ruby --without-haskell  --without-go
+            make
+            make install
+         ```
       ```
-       $ sudo apt install thrift-compiler  # 如有thrift接口
        $ pip isntall thrift                # 如有thrift接口
        $ pip install robotframework
        $ pip install robotframework-requests
        $ pip install robotframework-jsonschemalibrary
        $ pip install robotframework-jsonvalidator
       ```
+             注：若有报错，可能是more-itertools版本过高，网上有人说python2.7最高支持5.0.0
 
 # 3. **python相关**
    - 1. 在 python2中，str 其实是 bytes，而不是 unicode，在代码中声明了编码方式为 utf-8，并将该参数存入到了 DB 中，导致下次请求传递的还是 DB 中的 utf-8 类型的 port，而不是 int 或者 string，port给int型
