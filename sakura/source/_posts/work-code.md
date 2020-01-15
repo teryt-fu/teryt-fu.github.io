@@ -288,4 +288,47 @@ ubuntu系统加速方式为，更换为国内的镜像作为加速器，首先�
 
 # 8. **ubuntu(linux)相关**
    - 1. ubuntu16.04系统，设置点击启动栏图标后应用最小化功能：`gsettings set org.compiz.unityshell:/org/compiz/profiles/unity/plugins/unityshell/ launcher-minimize-window true`，此方法已经过验证，如不行，则可以尝试`gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'`，如果要预览是否打开了相同应用程序的多个窗口，请改用以下命令：`gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize-or-overview'`，如果想还原则使用：`gsettings reset org.gnome.shell.extensions.dash-to-dock click-action`。
-   - 2. ubuntu系统显示隐藏文件方式为`ctrl + H`，如想永远显示则需另外设置。
+   - 2. ubuntu16.04系统显示隐藏文件方式为`ctrl + H`，如想永远显示则需另外设置。
+   - 3. ubuntu16.04系统开启ssh远程登录。先查看是否安装服务：`apt-cache policy openssh-client openssh-server`。ubuntu默认安装了openssh-client，openssh-server需手动安装：`apt-get install openssh-server`，查看ssh服务开启状况：`ps -e|grep ssh`，如出现sshd则说明服务开启，没有则执行`/etc/init.d/ssh start`开启。
+            远程访问方法：`ssh username@host`
+   - 4. ubuntu16.04安装supervisor。
+         - 安装。`sudo apt install supervisor`
+         - 配置网页端访问supervisor。在`/etc/supervisor/supervisord.conf`中添加如下：
+         ```
+           [inet_http_server]
+           port=10.234.30.24:9001
+           username=user
+           password=123
+         ```
+         并确保该文件中包含`[include]files = /etc/supervisor/conf.d/*.conf`
+         - 创建supervisor任务。在`/etc/supervisor/conf.d`中创建myflask.conf，内容如下：
+         ```
+           [program:myflask]
+           command=/home/mi/myflask/venv/bin/uwsgi config.ini
+           directory=/home/mi/myflask
+           user=mi  # 注：此处的user是ubuntu系统的用户名
+           autostart=true
+           autorestart=true
+           stopasgroup=true
+           killasgroup=true
+         ```
+         如有celery任务，则创建celery.conf，内容如下：
+         ```
+           [program:celery]
+           command=/home/mi/myflask/venv/bin/celery -A app.celery worker -B -l info
+           directory=/home/mi/myflask
+           user=mi
+           autostart=true
+           autorestart=true
+           stopasgroup=true
+           killasgroup=true
+         ```
+         - 重载supervisor服务：`sudo supervisorctl reload`
+                >如报：unix:///var/run/supervisor.sock no such file
+                    则：sudo touch /var/run/supervisor.sock
+                       sudo chmod 777 /var/run/supervisor.sock
+                       sudo service supervisor restart
+                >如报：unix:///var/run/supervisor.sock refused connection
+                    则：sudo supervisord -c /etc/supervisor/supervisord.conf
+         - 查询supervisor开机自启：`systemctl is-enabled supervisord`
+         - 设置supervisor开机自启：`sudo systemctl enable supervisor`
