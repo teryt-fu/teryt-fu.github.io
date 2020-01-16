@@ -263,6 +263,52 @@ categories:
         </span>
        ```
 
+     - Canvas-nest动画风格
+       在theme/next目录下执行`git clone https://github.com/theme-next/theme-next-canvas-nest source/lib/canvas-nest`,打开主题配置文件_config.yml，找到`Canvas-nest`，设置enable值为true：
+       ```
+           canvas_nest:
+            enable: true
+            onmobile: true # Display on mobile or not
+            color: "0,0,255" # RGB values, use `,` to separate
+            opacity: 0.5 # The opacity of line: 0~1
+            zIndex: -1 # z-index property of the background
+            count: 99 # The number of lines
+       ```
+     - live2d看板娘
+       在主目录下运行`npm install --save hexo-helper-live2d`，下一步可自己去`https://github.com/xiazeyu/live2d-widget-models.git`下载动画model，将packages里的所有动画模板复制到主目录的node_modules目录中。或者从
+        > Epsilon2.1,Gantzert_Felixande,haru,haruto,hibiki,hijiki,koharu,miku,ni-j,nico,nietzche,nipsilon,nito,shizuku,tororo,tsumiki,Unitychan,z16
+
+       中选择一个名字，在主题配置文件中添加：
+       ```
+           live2d:
+            enable: true
+            scriptFrom: local
+            pluginRootPath: live2dw/
+            pluginJsPath: lib/
+            pluginModelPath: assets/
+            tagMode: false
+            log: false
+            model:
+               use: live2d-widget-model-{你选的名字}
+            display:
+               position: right
+               width: 150
+               height: 300
+            mobile:
+               show: true
+       ```
+       再运行`npm install --save live2d-widget-model-{你选的名字}`即可。
+              注：如直接下载复制到node_modules中，则直接在里面找个名字放在配置文件中，且无需再运行npm下载对应名字的model。
+     - 版权声明
+       配置文件中找到creative_commons，修改配置：
+       ```
+          creative_commons:
+            license: by-nc-sa
+            sidebar: false
+            post: true
+            language:
+       ```
+
 # 日常使用
   1. 新建文章
      - 在项目根目录运行`hexo new 文章名`，新建的文章在`source/_posts`文件夹下，文章开头格式为:
