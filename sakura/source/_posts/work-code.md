@@ -1,7 +1,6 @@
 ---
 title: 工作笔记
 date: 2019-12-30 13:09:29
-password: XIAOMI
 tags:
 - python
 - robotframework
