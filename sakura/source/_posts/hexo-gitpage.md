@@ -38,9 +38,9 @@ categories:
         # Deployment
         ## Docs: https://hexo.io/docs/deployment.html
         deploy:
-        type: git
-        repo: git@github.com:username/username.github.io.git
-        branch: master
+          type: git
+          repo: git@github.com:username/username.github.io.git
+          branch: master
         ```
   2. 安装git部署插件hexo-deployer-git：
      `npm install hexo-deployer-git --save`
@@ -103,25 +103,25 @@ categories:
      - favicon
        标签栏的小图标，可以自己定制后将图标放在themes/next/source/images目录下面，然后修改配置文件，找到favicon，配置路径：
        ```
-        favicon:
-            small: /images/favicon-16x16.png
-            medium: /images/favicon-32x32.png
-            apple_touch_icon: /images/apple-touch-icon.png
-            safari_pinned_tab: /images/safari-pinned-tab.svg
+         favicon:
+           small: /images/favicon-16x16.png
+           medium: /images/favicon-32x32.png
+           apple_touch_icon: /images/apple-touch-icon.png
+           safari_pinned_tab: /images/safari-pinned-tab.svg
        ```
      - avatar
        作者头像，放置路径为themes/next/source/images/avatar.png，修改配置文件，找到Sidebar Avatar，修改正确路径：
        ```
         # Sidebar Avatar
         avatar:
-            # In theme directory (source/images): /images/avatar.gif
-            # In site directory (source/uploads): /uploads/avatar.gif
-            # You can also use other linking images.
-            url: /images/avatar.png
-            # If true, the avatar would be dispalyed in circle.
-            rounded: true
-            # If true, the avatar would be rotated with the cursor.
-            rotated: true
+          # In theme directory (source/images): /images/avatar.gif
+          # In site directory (source/uploads): /uploads/avatar.gif
+          # You can also use other linking images.
+          url: /images/avatar.png
+          # If true, the avatar would be dispalyed in circle.
+          rounded: true
+          # If true, the avatar would be rotated with the cursor.
+          rotated: true
        ```
              注：rounded选项是是否显示圆形，rotated是是否带旋转效果，可自选true或false。
      - rss订阅
@@ -129,71 +129,71 @@ categories:
      - code
        代码块的显示样式。修改配置文件，找到codeblock，更改选项：
        ```
-        codeblock:
-            # Code Highlight theme
-            # Available values: normal | night | night eighties | night blue | night bright
-            # See: https://github.com/chriskempson/tomorrow-theme
-            highlight_theme: night bright
-            # Add copy button on codeblock
-            copy_button:
-                enable: true
-                # Show text copy result.
-                show_result: true
-                # Available values: default | flat | mac
-                style: mac
+         codeblock:
+           # Code Highlight theme
+           # Available values: normal | night | night eighties | night blue | ight bright
+           # See: https://github.com/chriskempson/tomorrow-theme
+           highlight_theme: night bright
+           # Add copy button on codeblock
+           copy_button:
+             enable: true
+             # Show text copy result.
+             show_result: true
+             # Available values: default | flat | mac
+             style: mac
        ```
              注：可根据喜好自由选择。
      - top
        返回页面顶端的按钮。修改配置文件，找到back2top，更改选项：
        ```
         back2top:
-            enable: true
-            # Back to top in sidebar.
-            sidebar: false
-            # Scroll percent label in b2t button.
-            scrollpercent: true
+          enable: true
+          # Back to top in sidebar.
+          sidebar: false
+          # Scroll percent label in b2t button.
+          scrollpercent: true
        ```
              注：enable默认为true，即显示。sidebar为true则按钮会出现在侧栏下方。scrollpercent显示阅读百分比。
      - reading_process
        阅读进度。最上侧显示的进度条。在配置文件中找到reading_progress，修改选项：
        ```
        reading_progress:
-        enable: true
-        # Available values: top | bottom
-        position: top
-        color: "#222"
-        height: 2px
+         enable: true
+         # Available values: top | bottom
+         position: top
+         color: "#222"
+         height: 2px
        ```
      - bookmark
        书签，记录阅读记录，下次打开页面可快速定位上次阅读位置。在配置文件中找到bookmark，修改选项：
        ```
        bookmark:
-        enable: false
-        # Customize the color of the bookmark.
-        color: "#222"
-        # If auto, save the reading progress when closing the page or clicking the bookmark-icon.
-        # If manual, only save it by clicking the bookmark-icon.
-        save: auto
+         enable: false
+         # Customize the color of the bookmark.
+         color: "#222"
+         # If auto, save the reading progress when closing the page or clicking the bookmark-icon.
+         # If manual, only save it by clicking the bookmark-icon.
+         save: auto
        ```
      - github_banner
        右上角显示github图标，在配置文件中找到github_banner，修改选项：
        ```
         # `Follow me on GitHub` banner in the top-right corner.
         github_banner:
-            enable: true
-            permalink: https://github.com/yourname/yourname.github.io
-            title: yourname GitHub
+          enable: true
+          permalink: https://github.com/yourname/yourname.github.io
+          title: yourname GitHub
        ```
      - gitalk
        评论功能。Next主题中有多种评论插件，如changyan | disqus | disqusjs | facebook_comments_plugin | gitalk | livere | valine | vkontakte。示例用gittalk，首先需要在github上注册一个OAuth Application，链接为：`https://github.com/settings/applications/new`，注册完毕之后拿到 Client ID、Client Secret。在配置文件中找到comments，修改配置：
        ```
        # Multiple Comment System Support
-        comments:
-        # Available values: tabs | buttons
-        style: tabs
-        # Choose a comment system to be displayed by default.
-        # Available values: changyan | disqus | disqusjs | facebook_comments_plugin | gitalk | livere | valine | vkontakte
-        active: gitalk
+       comments:
+         # Available values: tabs | buttons
+         style: tabs
+         # Choose a comment system to be displayed by default.
+         # Available values: changyan | disqus | disqusjs | facebook_comments_plugin | gitalk | livere | valine | vkontakte
+         active: gitalk
 
        ```
        然后找到Gitalk，修改配置：
@@ -202,17 +202,17 @@ categories:
         # Demo: https://gitalk.github.io
         # For more information: https://github.com/gitalk/gitalk
         gitalk:
-            enable: true
-            github_id: {yourname}
-            repo: {yourname}.github.io # Repository name to store issues
-            client_id: {your client id} # GitHub Application Client ID
-            client_secret: {your client secret} # GitHub Application Client Secret
-            admin_user: germey # GitHub repo owner and collaborators, only these guys can initialize gitHub issues
-            distraction_free_mode: true # Facebook-like distraction free mode
-            # Gitalk's display language depends on user's browser or system environment
-            # If you want everyone visiting your site to see a uniform language, you can set a force language value
-            # Available values: en | es-ES | fr | ru | zh-CN | zh-TW
-            language: zh-CN
+          enable: true
+          github_id: {yourname}
+          repo: {yourname}.github.io # Repository name to store issues
+          client_id: {your client id} # GitHub Application Client ID
+          client_secret: {your client secret} # GitHub Application Client Secret
+          admin_user: germey # GitHub repo owner and collaborators, only these guys can initialize gitHub issues
+          distraction_free_mode: true # Facebook-like distraction free mode
+          # Gitalk's display language depends on user's browser or system environment
+          # If you want everyone visiting your site to see a uniform language, you can set a force language value
+          # Available values: en | es-ES | fr | ru | zh-CN | zh-TW
+          language: zh-CN
        ```
     - pangu
       中英文间自动加间距。在配置文件中找到pangu，值修改为true即可。
@@ -220,18 +220,18 @@ categories:
       公式展示效果。在配置文件中找到math，修改配置：
       ```
         math:
+          enable: true
+
+          # Default (true) will load mathjax / katex script on demand.
+          # That is it only render those page which has `mathjax: true` in Front-matter.
+          # If you set it to false, it will load mathjax / katex srcipt EVERY PAGE.
+          per_page: true
+
+          # hexo-renderer-pandoc (or hexo-renderer-kramed) required for full MathJax support.
+          mathjax:
             enable: true
-
-            # Default (true) will load mathjax / katex script on demand.
-            # That is it only render those page which has `mathjax: true` in Front-matter.
-            # If you set it to false, it will load mathjax / katex srcipt EVERY PAGE.
-            per_page: true
-
-            # hexo-renderer-pandoc (or hexo-renderer-kramed) required for full MathJax support.
-            mathjax:
-                enable: true
-                # See: https://mhchem.github.io/MathJax-mhchem/
-                mhchem: true
+            # See: https://mhchem.github.io/MathJax-mhchem/
+            mhchem: true
       ```
              注：mathjax使用需要安装插件hexo-renderer-kramed，也可以安装hexo-renderer-pandoc，命令为：
              ```
@@ -248,13 +248,13 @@ categories:
        使用主题集成的不蒜子统计，在配置文件中找到busuanzi_count，修改配置：
        ```
        busuanzi_count:
-       enable: true
-       total_visitors: true
-       total_visitors_icon: user
-       total_views: true
-       total_views_icon: eye
-       post_views: true
-       post_views_icon: eye
+         enable: true
+         total_visitors: true
+         total_visitors_icon: user
+         total_views: true
+         total_views_icon: eye
+         post_views: true
+         post_views_icon: eye
        ```
        此时页面最下文会用icon显示总访问人数和人次，如想自定义，则将`total_visitors`和`total_views`的值改为:false，进入/themes/next/layout/_partials/footer.swig，在最后添加内容如下：
        ```
@@ -266,13 +266,13 @@ categories:
      - Canvas-nest动画风格
        在theme/next目录下执行`git clone https://github.com/theme-next/theme-next-canvas-nest source/lib/canvas-nest`,打开主题配置文件_config.yml，找到`Canvas-nest`，设置enable值为true：
        ```
-           canvas_nest:
-            enable: true
-            onmobile: true # Display on mobile or not
-            color: "0,0,255" # RGB values, use `,` to separate
-            opacity: 0.5 # The opacity of line: 0~1
-            zIndex: -1 # z-index property of the background
-            count: 99 # The number of lines
+         canvas_nest:
+           enable: true
+           onmobile: true # Display on mobile or not
+           color: "0,0,255" # RGB values, use `,` to separate
+           opacity: 0.5 # The opacity of line: 0~1
+           zIndex: -1 # z-index property of the background
+           count: 99 # The number of lines
        ```
      - live2d看板娘
        在主目录下运行`npm install --save hexo-helper-live2d`，下一步可自己去`https://github.com/xiazeyu/live2d-widget-models.git`下载动画model，将packages里的所有动画模板复制到主目录的node_modules目录中。或者从
@@ -280,22 +280,22 @@ categories:
 
        中选择一个名字，在主题配置文件中添加：
        ```
-           live2d:
-            enable: true
-            scriptFrom: local
-            pluginRootPath: live2dw/
-            pluginJsPath: lib/
-            pluginModelPath: assets/
-            tagMode: false
-            log: false
-            model:
-               use: live2d-widget-model-{你选的名字}
-            display:
-               position: right
-               width: 150
-               height: 300
-            mobile:
-               show: true
+         live2d:
+           enable: true
+           scriptFrom: local
+           pluginRootPath: live2dw/
+           pluginJsPath: lib/
+           pluginModelPath: assets/
+           tagMode: false
+           log: false
+           model:
+             use: live2d-widget-model-{你选的名字}
+           display:
+             position: right
+             width: 150
+             height: 300
+           mobile:
+             show: true
        ```
        再运行`npm install --save live2d-widget-model-{你选的名字}`即可。
               注：如直接下载复制到node_modules中，则直接在里面找个名字放在配置文件中，且无需再运行npm下载对应名字的model。
@@ -307,6 +307,41 @@ categories:
             sidebar: false
             post: true
             language:
+       ```
+     - tag cloud
+       标签云图展示。
+       1. 项目目录下的`package.json`中添加依赖`"hexo-tag-cloud": "2.0.*"`。
+       2. 进入node_modules中，运行`git clone https://github.com/MikeCoder/hexo-tag-cloud`。
+                  注：也可以在项目目录下运行`npm install hexo-tag-cloud@^2.0.* --save`，但网上说很可能会出现各种问题，故未尝试。
+       3. 在next主题文件夹下的`layout/_macro/sidebar.swig`中，同其他if-endif一样，将`{% if site.tags.length > 1 %}{% endif %}`一段加入到末尾：
+       ```
+               {% if site.tags.length > 1 %}
+               <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+               <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+               <div class="widget-wrap">
+                  <h3 class="widget-title">标签云图</h3>
+                  <div id="myCanvasContainer" class="widget tagcloud">
+                     <canvas width="250" height="250" id="resCanvas" style="width=100%">
+                           {{ list_tags() }}
+                     </canvas>
+                  </div>
+               </div>
+               {% endif %}
+
+            </div>
+         </aside>
+         <div id="sidebar-dimmer"></div>
+         {% endmacro %}
+       ```
+       4. 在项目目录下的_config.yml配置文件中在最后添加配置：
+       ```
+         # hexo-tag-cloud
+         tag_cloud:
+           textFont: Trebuchet MS, Helvetica
+           textColor: '#c6d9f1'
+           textHeight: 30
+           outlineColor: '#e2e1d1'
+           maxSpeed: 0.1
        ```
 
 # 日常使用
@@ -342,14 +377,14 @@ categories:
      然后在next主题的_config.yml文件中将页面链接添加到主菜单页面即可，找到menu，修改配置：
      ```
      menu:
-        home: / || home
-        #about: /about/ || user
-        tags: /tags/ || tags
-        #categories: /categories/ || th
-        archives: /archives/ || archive
-        #schedule: /schedule/ || calendar
-        #sitemap: /sitemap.xml || sitemap
-        #commonweal: /404/ || heartbeat
+       home: / || home
+       #about: /about/ || user
+       tags: /tags/ || tags
+       #categories: /categories/ || th
+       archives: /archives/ || archive
+       #schedule: /schedule/ || calendar
+       #sitemap: /sitemap.xml || sitemap
+       #commonweal: /404/ || heartbeat
      ```
   3. 分类页
      - 在项目根目录运行`hexo new page categories`，会自动生成`source/categories/index.md`文件，在文件中添加type字段：
@@ -360,39 +395,39 @@ categories:
      再修改next主题的_config.yml文件，找到menu:
      ```
      menu:
-        home: / || home
-        #about: /about/ || user
-        tags: /tags/ || tags
-        categories: /categories/ || th
-        archives: /archives/ || archive
-        #schedule: /schedule/ || calendar
-        #sitemap: /sitemap.xml || sitemap
-        #commonweal: /404/ || heartbeat
+       home: / || home
+       #about: /about/ || user
+       tags: /tags/ || tags
+       categories: /categories/ || th
+       archives: /archives/ || archive
+       #schedule: /schedule/ || calendar
+       #sitemap: /sitemap.xml || sitemap
+       #commonweal: /404/ || heartbeat
      ```
   4. 搜索页
      - 搜索功能需要安装插件hexo-generator-searchdb，运行`npm install hexo-generator-searchdb --save`，然后修改项目根目录的_config.yml，找到search，修改配置：
      ```
         search:
-            path: search.xml
-            field: post
-            format: html
-            limit: 10000
+          path: search.xml
+          field: post
+          format: html
+          limit: 10000
      ```
      再修改next主题的_config.yml，找到local_search，修改配置：
      ```
      # Local search
      # Dependencies: https://github.com/wzpan/hexo-generator-search
      local_search:
-        enable: true
-        # If auto, trigger search by changing input.
-        # If manual, trigger search by pressing enter key or search button.
-        trigger: auto
-        # Show top n results per article, show all results by setting to -1
-        top_n_per_article: 5
-        # Unescape html strings to the readable one.
-        unescape: false
-        # Preload the search data when the page loads.
-        preload: false
+       enable: true
+       # If auto, trigger search by changing input.
+       # If manual, trigger search by pressing enter key or search button.
+       trigger: auto
+       # Show top n results per article, show all results by setting to -1
+       top_n_per_article: 5
+       # Unescape html strings to the readable one.
+       unescape: false
+       # Preload the search data when the page loads.
+       preload: false
      ```
   5. 404页
      - 直接在根目录的source文件夹新建一个404.md文件，内容示例：

@@ -23,6 +23,7 @@
     "hexo-renderer-marked": "^2.0.0",
     "hexo-renderer-stylus": "^1.1.0",
     "hexo-server": "^1.0.0",
-    "live2d-widget-model-miku": "^1.0.5"
+    "live2d-widget-model-miku": "^1.0.5",
+    "hexo-tag-cloud": "2.0.*"
   }
 }

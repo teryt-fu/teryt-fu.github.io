@@ -108,3 +108,11 @@ search:
   field: post
   format: html
   limit: 10000
+
+# hexo-tag-cloud
+tag_cloud:
+  textFont: Trebuchet MS, Helvetica
+  textColor: '#c6d9f1'
+  textHeight: 30
+  outlineColor: '#e2e1d1'
+  maxSpeed: 0.1
