@@ -104,7 +104,7 @@ deploy:
 
 # 搜索
 search:
-  path: search.xml
+  path: ./public/search.xml
   field: post
   format: html
   limit: 10000

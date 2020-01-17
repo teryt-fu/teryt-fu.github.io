@@ -313,6 +313,7 @@ categories:
        1. 项目目录下的`package.json`中添加依赖`"hexo-tag-cloud": "2.0.*"`。
        2. 进入node_modules中，运行`git clone https://github.com/MikeCoder/hexo-tag-cloud`。
                   注：也可以在项目目录下运行`npm install hexo-tag-cloud@^2.0.* --save`，但网上说很可能会出现各种问题，故未尝试。
+                  注：如在项目根目录再次运行过npm命令会导致git clone的hexo-tag-cloud丢失，云图无法显示，可再次git clone。
        3. 在next主题文件夹下的`layout/_macro/sidebar.swig`中，同其他if-endif一样，将`{% if site.tags.length > 1 %}{% endif %}`一段加入到末尾：
        ```
                {% if site.tags.length > 1 %}
@@ -405,7 +406,7 @@ categories:
        #commonweal: /404/ || heartbeat
      ```
   4. 搜索页
-     - 搜索功能需要安装插件hexo-generator-searchdb，运行`npm install hexo-generator-searchdb --save`，然后修改项目根目录的_config.yml，找到search，修改配置：
+     - 搜索功能需要安装插件hexo-generator-searchdb，在项目根目录运行`npm install hexo-generator-searchdb --save`，然后修改项目根目录的_config.yml，找到search，修改配置：
      ```
         search:
           path: search.xml
