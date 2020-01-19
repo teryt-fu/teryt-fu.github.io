@@ -196,6 +196,8 @@ categories:
        $ pip install robotframework-jsonvalidator
       ```
              注：若有报错，可能是more-itertools版本过高，网上有人说python2.7最高支持5.0.0
+   - 6. jenkins+gitlab配置webhook
+      首先确认`Gitlab Hook Plugin`和`Build Authorization Token Root Plugin`插件已安装。然后在job配置中勾选`Build when a change is pushed to GitLab. GitLab webhook URL: http://10.234.30.24:8080/project/test_suite`选项，保存GitLab webhook URL待用。在`Enabled GitLab triggers`中勾选第三个`Accepted Merge Request Events`，在高级选项中点`Secret token`后的`Genrate`会生成token，保存待用。在gitlab项目中选settings->Intergrations(集成)，粘贴保存的URL和Secret Token，点击Add webhook，点击Test测试连接即可。
 
 # 3. **python相关**
    - 1. 在 python2中，str 其实是 bytes，而不是 unicode，在代码中声明了编码方式为 utf-8，并将该参数存入到了 DB 中，导致下次请求传递的还是 DB 中的 utf-8 类型的 port，而不是 int 或者 string，port给int型
