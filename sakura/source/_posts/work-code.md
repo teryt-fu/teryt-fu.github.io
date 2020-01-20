@@ -228,6 +228,7 @@ categories:
          依赖PhantomJS，需用`conda install phantomjs`或`npm install -g phantomjs-prebuilt`命令。实测用的npm，如报错则执行命令`sudo apt install nodejs-legacy`
       - plotly
          依赖orca等。需执行`conda install -c plotly plotly-orca`或`npm install -g electron@6.1.4 orca`，此npm建议nodejs版本>=6.0。实测npm一直报错找不到文件及权限等，即使在命令后加上`--unsafe-perm=true --allow-root`安装成功后依然无法保存plotly绘制的图形，最后安装miniconda使用conda命令安装后可使用。
+   - 13. celery运行配置了redis，但实际尝试还是得装rabbitmq，不然会报连接不上，不知具体原因。安装rabbitmq前先得装erlang，具体可网上找。rabbitmq网上说的没成功，最后在官网下载的deb安装包，通过`sudo dpkg -i download_file\?file_path\=pool%2Frabbitmq-server%2Frabbitmq-server_3.7.23-1_all.deb`安装，如报依赖于socat，然而未安装，直接`apt-get install socat`，再运行上面命令安装rabbitmq，装好后运行`systemctl status rabbitmq-server`查看运行状态。重启`supervisorctl reload`后celery任务即可成功运行。
 
 # 4. **MYSQL数据库**
    - 1. 查询数据库中的状态
