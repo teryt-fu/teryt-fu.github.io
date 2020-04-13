@@ -198,6 +198,32 @@ categories:
              注：若有报错，可能是more-itertools版本过高，网上有人说python2.7最高支持5.0.0
    - 6. jenkins+gitlab配置webhook
       首先确认`Gitlab Hook Plugin`和`Build Authorization Token Root Plugin`插件已安装。然后在job配置中勾选`Build when a change is pushed to GitLab. GitLab webhook URL: http://10.234.30.24:8080/project/test_suite`选项，保存GitLab webhook URL待用。在`Enabled GitLab triggers`中勾选第三个`Accepted Merge Request Events`，在高级选项中点`Secret token`后的`Genrate`会生成token，保存待用。在gitlab项目中选settings->Intergrations(集成)，粘贴保存的URL和Secret Token，点击Add webhook，点击Test测试连接即可。
+   - 7. jenkins托管flask服务的shell脚本
+   ```
+      #!/bin/bash
+      pwd
+      source /home/mi/abc_issues_wsgi/venv/bin/activate
+      cd /home/mi/.jenkins/workspace/apidata/
+      a=$(ps -aux|grep uwsgi)
+      str=$"\n"
+      echo ${a}
+      if [ ${#a} -lt 350 ]
+      then
+         nohup uwsgi config.ini &
+         sstr=$(echo -e $str)
+         echo $sstr
+      else
+         b=${a:9:5}
+         s=`echo ${b}`
+         echo ${s}
+         kill -9 ${s}
+         sleep 3
+         nohup uwsgi config.ini &
+         sstr=$(echo -e $str)
+         echo $sstr
+      fi
+      jobs -l
+   ```
 
 # 3. **python相关**
    - 1. 在 python2中，str 其实是 bytes，而不是 unicode，在代码中声明了编码方式为 utf-8，并将该参数存入到了 DB 中，导致下次请求传递的还是 DB 中的 utf-8 类型的 port，而不是 int 或者 string，port给int型
@@ -226,9 +252,15 @@ categories:
    此两种绘图库将所绘制图形保存为图片所依赖的库不同，分述如下：
       - Bokeh
          依赖PhantomJS，需用`conda install phantomjs`或`npm install -g phantomjs-prebuilt`命令。实测用的npm，如报错则执行命令`sudo apt install nodejs-legacy`
+         ```
+         Bokeh启用WebGL加速：
+         p = figure(output_backend="webgl")  # for the plotting API
+         p = Plot(output_backend="webgl")  # for the glyph API
+         ```
       - plotly
          依赖orca等。需执行`conda install -c plotly plotly-orca`或`npm install -g electron@6.1.4 orca`，此npm建议nodejs版本>=6.0。实测npm一直报错找不到文件及权限等，即使在命令后加上`--unsafe-perm=true --allow-root`安装成功后依然无法保存plotly绘制的图形，最后安装miniconda使用conda命令安装后可使用。
-   - 13. celery运行配置了redis，但实际尝试还是得装rabbitmq，不然会报连接不上，不知具体原因。安装rabbitmq前先得装erlang，具体可网上找。rabbitmq网上说的没成功，最后在官网下载的deb安装包，通过`sudo dpkg -i download_file\?file_path\=pool%2Frabbitmq-server%2Frabbitmq-server_3.7.23-1_all.deb`安装，如报依赖于socat，然而未安装，直接`apt-get install socat`，再运行上面命令安装rabbitmq，装好后运行`systemctl status rabbitmq-server`查看运行状态。重启`supervisorctl reload`后celery任务即可成功运行。
+   - 13. plotly、Bokeh保存路径支持相对路径，但openpyxl保存excel表格的路径只能用绝对路径，且send_from_directory的第二个参数为excel文件名，获取当前绝对路径：`os.path.abspath(os.path.join(os.path.dirname(__file__), os.path.pardir))`
+   - 14. celery运行配置了redis，但实际尝试还是得装rabbitmq，不然会报连接不上，不知具体原因。安装rabbitmq前先得装erlang，具体可网上找。rabbitmq网上说的没成功，最后在官网下载的deb安装包，通过`sudo dpkg -i download_file\?file_path\=pool%2Frabbitmq-server%2Frabbitmq-server_3.7.23-1_all.deb`安装，如报依赖于socat，然而未安装，直接`apt-get install socat`，再运行上面命令安装rabbitmq，装好后运行`systemctl status rabbitmq-server`查看运行状态。重启`supervisorctl reload`后celery任务即可成功运行。
 
 # 4. **MYSQL数据库**
    - 1. 查询数据库中的状态
@@ -239,9 +271,35 @@ categories:
      > mysql -uroot -ppasswd -e "select * from apipassrate" apidata > ~/GitHub/apipassrate.xlsx
              导出的xlsx文件不能直接被openpyxl模块识别，可通过excel或wps重新另存为。其中的时间字段如需还原成逗号分隔的文字，先把字段类型改为日期，语言选en-us或英国，在格式码处改为`YYYY,MM,DD,HH,MM,SS`，再复制到外部文本编辑器中，表格中另加一列，将外部数据复制进新加列，改字段类型为文本即可。
 
-# 5. **java相关**
+# 5. **java、scala、安卓相关**
    - 1. maven项目需将所有依赖的jar包打包到lib目录：`mvn dependency:copy-dependencies -DoutputDirectory=target/lib`
    - 2. java的 ‘==’和‘equals()’方法，== 对于基本类型来说是值比较，对于引用类型来说是比较的是引用；而 equals 默认情况下是引用比较，只是很多类重写了 equals 方法，比如 String、Integer 等把它变成了值比较，所以一般情况下 equals 比较的是值是否相等。
+   - 3. Android Retrofit网络请求
+   初始化Retrofit:
+   ```
+   String BASE_URL = "http://102.10.10.132/api/";
+   Retrofit retrofit = new Retrofit.Builder()
+            .baseUrl(BASE_URL)
+            .build();
+   ```
+   GET请求:
+   ```
+   @GET("News/{newsId}")
+   Call<NewsBean> getItem(@Path("newsId") String newsId);
+   ```
+               则url：http://102.10.10.132/api/News/newsId
+   参数在?之后：
+   ```
+   @GET("News")
+   Call<NewsBean> getItem(@Query("newsId") String newsId);
+   ```
+               则url：http://102.10.10.132/api/News?newsId=newsId
+   附录：
+     > @Path：网址中的参数，?前
+     > @Query：?后的参数
+     > @QueryMap：相当于多个@Query
+     > @Field：Post提交单个数据
+     > @Body：相当于多个@Field，以对象的形式提交
 
 # 6. **docker相关**
    - docker基础操作
@@ -335,3 +393,6 @@ ubuntu系统加速方式为，更换为国内的镜像作为加速器，首先�
                     则：sudo supervisord -c /etc/supervisor/supervisord.conf
          - 查询supervisor开机自启：`systemctl is-enabled supervisord`
          - 设置supervisor开机自启：`sudo systemctl enable supervisor`
+   - 5. linux系统的nohup和&后台运行。nohup，不挂断地运行命令。`nohup Command [Arg..] [ &]`输出会附加到当前目录的nohup.out文件中。查看运行的后台进程：`jobs -l`
+           注：jobs命令只看当前终端生效的，关闭终端后，在另一个终端jobs无法看到，此时利用ps(进程查看命令)`ps -aux|grep jenkins.war`
+   终止后台运行的进程：`kill -9 进程号`。运行nohup命令后，再按下回车，退回命令提示符输入后再退出终端。
