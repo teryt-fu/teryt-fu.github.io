@@ -196,9 +196,18 @@ categories:
        $ pip install robotframework-jsonvalidator
       ```
              注：若有报错，可能是more-itertools版本过高，网上有人说python2.7最高支持5.0.0
-   - 6. jenkins+gitlab配置webhook
+   - 6. robotframework运行报错:`UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-1: ordinal not in range(128)`，一般是代码在windows平台运行过，此时需在py文件中加入：
+   ```
+      # 解决中文编码报错
+      default_encoding = 'utf-8'
+      if sys.getdefaultencoding() != default_encoding:
+         reload(sys)
+         sys.setdefaultencoding(default_encoding)
+   ```
+   才能在robotframework中传递中文参数。
+   - 7. jenkins+gitlab配置webhook
       首先确认`Gitlab Hook Plugin`和`Build Authorization Token Root Plugin`插件已安装。然后在job配置中勾选`Build when a change is pushed to GitLab. GitLab webhook URL: http://10.234.30.24:8080/project/test_suite`选项，保存GitLab webhook URL待用。在`Enabled GitLab triggers`中勾选第三个`Accepted Merge Request Events`，在高级选项中点`Secret token`后的`Genrate`会生成token，保存待用。在gitlab项目中选settings->Intergrations(集成)，粘贴保存的URL和Secret Token，点击Add webhook，点击Test测试连接即可。
-   - 7. jenkins托管flask服务的shell脚本
+   - 8. jenkins托管flask服务的shell脚本
    ```
       #!/bin/bash
       pwd
