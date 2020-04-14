@@ -283,6 +283,11 @@ categories:
    - 2. 导出数据表
      > mysql -uroot -ppasswd -e "select * from apipassrate" apidata > ~/GitHub/apipassrate.xlsx
              导出的xlsx文件不能直接被openpyxl模块识别，可通过excel或wps重新另存为。其中的时间字段如需还原成逗号分隔的文字，先把字段类型改为日期，语言选en-us或英国，在格式码处改为`YYYY,MM,DD,HH,MM,SS`，再复制到外部文本编辑器中，表格中另加一列，将外部数据复制进新加列，改字段类型为文本即可。
+   - 3. 对查询出的数据二次查询报错-ERROR 1248 (42000): Every derived table must have its own alias。原因是在多级查询时，需要给表一个别名。
+   错误示例：
+             select avg(num_value) from (select distinct create_time,num_value from kibanadata where create_time like "%00:30:00" and aiservice_type='cpresource' and cp_name='xiaowei');
+   正确示例：
+             select avg(num_value) from (select distinct create_time,num_value from kibanadata where create_time like "%00:30:00" and aiservice_type='cpresource' and cp_name='xiaowei') as num;
 
 # 5. **java、scala、安卓相关**
    - 1. maven项目需将所有依赖的jar包打包到lib目录：`mvn dependency:copy-dependencies -DoutputDirectory=target/lib`
