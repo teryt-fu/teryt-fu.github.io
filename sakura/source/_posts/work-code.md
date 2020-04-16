@@ -209,9 +209,14 @@ categories:
    > -i --include tag *    Select test cases to run by tag
    > -e --exclude tag *    Select test cases not to run by tag
    如`robot -i dog -e cat animals.robot`则执行animals.robot文件中tag为dog但不执行tag为cat的测试用例。
-   - 8. jenkins+gitlab配置webhook
+   - 8. robotframework中Run Keyword If判断时，当变量值为字符串时，需用引号将变量引起来，或者使用变量时不加{}，与变量对比的字符常量也需用引号引起来。例：
+   ```
+      Run Keyword IF    '${resp[5]}'=='morning'
+      Run Keyword IF    $resp[5]=='evening'
+   ```
+   - 9. jenkins+gitlab配置webhook
       首先确认`Gitlab Hook Plugin`和`Build Authorization Token Root Plugin`插件已安装。然后在job配置中勾选`Build when a change is pushed to GitLab. GitLab webhook URL: http://10.234.30.24:8080/project/test_suite`选项，保存GitLab webhook URL待用。在`Enabled GitLab triggers`中勾选第三个`Accepted Merge Request Events`，在高级选项中点`Secret token`后的`Genrate`会生成token，保存待用。在gitlab项目中选settings->Intergrations(集成)，粘贴保存的URL和Secret Token，点击Add webhook，点击Test测试连接即可。
-   - 9. jenkins托管flask服务的shell脚本
+   - 10. jenkins托管flask服务的shell脚本
    ```
       #!/bin/bash
       pwd
