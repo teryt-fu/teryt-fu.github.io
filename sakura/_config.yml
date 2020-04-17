@@ -116,3 +116,7 @@ tag_cloud:
   textHeight: 30
   outlineColor: '#e2e1d1'
   maxSpeed: 0.1
+
+# 文章加密
+encrypt:
+  enable: true

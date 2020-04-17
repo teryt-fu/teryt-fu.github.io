@@ -344,6 +344,29 @@ categories:
            outlineColor: '#e2e1d1'
            maxSpeed: 0.1
        ```
+     - hexo-blog-encrypt文章加密
+       1. 安装插件`npm install --save hexo-blog-encrypt`(注意是项目根目录下运行)
+       2. 打开根目录配置文件，在末尾添加
+        ```
+        encrypt:
+          enable: true
+        ```
+       3. 在需加密的文章头部添加
+       ```
+        ---
+        title: 文章加密
+        date: 2020-04-17 14:42:12
+        category: 教程
+        tags:
+          - 博客
+          - Hexo
+        keywords: 博客文章密码
+        password: test
+        abstract: 一些需保密的内容
+        message:  输入密码，查看文章
+        ---
+       ```
+                  注：网上这种说法无法成功或无法保证每次成功，且造成词云不显示。。。
 
 # 日常使用
   1. 新建文章

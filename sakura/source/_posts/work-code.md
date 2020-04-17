@@ -1,6 +1,9 @@
 ---
 title: 工作笔记
 date: 2019-12-30 13:09:29
+# password: xiaomi191203
+# abstract: 工作中常见或遇到过的问题汇总
+# message:  输入密码，查看文章
 tags:
 - python
 - robotframework
@@ -12,14 +15,21 @@ categories:
 ---
 # 简要介绍
    工作中常见或遇到过的问题汇总
-<!--more-->
-# 1. **monitor平台**
+<!-- more -->
+# 1. **monitor平台zookeeper平台**
    - 1. 系统传参。
       在monitor平台中通过接口管理传递参数时，在robot测试用例中必须包含*** Variables ***字段，哪怕用例中实际用不到也得添加。传递其他参数时同样通过接口管理的param下的param里添加key-value的形式添加参数名和值，然后在测试计划的配置列表中添加param字段，在里面的value字段中添加key-value，同样测试用例中需有Variables，用例中使用${key}来使用此参数。
    - 2. 基本操作。
       添加的测试用例必须符合格式，具体为[]括起，每句用例用""括起，除最后一句外，句尾加'，'号。句中注意特殊字符需要\转义。目前已知"和\两个需要转义。
    - 3. 本地monitor平台。
       本地平台地址：`http://host:8080/result/prod/6`, 其中host根据丽姐本地url变化。访问时需手动两次更改localhost为实际url，登录名密码均为邮箱前缀。
+   - 4. zk获取各环境路径。
+   ```
+     product:c4/services下搜thrift文件中定义的service名字
+     staging:staging/services下搜thrift文件中定义的service名字
+     preview/prod_c3:c3/services下搜thrift文件中定义的service名字，点进去的Pool中各个host详情里的weight字段=1是preview，weight=10是prod_c3
+     prod_c6:c6cloudsrv/services下搜thrift文件中定义的service名字
+   ```
 
 # 2. **jenkins平台**
    - 1. python版本选择
