@@ -268,15 +268,21 @@ categories:
    - 7. python写入文件按照列表的方式读取， 每写入一条数据需写入一个换行符隔开，读取出来则是以列表的格式，filehandle.write('\n')
    - 8. thrift接口，客服端调用报错 ’‘TSocket’‘读取0字节，服务端报错 ''No handlens could be found for logger 'Thrift.server.TServer'''，只要是Handlens类报错，提示全都是这个，实际最后找到报错为返回类型和idl文件定义不一致，包括某些变量拼写错误也会出现这种情况
    - 9. flask-sqlalchemy对已生成的表字段做修改，在migrations/env.py文件，在run_migrations_online函数加入![图](/images/carbon18.png)
-   - 10. robot对python2的thrift接口返回response做To Json处理时报`UnicodeDecodeError: 'utf8' codec can't decode byte 0xb7 in position 0: invalid start byte`，此时可对被解析对象重编码.encode('utf-8')，如仍报`UnicodeDecodeError: 'ascii' codec can't decode byte 0xb7 in position 263: ordinal not in range(128)`，则用`.decode('gbk').encode('utf-8')`重编码，python2的代码示例如下：
+   - 10. flask_sqlalchemy使用query.filter()查询数据库/filter()和filter_by()
+      - 使用query.filter().all()返回列表，列表中为数据对象，使用`object.字段名`来取值
+      - 使用query.filter().first()返回数据对象，同样使用`object.字段名`来取值
+      - filter_by用于查询简单的列名，不支持比较运算符。语法：`column = expression`传入参数的写法，只需要用：`（不带类名的）列名 单个等号` 就可以判断。
+      - filter中，语法更加贴近于，类似于，Python的语法。比filter_by的功能更强大，且更复杂的查询的语法，比如and()，or()等多个条件的查询，只支持filter。语法：`column == expression`传入参数的写法，要用：`类名.列名 两个等号` 去判断
+      - 字段模糊查询，`filter(类名.字段名.like('%' + 精准字段值 + '%'))`
+   - 11. robot对python2的thrift接口返回response做To Json处理时报`UnicodeDecodeError: 'utf8' codec can't decode byte 0xb7 in position 0: invalid start byte`，此时可对被解析对象重编码.encode('utf-8')，如仍报`UnicodeDecodeError: 'ascii' codec can't decode byte 0xb7 in position 263: ordinal not in range(128)`，则用`.decode('gbk').encode('utf-8')`重编码，python2的代码示例如下：
    ```
       import json
       s = '{"_srcdata":"{\\"updateDate\\":\\"20200103\\",\\"keywords\\":[\\"\u5927\u536b\u65af\u7279\u6069\\",\\"mvp\\",\\"nba\\",\\"NBA\\",\\"\u9ec4\u91d1\\",\\"\u62c9\u91cc\\"],\\"cpId\\":\\"20200103A07HEN00\\",\\"updateTime\\":1578019149000,\\"title\\":\\"\u4f17\u7403\u661f\u7f05\u6000\u5927\u536b\xb7\u65af\u7279\u6069\uff0c\u4ed6\u662fNBA\u9ec4\u91d130\u5e74\u91cc\u771f\u6b63\u7684MVP\\",\\"cp\\":\\"qqnews\\",\\"playLength\\":67,\\"playUrl\\":\\"http://files.ai.xiaomi.com/aiservice/aiservice/qqnews/276102adb35b72723a1abe0a0a39a941.mp3\\",\\"audio_id\\":337697176311300121,\\"id\\":\\"ai-audio-news_4628730706182661528\\",\\"categories\\":[\\"\u4f53\u80b2\\"],\\"category\\":\\"\u4f53\u80b2\\",\\"isHot\\":\\"0\\",\\"simHash\\":[\\"t-9197614281938041715\\",\\"b-2886507832045461559\\",\\"b383678740477312137\\",\\"t3500282104762336264\\",\\"b-7491421025233353511\\",\\"b-8069685134151215735\\",\\"t2310628634316906393\\",\\"b-2285480801161917239\\"],\\"status\\":1}","updateTime":1578019149000,"id":"ai-audio-news_4628730706182661528"}'
       sj = json.loads(s.decode('gbk').encode('utf-8'))
       print(sj['_srcdata'])
    ```
-   - 11. thrift文件生成后运行时报`SyntaxError: Non-ASCII character '\xe8' in file gen-py/ai_course/ttypes.py on line 23, but no encoding declared`，是因为thrift文件中的中文注释用了`/**/`，将所有注释改为`//`再重新生成即可。
-   - 12. flask使用Bokeh保存图片和plotly保存图片。
+   - 12. thrift文件生成后运行时报`SyntaxError: Non-ASCII character '\xe8' in file gen-py/ai_course/ttypes.py on line 23, but no encoding declared`，是因为thrift文件中的中文注释用了`/**/`，将所有注释改为`//`再重新生成即可。
+   - 13. flask使用Bokeh保存图片和plotly保存图片。
    此两种绘图库将所绘制图形保存为图片所依赖的库不同，分述如下：
       - Bokeh
          依赖PhantomJS，需用`conda install phantomjs`或`npm install -g phantomjs-prebuilt`命令。实测用的npm，如报错则执行命令`sudo apt install nodejs-legacy`
@@ -287,8 +293,9 @@ categories:
          ```
       - plotly
          依赖orca等。需执行`conda install -c plotly plotly-orca`或`npm install -g electron@6.1.4 orca`，此npm建议nodejs版本>=6.0。实测npm一直报错找不到文件及权限等，即使在命令后加上`--unsafe-perm=true --allow-root`安装成功后依然无法保存plotly绘制的图形，最后安装miniconda使用conda命令安装后可使用。
-   - 13. plotly、Bokeh保存路径支持相对路径，但openpyxl保存excel表格的路径只能用绝对路径，且send_from_directory的第二个参数为excel文件名，获取当前绝对路径：`os.path.abspath(os.path.join(os.path.dirname(__file__), os.path.pardir))`
-   - 14. celery运行配置了redis，但实际尝试还是得装rabbitmq，不然会报连接不上，不知具体原因。安装rabbitmq前先得装erlang，具体可网上找。rabbitmq网上说的没成功，最后在官网下载的deb安装包，通过`sudo dpkg -i download_file\?file_path\=pool%2Frabbitmq-server%2Frabbitmq-server_3.7.23-1_all.deb`安装，如报依赖于socat，然而未安装，直接`apt-get install socat`，再运行上面命令安装rabbitmq，装好后运行`systemctl status rabbitmq-server`查看运行状态。重启`supervisorctl reload`后celery任务即可成功运行。
+   - 14. plotly、Bokeh保存路径支持相对路径，但openpyxl保存excel表格的路径只能用绝对路径，且send_from_directory的第二个参数为excel文件名，获取当前绝对路径：`os.path.abspath(os.path.join(os.path.dirname(__file__), os.path.pardir))`
+   - 15. celery运行配置了redis，但实际尝试还是得装rabbitmq，不然会报连接不上，不知具体原因。安装rabbitmq前先得装erlang，具体可网上找。rabbitmq网上说的没成功，最后在官网下载的deb安装包，通过`sudo dpkg -i download_file\?file_path\=pool%2Frabbitmq-server%2Frabbitmq-server_3.7.23-1_all.deb`安装，如报依赖于socat，然而未安装，直接`apt-get install socat`，再运行上面命令安装rabbitmq，装好后运行`systemctl status rabbitmq-server`查看运行状态。重启`supervisorctl reload`后celery任务即可成功运行。
+   - 16. flask中post传递的data，只需`req = request.form`后即可用`req.get('key')`取得表单中对应key的value，而无需`req = request.form()`，此时会报`'ImmutableMultiDict' object is not callable`。
 
 # 4. **MYSQL数据库**
    - 1. 查询数据库中的状态
