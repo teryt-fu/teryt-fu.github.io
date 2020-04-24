@@ -27,7 +27,7 @@ categories:
    ```
      product:c4/services下搜thrift文件中定义的service名字
      staging:staging/services下搜thrift文件中定义的service名字
-     preview/prod_c3:c3/services下搜thrift文件中定义的service名字，点进去的Pool中各个host详情里的weight字段=1是preview，weight=10是prod_c3
+     preview/prod_c3:c3/services下搜thrift文件中定义的service名字，点进去的Pool中各个host详情里的server.service.level字段=1是preview，weight=10是prod_c3
      prod_c6:c6cloudsrv/services下搜thrift文件中定义的service名字
    ```
 
