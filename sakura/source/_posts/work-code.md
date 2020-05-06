@@ -224,6 +224,7 @@ categories:
       Run Keyword IF    '${resp[5]}'=='morning'
       Run Keyword IF    $resp[5]=='evening'
    ```
+   当使用了Run Keyword If关键字时，后面的ELSE IF必须大写，且每个ELSE IF语句判断后面需跟动作，例如Log或Fail，不然会报`'Else If' is a reserved keyword. It must be in uppercase (ELSE IF) when used as a marker with 'Run Keyword If'.`
    - 9. jenkins+gitlab配置webhook
       首先确认`Gitlab Hook Plugin`和`Build Authorization Token Root Plugin`插件已安装。然后在job配置中勾选`Build when a change is pushed to GitLab. GitLab webhook URL: http://10.234.30.24:8080/project/test_suite`选项，保存GitLab webhook URL待用。在`Enabled GitLab triggers`中勾选第三个`Accepted Merge Request Events`，在高级选项中点`Secret token`后的`Genrate`会生成token，保存待用。在gitlab项目中选settings->Intergrations(集成)，粘贴保存的URL和Secret Token，点击Add webhook，点击Test测试连接即可。
    - 10. jenkins托管flask服务的shell脚本
