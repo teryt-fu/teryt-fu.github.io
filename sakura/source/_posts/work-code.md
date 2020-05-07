@@ -330,6 +330,15 @@ categories:
    - 14. plotly、Bokeh保存路径支持相对路径，但openpyxl保存excel表格的路径只能用绝对路径，且send_from_directory的第二个参数为excel文件名，获取当前绝对路径：`os.path.abspath(os.path.join(os.path.dirname(__file__), os.path.pardir))`
    - 15. celery运行配置了redis，但实际尝试还是得装rabbitmq，不然会报连接不上，不知具体原因。安装rabbitmq前先得装erlang，具体可网上找。rabbitmq网上说的没成功，最后在官网下载的deb安装包，通过`sudo dpkg -i download_file\?file_path\=pool%2Frabbitmq-server%2Frabbitmq-server_3.7.23-1_all.deb`安装，如报依赖于socat，然而未安装，直接`apt-get install socat`，再运行上面命令安装rabbitmq，装好后运行`systemctl status rabbitmq-server`查看运行状态。重启`supervisorctl reload`后celery任务即可成功运行。
    - 16. flask中post传递的data，只需`req = request.form`后即可用`req.get('key')`取得表单中对应key的value，而无需`req = request.form()`，此时会报`'ImmutableMultiDict' object is not callable`。
+   - 17. python异常捕获try...except语句捕获的异常打印出来信息太少，不利于调试，此时可用traceback模块，`traceback.print_exc()`直接打印出错误，`traceback.format_exc()`将返回字符串。例：
+   ```
+   try:
+       pass
+   except Exception as e:
+        traceback.print_exc()
+        return render_template('errorpage.html')
+   ```
+   因flask中uwsgi会将stdout标准输出的内容写入到日志中，故在flask项目中直接用`traceback.print_exc()`方法。
 
 # 4. **MYSQL数据库**
    - 1. 查询数据库中的状态
