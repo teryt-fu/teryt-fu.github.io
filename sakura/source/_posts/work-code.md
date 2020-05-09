@@ -339,6 +339,20 @@ categories:
         return render_template('errorpage.html')
    ```
    因flask中uwsgi会将stdout标准输出的内容写入到日志中，故在flask项目中直接用`traceback.print_exc()`方法。
+   附try...except语句能调用的属性和方法：
+   ```
+   try:
+       1/0
+   except Exception as e:
+       print(e.args)  # 返回异常的错误编号和描述字符串
+       print(str(e))  # 返回异常信息，但不包括异常信息的类型
+       print(repr(e))  # 返回较全的异常信息，包括异常信息的类型
+
+   输出结果：
+   ('division by zero',)
+   division by zero
+   ZeroDivisionError('division by zero',)
+   ```
 
 # 4. **MYSQL数据库**
    - 1. 查询数据库中的状态
