@@ -215,6 +215,7 @@ categories:
          sys.setdefaultencoding(default_encoding)
    ```
    才能在robotframework中传递中文参数。
+            另注：rf的报告中只会打印rf直接调用的函数里的Print语句的内容，故如需调试应在client.py文件中添加print，ms.py中添加的无效。
    - 7. robotframework中tag用法。加在`*** Settings ***`下的`Default Tags    jokesAPI`，或加在case用例中的`[Tags]    fw`，运行robot时的参数：
    > -i --include tag *    Select test cases to run by tag
    > -e --exclude tag *    Select test cases not to run by tag
