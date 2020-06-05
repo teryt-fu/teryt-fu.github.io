@@ -287,6 +287,9 @@ categories:
    fi
    jobs -l
    ```
+   - 11. jenkins添加用户及配置权限
+      前提是已创建管理员账户，在管理中选择`Manage Users`，可以新建用户。
+      再在管理中选择`Configure Global Security`，启用安全，安全域为`Jenkins own user database`，在授权策略中选择`项目矩阵授权策略`，添加用户，配置读权限。再在各job设置中启用项目安全，添加用户，配置各项权限。
 
 # 3. **python相关**
    - 1. 在 python2中，str 其实是 bytes，而不是 unicode，在代码中声明了编码方式为 utf-8，并将该参数存入到了 DB 中，导致下次请求传递的还是 DB 中的 utf-8 类型的 port，而不是 int 或者 string，port给int型
@@ -354,6 +357,8 @@ categories:
    division by zero
    ZeroDivisionError('division by zero',)
    ```
+   - 18. python2安装mysql官方提供的mysql-connector-python时`pip install mysql-connector-python`，如报setuptools版本错误，是版本必须小于45,此时可先卸载setuptools，再`pip install "setuptools<45"`安装特定条件版本，或者在建虚拟环境时`py -2.7-32 -m virtualenv --no-setuptools venv`或`virtualenv --no-setuptools venv --python=python2`
+              注意：mysql-connector-python只有8.0的版本支持mysql8.0
 
 # 4. **MYSQL数据库**
    - 1. 查询数据库中的状态
