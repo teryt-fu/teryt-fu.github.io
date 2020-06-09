@@ -373,6 +373,14 @@ categories:
              select avg(num_value) from (select distinct create_time,num_value from kibanadata where create_time like "%00:30:00" and aiservice_type='cpresource' and cp_name='xiaowei');
    正确示例：
              select avg(num_value) from (select distinct create_time,num_value from kibanadata where create_time like "%00:30:00" and aiservice_type='cpresource' and cp_name='xiaowei') as num;
+   - 4. mysql对json对象操作的json_extract函数
+     > 语法：select json_extract(data, '$.name') from table_json;
+     > 注释：data为字段名，data字段里的数据为json对象，通过$表示该对象，.name表示键值对的key，得到的为键值对的value。
+   - 5. mysql各种连接查询
+     > 内连接：`select * from a_table (as) a inner join b_table (as) b on a.a_id=b.b_id;`
+     > 左(外)连接：`select * from a_table (as) a left (outer) join b_table (as) b on a.a_id=b.b_id;`
+     > 右(外)连接：`select * from a_table (as) a right (outer) join b_table (as) b on a.a_id=b.b_id;`
+     > 全(外)连接：mysql不支持全外连接，full join，需要左连，右连后再union (all)。
 
 # 5. **java、scala、安卓相关**
    - 1. maven项目需将所有依赖的jar包打包到lib目录：`mvn dependency:copy-dependencies -DoutputDirectory=target/lib`
