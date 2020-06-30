@@ -306,6 +306,8 @@ categories:
    - 7. python写入文件按照列表的方式读取， 每写入一条数据需写入一个换行符隔开，读取出来则是以列表的格式，filehandle.write('\n')
    - 8. thrift接口，客服端调用报错 ’‘TSocket’‘读取0字节，服务端报错 ''No handlens could be found for logger 'Thrift.server.TServer'''，只要是Handlens类报错，提示全都是这个，实际最后找到报错为返回类型和idl文件定义不一致，包括某些变量拼写错误也会出现这种情况
    - 9. flask-sqlalchemy对已生成的表字段做修改，在migrations/env.py文件，在run_migrations_online函数加入![图](/images/carbon18.png)
+   flask-sqlalchemy中不常用的类型，Text(16777216)在mysql中属于longtext`变长字符串，max32M`，Text(65536)属于mediumtext`变长字符串，max16M`，Text属于tinytext`变长字符串，64K`。
+          数据迁移migrate的`flask db migrate -m "Datetime some change"`迁移命令带上-m选项后可用来添加迁移备注，在项目的`migrations/versions/`文件夹下的迁移记录名会带上备注，方便查询迁移顺序等。
    - 10. flask_sqlalchemy使用query.filter()查询数据库/filter()和filter_by()
       - 使用query.filter().all()返回列表，列表中为数据对象，使用`object.字段名`来取值
       - 使用query.filter().first()返回数据对象，同样使用`object.字段名`来取值
@@ -463,6 +465,7 @@ ubuntu系统加速方式为，更换为国内的镜像作为加速器，首先�
    - 2. ubuntu16.04系统显示隐藏文件方式为`ctrl + H`，如想永远显示则需另外设置。
    - 3. ubuntu16.04系统开启ssh远程登录。先查看是否安装服务：`apt-cache policy openssh-client openssh-server`。ubuntu默认安装了openssh-client，openssh-server需手动安装：`apt-get install openssh-server`，查看ssh服务开启状况：`ps -e|grep ssh`，如出现sshd则说明服务开启，没有则执行`/etc/init.d/ssh start`开启。
             远程访问方法：`ssh username@host`
+   将远程的文件/文件夹保存到本地，使用scp命令：`scp username@host:/home/username/somefile.xlsx /home/localusername/`；如将本地文件/文件夹上传到远程则反过来：`scp /home/localusername/somefile.xlsx username@host:/home/username/`
    - 4. ubuntu16.04安装supervisor。
          - 安装。`sudo apt install supervisor`
          - 配置网页端访问supervisor。在`/etc/supervisor/supervisord.conf`中添加如下：
