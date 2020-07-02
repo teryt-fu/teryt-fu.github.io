@@ -378,11 +378,18 @@ categories:
    - 4. mysql对json对象操作的json_extract函数
      > 语法：select json_extract(data, '$.name') from table_json;
      > 注释：data为字段名，data字段里的数据为json对象，通过$表示该对象，.name表示键值对的key，得到的为键值对的value。
-   - 5. mysql各种连接查询
+   - 5. mysql cast函数
+     > 语法：cast(expression as TYPE)
+     > 注释：cast()函数将任何类型的值转换为具有指定类型的值。目标类型可以是以下类型之一：BINARY、CHAR、DATE、DATETIME、TIME、DECIMAL、SIGNED、UNSIGNED。
+     > 例子：mysql中比较字符型的数字时，'999'是大于'1099'的，故此时需将此字段的类型转换为DECIMAL类型后再做比较或者直接max()取最大值。
+   - 6. mysql各种连接查询
      > 内连接：`select * from a_table (as) a inner join b_table (as) b on a.a_id=b.b_id;`
      > 左(外)连接：`select * from a_table (as) a left (outer) join b_table (as) b on a.a_id=b.b_id;`
      > 右(外)连接：`select * from a_table (as) a right (outer) join b_table (as) b on a.a_id=b.b_id;`
      > 全(外)连接：mysql不支持全外连接，full join，需要左连，右连后再union (all)。
+   - 7. mysql备份及恢复
+     > 备份：`mysqldump -hHost -uroot -ppasswd -Pport -database 数据库名 > test.sql`
+     > 恢复：`mysql -hHost -uroot -ppasswd -Pport < test.sql`
 
 # 5. **java、scala、安卓相关**
    - 1. maven项目需将所有依赖的jar包打包到lib目录：`mvn dependency:copy-dependencies -DoutputDirectory=target/lib`
