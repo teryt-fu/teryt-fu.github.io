@@ -287,6 +287,41 @@ categories:
    fi
    jobs -l
    ```
+   再次更新脚本，发现当kill值为'Sl'那栏的id时只会杀死单个进程，不会停止整个服务。
+   ```
+   #!/bin/bash
+   pwd
+   source /home/mi/abc_issues_wsgi/venv/bin/activate
+   cd /home/mi/.jenkins/workspace/apidata/
+   a=$(ps -aux|grep uwsgi)
+   str=$"\n"
+   echo ${a}
+   arr=(${a})
+   if [ ${#a} -lt 350 ]
+   then
+      nohup uwsgi config.ini &
+      sstr=$(echo -e $str)
+      echo $sstr
+   else
+      index=7
+      until [ "${arr[index]}" = "S" ]
+      do
+         echo ${arr[index]}
+         index=$(($index + 12))
+      done
+      echo $index
+      indexId=$(($index - 6))
+      echo $indexId
+      s=${arr[$indexId]}
+      echo ${s}
+      kill -9 ${s}
+      sleep 3
+      nohup uwsgi config.ini &
+      sstr=$(echo -e $str)
+      echo $sstr
+   fi
+   jobs -l
+   ```
    - 11. jenkins添加用户及配置权限
       前提是已创建管理员账户，在管理中选择`Manage Users`，可以新建用户。
       再在管理中选择`Configure Global Security`，启用安全，安全域为`Jenkins own user database`，在授权策略中选择`项目矩阵授权策略`，添加用户，配置读权限。再在各job设置中启用项目安全，添加用户，配置各项权限。
@@ -331,8 +366,33 @@ categories:
          p = figure(output_backend="webgl")  # for the plotting API
          p = Plot(output_backend="webgl")  # for the glyph API
          ```
+         Bokeh将生成内容嵌入html：
+         ```
+         from bokeh.embed import components
+         ...
+         p_script, p_div = components(p)
+         p_html = p_script + p_div
+         return render_template('example.html', p_html=p_html)
+         # 或者
+         # return jsonify({'status': 200, 'p_html': p_html})
+         ```
       - plotly
          依赖orca等。需执行`conda install -c plotly plotly-orca`或`npm install -g electron@6.1.4 orca`，此npm建议nodejs版本>=6.0。实测npm一直报错找不到文件及权限等，即使在命令后加上`--unsafe-perm=true --allow-root`安装成功后依然无法保存plotly绘制的图形，最后安装miniconda使用conda命令安装后可使用。
+         plotly将生成内容嵌入到html：
+         ```
+         import plotly
+         ...
+         div = plotly.offline.plot(fig, auto_open=False, output_type='div')
+         return render_template('example.html', plotly_div=div)
+         ```
+      - jinja2
+         当html内容字符串作为数据传入到jinja2中时，如果要模板自动渲染，需要使用{{ div|safe }}或者
+         ```
+         {% autoescape false %}
+         {{ div }}
+         {% endautoescape %}
+         ```
+         来自动渲染成html内容。
    - 14. plotly、Bokeh保存路径支持相对路径，但openpyxl保存excel表格的路径只能用绝对路径，且send_from_directory的第二个参数为excel文件名，获取当前绝对路径：`os.path.abspath(os.path.join(os.path.dirname(__file__), os.path.pardir))`
    - 15. celery运行配置了redis，但实际尝试还是得装rabbitmq，不然会报连接不上，不知具体原因。安装rabbitmq前先得装erlang，具体可网上找。rabbitmq网上说的没成功，最后在官网下载的deb安装包，通过`sudo dpkg -i download_file\?file_path\=pool%2Frabbitmq-server%2Frabbitmq-server_3.7.23-1_all.deb`安装，如报依赖于socat，然而未安装，直接`apt-get install socat`，再运行上面命令安装rabbitmq，装好后运行`systemctl status rabbitmq-server`查看运行状态。重启`supervisorctl reload`后celery任务即可成功运行。
    - 16. flask中post传递的data，只需`req = request.form`后即可用`req.get('key')`取得表单中对应key的value，而无需`req = request.form()`，此时会报`'ImmutableMultiDict' object is not callable`。
@@ -389,7 +449,9 @@ categories:
      > 全(外)连接：mysql不支持全外连接，full join，需要左连，右连后再union (all)。
    - 7. mysql备份及恢复
      > 备份：`mysqldump -hHost -uroot -ppasswd -Pport -database 数据库名 > test.sql`
-     > 恢复：`mysql -hHost -uroot -ppasswd -Pport < test.sql`
+     > 恢复：`mysql -hHost -uroot -ppasswd -Pport 数据库名 < test.sql`
+   - 8. ubuntu命令行安装mysql时未提示输入密码，则可以在`/etc/mysql/debian.cnf`文件中找到用户名和密码，用此用户名密码登录mysql后，可重置密码，或添加一个root用户。成功后重启mysql服务即可。
+   - 9. mysql将查询结果以逗号分隔一行打印，使用`group_concat()`函数，例：`select group_concat(cpname) from (select distinct(cpname) from kibanawow where aiservice_type=406 and value!=0 group by cpname) as name;`。
 
 # 5. **java、scala、安卓相关**
    - 1. maven项目需将所有依赖的jar包打包到lib目录：`mvn dependency:copy-dependencies -DoutputDirectory=target/lib`
