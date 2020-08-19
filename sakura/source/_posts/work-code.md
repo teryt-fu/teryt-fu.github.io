@@ -366,7 +366,7 @@ categories:
          p = figure(output_backend="webgl")  # for the plotting API
          p = Plot(output_backend="webgl")  # for the glyph API
          ```
-         Bokeh将生成内容嵌入html：
+         > Bokeh将生成内容嵌入html：
          ```
          from bokeh.embed import components
          ...
@@ -376,6 +376,7 @@ categories:
          # 或者
          # return jsonify({'status': 200, 'p_html': p_html})
          ```
+         > Bokeh画图自适应宽度：在figure中添加`sizing_mode='scale_width'`参数，同时给出`plot_height=300`参数，不然高度也会自适应屏幕。
       - plotly
          依赖orca等。需执行`conda install -c plotly plotly-orca`或`npm install -g electron@6.1.4 orca`，此npm建议nodejs版本>=6.0。实测npm一直报错找不到文件及权限等，即使在命令后加上`--unsafe-perm=true --allow-root`安装成功后依然无法保存plotly绘制的图形，最后安装miniconda使用conda命令安装后可使用。
          plotly将生成内容嵌入到html：
@@ -452,6 +453,64 @@ categories:
      > 恢复：`mysql -hHost -uroot -ppasswd -Pport 数据库名 < test.sql`
    - 8. ubuntu命令行安装mysql时未提示输入密码，则可以在`/etc/mysql/debian.cnf`文件中找到用户名和密码，用此用户名密码登录mysql后，可重置密码，或添加一个root用户。成功后重启mysql服务即可。
    - 9. mysql将查询结果以逗号分隔一行打印，使用`group_concat()`函数，例：`select group_concat(cpname) from (select distinct(cpname) from kibanawow where aiservice_type=406 and value!=0 group by cpname) as name;`。
+   - 10. mysql在linux环境自动备份脚本及自动任务。
+    > 备份脚本`dump_mysql.sh`
+    ```
+      #!/bin/zsh
+      #保存备份个数，备份7天数据
+      number=7
+      #备份保存路径
+      # backup_dir=/home/fuyu/GitHub/work-code/shell/mysql
+      backup_dir=$(dirname $(readlink -f $0))/mysql
+      echo $backup_dir
+      #日期
+      dd=`date +%Y-%m-%d-%H-%M-%S`
+      #备份工具
+      tool=mysqldump
+      #用户名
+      username=root
+      #密码
+      password=tarena
+      #将要备份的数据库
+      database_name=apidata
+
+      #如果文件夹不存在则创建
+      if [ ! -d $backup_dir ]; 
+      then     
+         mkdir -p $backup_dir; 
+      fi
+
+      #简单写法  mysqldump -u root -p123456 users > /root/mysqlbackup/users-$filename.sql
+      $tool -u $username -p$password $database_name > $backup_dir/$database_name-$dd.sql
+
+      #写创建备份日志
+      echo "create $backup_dir/$database_name-$dd.dupm" >> $backup_dir/log.txt
+
+      #找出需要删除的备份
+      delfile=`ls -l -crt  $backup_dir/*.sql | awk '{print $9 }' | head -1`
+
+      #判断现在的备份数量是否大于$number
+      count=`ls -l -crt  $backup_dir/*.sql | awk '{print $9 }' | wc -l`
+
+      if [ $count -gt $number ]
+      then
+      #删除最早生成的备份，只保留number数量的备份
+      rm $delfile
+      #写删除文件日志
+      echo "delete $delfile" >> $backup_dir/log.txt
+      fi
+
+    ```
+    > 自动任务`dump_mysql.cron`
+    ```
+      0 0 * * * /home/fuyu/GitHub/work-code/shell/dump_mysql.sh
+
+    ```
+    > 启动任务
+        1. 添加脚本执行权限：`chmod +x dump_mysql.sh`
+        2. 启动crontab任务：`crontab dump_mysql.cron`
+        3. 检查任务是否创建：`crontab -l`
+    > 注意：cron文件中末尾必须有空行，否则报错
 
 # 5. **java、scala、安卓相关**
    - 1. maven项目需将所有依赖的jar包打包到lib目录：`mvn dependency:copy-dependencies -DoutputDirectory=target/lib`
