@@ -16,7 +16,7 @@ categories:
 # 简要介绍
    工作中常见或遇到过的问题汇总
 <!-- more -->
-# 1. **monitor平台zookeeper平台**
+# 1. **monitor平台zookeeper平台kibana平台**
    - 1. 系统传参。
       在monitor平台中通过接口管理传递参数时，在robot测试用例中必须包含*** Variables ***字段，哪怕用例中实际用不到也得添加。传递其他参数时同样通过接口管理的param下的param里添加key-value的形式添加参数名和值，然后在测试计划的配置列表中添加param字段，在里面的value字段中添加key-value，同样测试用例中需有Variables，用例中使用${key}来使用此参数。
    - 2. 基本操作。
@@ -30,6 +30,22 @@ categories:
      preview/prod_c3:c3/services下搜thrift文件中定义的service名字，点进去的Pool中各个host详情里的server.service.level字段=1是preview，server.service.level=10是prod_c3
      prod_c6:c6cloudsrv/services下搜thrift文件中定义的service名字
    ```
+   - 5. Elasticsearch深度分页解决：scroll游标。包括初始化和遍历两部分。
+     > 初始化。
+     ```
+      POST ip:port/my_index/my_type/_search?scroll=1m
+      {
+         "query": { "match_all": {}}
+      }
+     ```
+     > 遍历。
+     ```
+      POST /_search?scroll=1m
+      {
+         "scroll_id":"XXXXXXXXXXXXXXXXXXXXXXX I am scroll id XXXXXXXXXXXXXXX"
+      }
+     ```
+   说明：初始化时请求体中数据照常，只需在search后加上`?scroll=1m`，初始化返回一个_scroll_id，_scroll_id 用来下次取数据用。遍历里的的 scroll_id 即 上一次遍历取回的 _scroll_id 或者是初始化返回的 _scroll_id，同样的，需要带 scroll 参数。 重复这一步骤，直到返回的数据为空，即遍历完成。注意，每次都要传参数 scroll，刷新搜索结果的缓存时间。设置scroll的时候，需要使搜索结果缓存到下一次遍历完成，同时，也不能太长，毕竟空间有限。
 
 # 2. **jenkins平台**
    - 1. python版本选择
@@ -422,6 +438,26 @@ categories:
    ```
    - 18. python2安装mysql官方提供的mysql-connector-python时`pip install mysql-connector-python`，如报setuptools版本错误，是版本必须小于45,此时可先卸载setuptools，再`pip install "setuptools<45"`安装特定条件版本，或者在建虚拟环境时`py -2.7-32 -m virtualenv --no-setuptools venv`或`virtualenv --no-setuptools venv --python=python2`
               注意：mysql-connector-python只有8.0的版本支持mysql8.0
+   - 19. python线程池的使用。通过`thread_count = multiprocessing.cpu_count()`获取cpu核心数作为线程池中线程个数，示例代码：
+   ```
+   def multiThread(Ids=[]):
+       thread_count = multiprocessing.cpu_count() * 2
+       with ThreadPoolExecutor(max_workers=thread_count) as t:
+           obj_list = []
+           begin = time.time()
+           # all_task = [t.submit(exportResult, i) for i in Ids]
+           # wait(all_task,)
+           for i in Ids:
+               obj = t.submit(exportResult, i)
+               obj_list.append(obj)
+           for future in as_completed(obj_list):
+               data = future.result()
+               print(data)
+           times = time.time() - begin
+           print(f'总耗时：{times}')
+       return f'{Ids}全部下载完成'
+   ```
+             注：其中exportResult为启动线程所需要运行的函数，i为该函数的入参。
 
 # 4. **MYSQL数据库**
    - 1. 查询数据库中的状态
