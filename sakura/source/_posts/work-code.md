@@ -485,7 +485,7 @@ categories:
      > 右(外)连接：`select * from a_table (as) a right (outer) join b_table (as) b on a.a_id=b.b_id;`
      > 全(外)连接：mysql不支持全外连接，full join，需要左连，右连后再union (all)。
    - 7. mysql备份及恢复
-     > 备份：`mysqldump -hHost -uroot -ppasswd -Pport -database 数据库名 > test.sql`
+     > 备份：`mysqldump -hHost -uroot -ppasswd -Pport 数据库名 > test.sql`或`mysqldump -hHost -uroot -ppasswd -Pport 数据库名 数据表名 > test.sql`
      > 恢复：`mysql -hHost -uroot -ppasswd -Pport 数据库名 < test.sql`
    - 8. ubuntu命令行安装mysql时未提示输入密码，则可以在`/etc/mysql/debian.cnf`文件中找到用户名和密码，用此用户名密码登录mysql后，可重置密码，或添加一个root用户。成功后重启mysql服务即可。
    - 9. mysql将查询结果以逗号分隔一行打印，使用`group_concat()`函数，例：`select group_concat(cpname) from (select distinct(cpname) from kibanawow where aiservice_type=406 and value!=0 group by cpname) as name;`。
@@ -547,6 +547,7 @@ categories:
         2. 启动crontab任务：`crontab dump_mysql.cron`
         3. 检查任务是否创建：`crontab -l`
     > 注意：cron文件中末尾必须有空行，否则报错
+   - 11. mysql不支持`123<=id<=125`这类判断操作，在删除中带此类条件会清空数据表！！！使用`123<=id and id<=125`语句来判断。
 
 # 5. **java、scala、安卓相关**
    - 1. maven项目需将所有依赖的jar包打包到lib目录：`mvn dependency:copy-dependencies -DoutputDirectory=target/lib`
@@ -629,7 +630,7 @@ ubuntu系统加速方式为，更换为国内的镜像作为加速器，首先�
    - 2. ubuntu16.04系统显示隐藏文件方式为`ctrl + H`，如想永远显示则需另外设置。
    - 3. ubuntu16.04系统开启ssh远程登录。先查看是否安装服务：`apt-cache policy openssh-client openssh-server`。ubuntu默认安装了openssh-client，openssh-server需手动安装：`apt-get install openssh-server`，查看ssh服务开启状况：`ps -e|grep ssh`，如出现sshd则说明服务开启，没有则执行`/etc/init.d/ssh start`开启。
             远程访问方法：`ssh username@host`
-   将远程的文件/文件夹保存到本地，使用scp命令：`scp username@host:/home/username/somefile.xlsx /home/localusername/`；如将本地文件/文件夹上传到远程则反过来：`scp /home/localusername/somefile.xlsx username@host:/home/username/`
+   将远程的文件/文件夹保存到本地，使用scp命令：`scp username@host:/home/username/somefile.xlsx /home/localusername/`；如将本地文件/文件夹上传到远程则反过来：`scp /home/localusername/somefile.xlsx username@host:/home/username/(文件保存路径)`
    - 4. ubuntu16.04安装supervisor。
          - 安装。`sudo apt install supervisor`
          - 配置网页端访问supervisor。在`/etc/supervisor/supervisord.conf`中添加如下：
@@ -671,7 +672,7 @@ ubuntu系统加速方式为，更换为国内的镜像作为加速器，首先�
                     则：sudo supervisord -c /etc/supervisor/supervisord.conf
          - 查询supervisor开机自启：`systemctl is-enabled supervisord`
          - 设置supervisor开机自启：`sudo systemctl enable supervisor`
-   - 5. linux系统的nohup和&后台运行。nohup，不挂断地运行命令。`nohup Command [Arg..] [ &]`输出会附加到当前目录的nohup.out文件中。查看运行的后台进程：`jobs -l`
+   - 5. linux系统的nohup和&后台运行。nohup，不挂断地运行命令。`nohup Command [Arg..] [ &]`输出会附加到当前目录的nohup.out文件中，例`nohup java -jar jenkins.war &`。查看运行的后台进程：`jobs -l`
            注：jobs命令只看当前终端生效的，关闭终端后，在另一个终端jobs无法看到，此时利用ps(进程查看命令)`ps -aux|grep jenkins.war`
    终止后台运行的进程：`kill -9 进程号`。运行nohup命令后，再按下回车，退回命令提示符输入后再退出终端。
    - 6. ubuntu16.04下运行shell脚本(脚本中有字符串截取)报`Bad substitution`，网上解释：
