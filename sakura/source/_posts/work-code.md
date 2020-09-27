@@ -242,9 +242,25 @@ categories:
       Run Keyword IF    $resp[5]=='evening'
    ```
    当使用了Run Keyword If关键字时，后面的ELSE IF必须大写，且每个ELSE IF语句判断后面需跟动作，例如Log或Fail，不然会报`'Else If' is a reserved keyword. It must be in uppercase (ELSE IF) when used as a marker with 'Run Keyword If'.`
-   - 9. jenkins+gitlab配置webhook
+   - 9. robotframework导入python库。
+      ```
+      # 如果类的 __init__ 初始化方法需要传参，则在导入库后面跟对应的参数列表
+      Library path/python_class_name.py    argument
+      # 用路径法导入Python模块需要有文件后缀，且用 / 来表示目录下
+           # 重点：使用路径法，只能导入和模块名相同的类名！
+      ```
+      1. python扩展库搜索规则：
+        > 先根据 robot 文件自身当前目录下查找库文件
+        > 如果没有找到则再根据 `--pythonpath` 和 `-P` 提供的搜索路径进行搜索
+        > 最后找 Python 安装的路径
+      2. python库引入了其他模块：
+        > 当 robot 文件导入的 Python 测试库引入了其他模块时，确保导入的模块路径和RF导入的模块起始路径统一。
+      3. python库中的class存在继承：
+        > 当 robot 文件导入 Python 测试库的类继承了另一个类，确保导入的模块路径和RF导入的模块起始路径统一，使用的时候 RF 文件只需导入子类即可。
+
+   - 10. jenkins+gitlab配置webhook
       首先确认`Gitlab Hook Plugin`和`Build Authorization Token Root Plugin`插件已安装。然后在job配置中勾选`Build when a change is pushed to GitLab. GitLab webhook URL: http://10.234.30.24:8080/project/test_suite`选项，保存GitLab webhook URL待用。在`Enabled GitLab triggers`中勾选第三个`Accepted Merge Request Events`，在高级选项中点`Secret token`后的`Genrate`会生成token，保存待用。在gitlab项目中选settings->Intergrations(集成)，粘贴保存的URL和Secret Token，点击Add webhook，点击Test测试连接即可。
-   - 10. jenkins托管flask服务的shell脚本
+   - 11. jenkins托管flask服务的shell脚本
    ```
       #!/bin/bash
       pwd
@@ -338,7 +354,7 @@ categories:
    fi
    jobs -l
    ```
-   - 11. jenkins添加用户及配置权限
+   - 12. jenkins添加用户及配置权限
       前提是已创建管理员账户，在管理中选择`Manage Users`，可以新建用户。
       再在管理中选择`Configure Global Security`，启用安全，安全域为`Jenkins own user database`，在授权策略中选择`项目矩阵授权策略`，添加用户，配置读权限。再在各job设置中启用项目安全，添加用户，配置各项权限。
 
@@ -490,64 +506,88 @@ categories:
    - 8. ubuntu命令行安装mysql时未提示输入密码，则可以在`/etc/mysql/debian.cnf`文件中找到用户名和密码，用此用户名密码登录mysql后，可重置密码，或添加一个root用户。成功后重启mysql服务即可。
    - 9. mysql将查询结果以逗号分隔一行打印，使用`group_concat()`函数，例：`select group_concat(cpname) from (select distinct(cpname) from kibanawow where aiservice_type=406 and value!=0 group by cpname) as name;`。
    - 10. mysql在linux环境自动备份脚本及自动任务。
-    > 备份脚本`dump_mysql.sh`
-    ```
-      #!/bin/zsh
-      #保存备份个数，备份7天数据
-      number=7
-      #备份保存路径
-      # backup_dir=/home/fuyu/GitHub/work-code/shell/mysql
-      backup_dir=$(dirname $(readlink -f $0))/mysql
-      echo $backup_dir
-      #日期
-      dd=`date +%Y-%m-%d-%H-%M-%S`
-      #备份工具
-      tool=mysqldump
-      #用户名
-      username=root
-      #密码
-      password=tarena
-      #将要备份的数据库
-      database_name=apidata
+     > 备份脚本`dump_mysql.sh`
+     ```
+       #!/bin/zsh
+       #保存备份个数，备份7天数据
+       number=7
+       #备份保存路径
+       # backup_dir=/home/fuyu/GitHub/work-code/shell/mysql
+       backup_dir=$(dirname $(readlink -f $0))/mysql
+       echo $backup_dir
+       #日期
+       dd=`date +%Y-%m-%d-%H-%M-%S`
+       #备份工具
+       tool=mysqldump
+       #用户名
+       username=root
+       #密码
+       password=tarena
+       #将要备份的数据库
+       database_name=apidata
 
-      #如果文件夹不存在则创建
-      if [ ! -d $backup_dir ]; 
-      then     
-         mkdir -p $backup_dir; 
-      fi
+       #如果文件夹不存在则创建
+       if [ ! -d $backup_dir ]; 
+       then     
+          mkdir -p $backup_dir; 
+       fi
 
-      #简单写法  mysqldump -u root -p123456 users > /root/mysqlbackup/users-$filename.sql
-      $tool -u $username -p$password $database_name > $backup_dir/$database_name-$dd.sql
+       #简单写法  mysqldump -u root -p123456 users > /root/mysqlbackup/users-$filename.sql
+       $tool -u $username -p$password $database_name > $backup_dir/$database_name-$dd.sql
 
-      #写创建备份日志
-      echo "create $backup_dir/$database_name-$dd.dupm" >> $backup_dir/log.txt
+       #写创建备份日志
+       echo "create $backup_dir/$database_name-$dd.dupm" >> $backup_dir/log.txt
 
-      #找出需要删除的备份
-      delfile=`ls -l -crt  $backup_dir/*.sql | awk '{print $9 }' | head -1`
+       #找出需要删除的备份
+       delfile=`ls -l -crt  $backup_dir/*.sql | awk '{print $9 }' | head -1`
 
-      #判断现在的备份数量是否大于$number
-      count=`ls -l -crt  $backup_dir/*.sql | awk '{print $9 }' | wc -l`
+       #判断现在的备份数量是否大于$number
+       count=`ls -l -crt  $backup_dir/*.sql | awk '{print $9 }' | wc -l`
 
-      if [ $count -gt $number ]
-      then
-      #删除最早生成的备份，只保留number数量的备份
-      rm $delfile
-      #写删除文件日志
-      echo "delete $delfile" >> $backup_dir/log.txt
-      fi
+       if [ $count -gt $number ]
+       then
+       #删除最早生成的备份，只保留number数量的备份
+       rm $delfile
+       #写删除文件日志
+       echo "delete $delfile" >> $backup_dir/log.txt
+       fi
 
-    ```
-    > 自动任务`dump_mysql.cron`
-    ```
-      0 0 * * * /home/fuyu/GitHub/work-code/shell/dump_mysql.sh
-
-    ```
-    > 启动任务
-        1. 添加脚本执行权限：`chmod +x dump_mysql.sh`
-        2. 启动crontab任务：`crontab dump_mysql.cron`
-        3. 检查任务是否创建：`crontab -l`
-    > 注意：cron文件中末尾必须有空行，否则报错
+     ```
+     > 自动任务`dump_mysql.cron`
+     ```
+       0 0 * * * /home/fuyu/GitHub/work-code/shell/dump_mysql.sh
+ 
+     ```
+     > 启动任务
+         1. 添加脚本执行权限：`chmod +x dump_mysql.sh`
+         2. 启动crontab任务：`crontab dump_mysql.cron`
+         3. 检查任务是否创建：`crontab -l`
+     > 注意：cron文件中末尾必须有空行，否则报错
    - 11. mysql不支持`123<=id<=125`这类判断操作，在删除中带此类条件会清空数据表！！！使用`123<=id and id<=125`语句来判断。
+   - 12. SQLite数据库
+     > 安装：ubuntu自带
+     > 使用：
+         > `sqlite3`进入操作界面，`sqlite3 filename.db`打开特定数据库，直接执行sql语句。
+           如想格式化数据展示，则通过三步：
+           ```
+           .header on
+           .mode column
+           .timer on
+           ```
+                  `.help`可打开帮助介绍。
+         > python操作sqlite：
+         ```
+         import sqlite3
+         db = sqlite3.connect('path/filename.db')
+         cur = db.cursor()
+         cur.execute('SQL语句')
+         # 如是查询语句，则可获取查询到的内容
+         print(cur.fetchall())
+         cur.close()
+         # 如是增加、修改操作，则需提交更改
+         db.commit()
+         db.close()
+         ```
 
 # 5. **java、scala、安卓相关**
    - 1. maven项目需将所有依赖的jar包打包到lib目录：`mvn dependency:copy-dependencies -DoutputDirectory=target/lib`
@@ -686,3 +726,10 @@ ubuntu系统加速方式为，更换为国内的镜像作为加速器，首先�
    然后选 择 no
    ```
    也可以将运行命令改为`bash test.sh`或`zsh test.sh`，或者直接更改test.sh脚本文件为可执行，直接`./test.sh`运行。
+   - 7. git相关
+      1. git submodule 子模块
+         - 为项目添加子模块：`git submodule add https://github.com/somename/`
+         - 克隆带子模块的项目：`git clone --recurse-submodule https://github.com/somename/`
+                 如果给 git clone 命令传递 --recurse-submodules 选项，它就会自动初始化并更新仓库中的每一个子模块， 包括可能存在的嵌套子模块。
+         - 更新子模块：`git submodule update --init --recursive`
+         - 拉取项目并更新子模块：`git pull --recurse-submodules`
