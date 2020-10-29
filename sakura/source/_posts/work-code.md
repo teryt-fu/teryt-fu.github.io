@@ -257,10 +257,31 @@ categories:
         > 当 robot 文件导入的 Python 测试库引入了其他模块时，确保导入的模块路径和RF导入的模块起始路径统一。
       3. python库中的class存在继承：
         > 当 robot 文件导入 Python 测试库的类继承了另一个类，确保导入的模块路径和RF导入的模块起始路径统一，使用的时候 RF 文件只需导入子类即可。
+   - 10. robotframework跳过执行关键字、for循环嵌套if判断。
+        > BuiltIn_ 关键字 `Pass Execution` 和 `Pass Execution If` 以PASS状态结束执行, 同时跳过剩下的关键字。
+           ```
+           Run Keyword IF    ${num1}<${num2}    Pass Execution    测试通过
+           ...    ELSE IF    ${num1}==${num2}    Fail    读取历史数据对比全部失败
+           ```
+        > 循环嵌套判断，只要保证循环体内语句缩进两个空格以上。
+           ```
+           FOR    ${m}    IN    @{msg}
+               ${num2}=    Evaluate    ${num2} + 1
+               ${low}    Evaluate    float(${m * 0.2})
+               ${high}    Evaluate    float(${m * 3.9})
+               Run Keyword IF    ${low}<=${current}<=${high}    Log    失败次数:${current}在配置文件同比数据:${m}的0.2到3.9倍范围内
+               ...    ELSE IF    ${-500}<=${current}-${m}<=${500}    Log    小数值差值范围在500以内
+               ...    ELSE    AddNum
+           END
+           ```
+                  1.如果  IN 后面跟的是一个 List 变量，必须用 @{list} 的格式哦！
+                  2.循环体内的语句需要缩进两个空格以上
+                  3.如果 IN 后面接的值太多，可以换行，需要通过 ... 来表示接着上一行的内容
+                  4.注意：  FOR  和  IN 都不能小写哦
 
-   - 10. jenkins+gitlab配置webhook
+   - 11. jenkins+gitlab配置webhook
       首先确认`Gitlab Hook Plugin`和`Build Authorization Token Root Plugin`插件已安装。然后在job配置中勾选`Build when a change is pushed to GitLab. GitLab webhook URL: http://10.234.30.24:8080/project/test_suite`选项，保存GitLab webhook URL待用。在`Enabled GitLab triggers`中勾选第三个`Accepted Merge Request Events`，在高级选项中点`Secret token`后的`Genrate`会生成token，保存待用。在gitlab项目中选settings->Intergrations(集成)，粘贴保存的URL和Secret Token，点击Add webhook，点击Test测试连接即可。
-   - 11. jenkins托管flask服务的shell脚本
+   - 12. jenkins托管flask服务的shell脚本
    ```
       #!/bin/bash
       pwd
@@ -354,7 +375,7 @@ categories:
    fi
    jobs -l
    ```
-   - 12. jenkins添加用户及配置权限
+   - 13. jenkins添加用户及配置权限
       前提是已创建管理员账户，在管理中选择`Manage Users`，可以新建用户。
       再在管理中选择`Configure Global Security`，启用安全，安全域为`Jenkins own user database`，在授权策略中选择`项目矩阵授权策略`，添加用户，配置读权限。再在各job设置中启用项目安全，添加用户，配置各项权限。
 
