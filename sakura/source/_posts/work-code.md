@@ -495,6 +495,26 @@ categories:
        return f'{Ids}全部下载完成'
    ```
              注：其中exportResult为启动线程所需要运行的函数，i为该函数的入参。
+   - 20. python与js中获取当前ip。
+      > python
+      ```
+      import socket
+      def getIp():
+          s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+          s.connect(('8.8.8.8', 80))
+          ip = s.getsockname()[0]
+          s.close()
+          return ip
+      ```
+      > js
+      ```
+      $(document).ready(function () {
+          URI = window.location.host;
+          console.log(URI)
+      });
+      // window.location.host 获取ip:port(不带http://，赋值给a标签的href或ajax的url时需手动带上)
+      // 其余方法另查
+      ```
 
 # 4. **MYSQL数据库**
    - 1. 查询数据库中的状态
