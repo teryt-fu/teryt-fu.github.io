@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('https://teryt-fu.github.io').hostname,
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.6.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":true,"show_result":true,"style":"mac"},
+    back2top: {"enable":true,"sidebar":true,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: true,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":5,"unescape":false,"preload":false},
+    path: './public/search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="简要介绍   python+robotframework测试接口">
+<meta property="og:type" content="article">
+<meta property="og:title" content="给二弟三弟">
+<meta property="og:url" content="https://teryt-fu.github.io/2019/12/30/py-robot/index.html">
+<meta property="og:site_name" content="叶理的家">
+<meta property="og:description" content="简要介绍   python+robotframework测试接口">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-12-30T06:44:58.000Z">
+<meta property="article:modified_time" content="2020-12-28T06:22:43.736Z">
+<meta property="article:author" content="teryt_fu">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="robotframework">
+<meta property="article:tag" content="schema">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://teryt-fu.github.io/2019/12/30/py-robot/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>给二弟三弟 | 叶理的家</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">叶理的家</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">a writer, a singer, a reader</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/teryt-fu" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://teryt-fu.github.io/2019/12/30/py-robot/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="teryt_fu">
+      <meta itemprop="description" content="本职是测试开发，兼爱读书唱歌">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="叶理的家">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          给二弟三弟
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-12-30 14:44:58" itemprop="dateCreated datePublished" datetime="2019-12-30T14:44:58+08:00">2019-12-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-28 14:22:43" itemprop="dateModified" datetime="2020-12-28T14:22:43+08:00">2020-12-28</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%B5%8B%E8%AF%95/" itemprop="url" rel="index">
+                    <span itemprop="name">测试</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="简要介绍"><a href="#简要介绍" class="headerlink" title="简要介绍"></a>简要介绍</h1><p>   python+robotframework测试接口</p>
+<a id="more"></a>
+<h2 id="接口测试背景介绍"><a href="#接口测试背景介绍" class="headerlink" title="接口测试背景介绍"></a>接口测试背景介绍</h2><p>   接口测试全流程扫盲<br>   扫盲内容：</p>
+<p>   1.什么是接口？</p>
+<p>   2.接口都有哪些类型？</p>
+<p>   3.接口的本质是什么？</p>
+<p>   4.什么是接口测试？</p>
+<p>   5.问什么要做接口测试？</p>
+<p>   6.怎样做接口测试？</p>
+<p>   7.接口测测试点是什么？</p>
+<p>   8.接口测试都要掌握哪些知识？</p>
+<p>   9.其他相关知识？</p>
+<p>   一.什么是接口？</p>
+<p>   接口测试主要用于外部系统与系统之间以及内部各个子系统之间的交互点，定义特定的交互点，然后通过这些交互点来，通过一些特殊的规则也就是协议，来进行数据之间的交互。</p>
+<p>   二.接口都有哪些类型？</p>
+<p>   接口一般分为两种：</p>
+<p>   1.程序内部的接口</p>
+<p>   2.系统对外的接口</p>
+<p>   系统对外的接口：比如你要从别的网站或服务器上获取资源或信息，别人肯定不会把数据库共享给你，他只能给你提供一个他们写好的方法来获取数据，你引用他提供的接口就能使用他写好的方法，从而达到数据共享的目的。</p>
+<p>   程序内部的接口：方法与方法之间，模块与模块之间的交互，程序内部抛出的接口，比如bbs系统，有登录模块、发帖模块等等，那你要发帖就必须先登录，那么这两个模块就得有交互，它就会抛出一个接口，供内部系统进行调用。</p>
+<p>   接口的分类：</p>
+<p>   1.webservice接口</p>
+<p>   2.http api接口</p>
+<p>   webService接口是走soap协议通过http传输，请求报文和返回报文都是xml格式的，我们在测试的时候都用通过工具才能进行调用，测试。</p>
+<p>   http api接口是走http协议，通过路径来区分调用的方法，请求报文都是key-value形式的，返回报文一般都是json串，有get和post等方法，这也是最常用的两种请求方式。</p>
+<p>   json是一种通用的数据类型，所有的语言都认识它。（json的本质是字符串，他与其他语言无关，只是可以经过稍稍加工可以转换成其他语言的数据类型，比如可以转换成Python中的字典，key-value的形式，可以转换成JavaScript中的原生对象，可以转换成java中的类对象等。）</p>
+<p>   三.接口的本质及其工作原理是什么？</p>
+<p>   接口你可以简单的理解他就是URL，工作原理就会说URL通过get或者post请求像服务器发送一些东西，然后得到一些相应的返回值，本质就是数据的传输与接收。</p>
+<p>   四.什么是接口测试？</p>
+<p>   简答的说就是通过URL像服务器或者其他模块等，传输我们想传输的数据，然后看看他们返回的是不是我们预期想要的。</p>
+<p>   五.问什么要做接口测试？</p>
+<p>   ①.越底层发现bug，它的修复成本是越低的。</p>
+<p>   ②.前端随便变，接口测好了，后端不用变，前后端是两拨人开发的。</p>
+<p>   ③.检查系统的安全性、稳定性，前端传参不可信，比如京东购物，前端价格不可能传入-1元，但是通过接口可以传入-1元。</p>
+<p>   ④.如今的系统复杂度不断上升，传统的测试方法成本急剧增加且测试效率大幅下降，接口测试可以提供这种情况下的解决方案。</p>
+<p>   ⑤. 接口测试相对容易实现自动化持续集成，且相对UI自动化也比较稳定，可以减少人工回归测试人力成本与时间，缩短测试周期，支持后端快速发版需求。接口持续集成是为什么能低成本高收益的根源。</p>
+<p>   ⑥. 现在很多系统前后端架构是分离的，从安全层面来说：</p>
+<p>   (1)、只依赖前端进行限制已经完全不能满足系统的安全要求（绕过前面实在太容易）， 需要后端同样进行控制，在这种情况下就需要从接口层面进行验证。</p>
+<p>   (2)、前后端传输、日志打印等信息是否加密传输也是需要验证的，特别是涉及到用户的隐私信息，如身份证，银行卡等。</p>
+<p>   六.怎样做接口测试？</p>
+<p>   工具有很多如：postman、jmeter、soupUI、java+httpclient、robotframework+httplibrary等。</p>
+<p>   –也可以用 接口自动化来实现，就是用代码实现，框架和UI自动化差不多，发送请求用断言来判断。</p>
+<p>   七.接口测测试点是什么？</p>
+<p>   目的：测试接口的正确性和稳定性；</p>
+<p>   原理：模拟客户端向服务器发送请求报文，服务器接收请求报文后对相应的报文做处理并向客户端返回应答，客户端接收应答的过程；</p>
+<p>   重点：检查数据的交换，传递和控制管理过程，还包括处理的次数；</p>
+<p>   核心：持续集成是接口测试的核心；</p>
+<p>   优点：为高复杂性的平台带来高效的缺陷监测和质量监督能力，平台越复杂，系统越庞大，接口测试的效果越明显（提高测试效率，提升用户体验，降低研发成本）；</p>
+<p>   用例设计重点：通常情况下主要测试最外层的两类接口:数据进入系统接口（调用外部系统的参数为本系统使用）和数据流出系统接口（验证系统处理后的数据是否正常）；</p>
+<p>   PS：设计用例时还需要注意外部接口提供给使用这些接口的外部用户什么功能，外部用户真正需要什么功能；</p>
+<p>   1、基本功能测试：</p>
+<p>   由于是针对基本业务功能进行测试，所以这部分是两种测试重合度最高的一块，开发同学通常所指的也主要是这部分的内容。</p>
+<p>   2、边界分析测试：</p>
+<p>   在基本功能测试的基础上考虑输入输出的边界条件，这部分内容也会有重复的部分（比如业务规则的边界）。但是，前端的输入输出很多时候都是提供固守的值让用户选择（如下拉框），在这种情况下测试的边界范围就非常有限，但接口测试就不存在这方面的限制，相对来说接口可以覆盖的范围更广，同样的，接口出现问题的概率也更高。</p>
+<p>   3、性能测试：</p>
+<p>   这个比较容易区分，虽然都需要做性能测试，但关注点确大不相同。App端性能主要关注与手机相关的特性，如手机cpu、内存、流量、fps等。而接口性能主要关注接口响应时间、并发、服务端资源的使用情况等。两种测试时的策略和方法都有很大区别，所以这部分内容是需要分开单独进行测试的，理论上来说这也是不同的部分。</p>
+<p>   综论：</p>
+<p>   1、接口测试和app测试的活动有部分重复的内容，主要集中在业务功能测试方面。除此之外，针对各自特性的测试都不一样，需要分别进行有针对性的测试，才能确保整个产品的质量。</p>
+<p>   2、接口测试可以关注于服务器逻辑验证，而UI测试可以关注于页面展示逻辑及界面前端与服务器集成验证</p>
+<p>   3、接口测试持续集成：</p>
+<p>   对接口测试而言，持续集成自动化是核心内容，通过持自动化的手段我们才能做到低成本高收益。目前我们已经实现了接口自动化，主要应用于回归阶段，后续还需要加强自动化的程度，包括但不限于下面的内容：</p>
+<p>   a) 流程方面：在回归阶段加强接口异常场景的覆盖度，并逐步向系统测试，冒烟测试阶段延伸，最终达到全流程自动化。</p>
+<p>   b) 结果展示：更加丰富的结果展示、趋势分析，质量统计和分析等</p>
+<p>   c) 问题定位：报错信息、日志更精准，方便问题复现与定位。</p>
+<p>   d) 结果校验：加强自动化校验能力，如数据库信息校验。</p>
+<p>   e) 代码覆盖率：不断尝试由目前的黑盒向白盒下探，提高代码覆盖率。</p>
+<p>   f) 性能需求：完善性能测试体系，通过自动化的手段监控接口性能指标是否正常。</p>
+<p>   4、接口测试质量评估标准：</p>
+<p>   a) 业务功能覆盖是否完整</p>
+<p>   b) 业务规则覆盖是否完整</p>
+<p>   c) 参数验证是否达到要求（边界、业务规则）</p>
+<p>   d) 接口异常场景覆盖是否完整</p>
+<p>   e) 接口覆盖率是否达到要求</p>
+<p>   f) 代码覆盖率是否达到要求</p>
+<p>   g) 性能指标是否满足要求</p>
+<p>   h) 安全指标是否满足要求</p>
+<p>   八.接口测试都要掌握哪些知识？</p>
+<p>   ①了解系统及内部各个组件之间的业务逻辑交互；</p>
+<p>   ②了解接口的I/O（input/output：输入输出）；</p>
+<p>   ③了解协议的基本内容，包括：通信原理、三次握手、常用的协议类型、报文构成、数据传输方式、常见的状态码、URL构成等；</p>
+<p>   ④常用的接口测试工具，比如：jmeter、loadrunner、postman、soapUI等；</p>
+<p>   ⑤数据库基础操作命令（检查数据入库、提取测试数据等）；</p>
+<p>   ⑥常见的字符类型，比如：char、varchar、text、int、float、datatime、string等；</p>
+<p>   如何获取接口相关信息？</p>
+<p>   一般的企业，都会由开发或者对应的技术负责人员编写接口文档，里面会注明接口相关的地址、参数类型、方法、输入、输出等信息，如果没有，想办法获取。。。</p>
+<p>   接口文档八要素：</p>
+<p>   封面：封面最好是本公司规定的封面，有logo，内容标题，版本号，公司名称，文档产生日期；</p>
+<p>   修订历史：表格形式较好些，包括：版本、修订说明、修订日期、修订人、审核时间审核人等；</p>
+<p>   接口信息：接口调用方式，常用的GET/POST方式，接口地址；</p>
+<p>   功能描述：简洁清晰的描述接口功能，比如：接口获取的信息不包括哪些；</p>
+<p>   接口参数说明：每个参数都要和实际中调用的一样，包括大小写；参数的含义言简意赅的说明，格式，是string 还是int 还是long等格式；</p>
+<p>   说明部分，说明参数值是需要哪里提供，并详细说明参数怎么生成的，例如时间戳，是哪个时间段的，参数是否必填，一些参数是必须要有的，有些是可选参数等；</p>
+<p>   返回值说明：</p>
+<p>   ①最好有一个模板返回值，并说明每个返回参数的意义；</p>
+<p>   ②提供一个真实的调用接口，真实的返回值；</p>
+<p>   调用限制，安全方面：</p>
+<p>   加密方式，或者自己公司一个特殊的加密过程，只要双方采用一致的加密算法就可以调用接口，保证了接口调用的安全性，比如常见的md5；</p>
+<p>   文档维护：文档在维护的时候，如有修改一定要写上修改日期，修改人，对大的修改要有版本号变更；</p>
+<p>   九.其他相关知识？</p>
+<p>   get请求，post请求的区别：</p>
+<p>   1、GET使用URL或Cookie传参。而POST将数据放在BODY中。</p>
+<p>   2、GET的URL会有长度上的限制，则POST的数据则可以非常大。</p>
+<p>   3、POST比GET安全，因为数据在地址栏上不可见。</p>
+<p>   4、一般get请求用来获取数据，post请求用来发送数据。</p>
+<p>   其实上面这几点，只有最后一点说的是比较靠谱的，第一点post请求也可以把数据放到url里面，get请求其实也没长度限制，post请求看起来参数是隐式的，稍微安全那么一些些，但是那只是对于小白用户来说的，就算post请求，你通过抓包也是可以抓到参数的。（唯一区别就是这一点，上面3点区别都是不准确的）</p>
+<p>   http状态码：</p>
+<p>   1、200 2开头的都表示这个请求发送成功，最常见的就是200，就代表这个请求是ok的，服务器也返回了。</p>
+<p>   2、300 3开头的代表重定向，最常见的是302，把这个请求重定向到别的地方了。</p>
+<p>   3、400 400代表客户端发送的请求有语法错误，401代表访问的页面没有授权，403表示没有权限访问这个页面，404代表没有这个页面。</p>
+<p>   4、500 5开头的代表服务器有异常，500代表服务器内部异常，504代表服务器端超时，没返回结果。</p>
+<p>   webservice接口怎么测试：</p>
+<p>   它不需要你在拼报文了，会给一个webservice的地址，或者wsdl文件，直接在soapui导入，就可以看到这个webservice里面的所有接口，也有报文，直接填入参数调用，看返回结果就可以了。</p>
+<p>   天气预报wsdl地址：<a href="http://www.webservicex.net/globalweather.asmx?wsdl" target="_blank" rel="noopener">http://www.webservicex.net/globalweather.asmx?wsdl</a></p>
+<p>   cookie与session的区别：</p>
+<p>   1、cookie数据存放在客户的浏览器上，session数据放在服务器上。</p>
+<p>   2、cookie不是很安全，别人可以分析存放在本地的cookie并进行cookie欺骗考虑到安全应当使用session。</p>
+<p>   3、session会在一定时间内保存在服务器上。当访问增多，会比较占用你服务器的性能考虑到减轻服务器性能方面，应当使用cookie。</p>
+<p>   4、单个cookie保存的数据不能超过4K，很多浏览器都限制一个站点最多保存20个cookie。</p>
+<p>   5、所以个人建议：</p>
+<p>   将登陆信息等重要信息存放为session</p>
+<p>   其他信息如果需要保留，可以放在cookie中</p>
+<h2 id="利用python访问url，利用robotframework编写测试用例"><a href="#利用python访问url，利用robotframework编写测试用例" class="headerlink" title="利用python访问url，利用robotframework编写测试用例"></a>利用python访问url，利用robotframework编写测试用例</h2><p>   <code>http://www.testclass.net/rf/</code>，robotframework教程链接</p>
+<ol>
+<li><strong>python安装库</strong><ul>
+<li><code>pip install requests</code>  python发送http请求，访问网页的库</li>
+<li><code>pip install robotframework</code></li>
+<li><code>pip install robotframework-requests</code></li>
+<li><code>pip install robotframework-jsonschemalibrary</code></li>
+<li><code>pip install robotframework-jsonvalidator</code></li>
+</ul>
+</li>
+<li><strong>python利用requests库访问网址代码示例</strong><br>新建py_robot.py文件，内容如下：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getbaidu</span><span class="params">()</span>:</span></span><br><span class="line">    url = <span class="string">"http://www.baidu.com"</span></span><br><span class="line">    response = requests.get(url)</span><br><span class="line">    print(response.status_code)</span><br><span class="line">    <span class="comment"># print(response.text)</span></span><br><span class="line">    <span class="keyword">return</span> response</span><br><span class="line"></span><br><span class="line"><span class="comment">#def hefeng():</span></span><br><span class="line"><span class="comment">#    url = "https://free-api.heweather.net/s6/weather/now?key=yourkey&amp;location=wuhan"</span></span><br><span class="line"><span class="comment">#    response = requests.get(url)</span></span><br><span class="line"><span class="comment">#    return response</span></span><br></pre></td></tr></table></figure></li>
+<li><strong>robot文件编写测试用例代码示例</strong><br>同目录下新建py_robot.robot文件，内容如下：<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">***Settings***</span></span><br><span class="line">Documentation    <span class="keyword">Test</span></span><br><span class="line">Library    RequestsLibrary</span><br><span class="line">Library    OperatingSystem</span><br><span class="line">Library    Collections</span><br><span class="line">Library    json</span><br><span class="line">Library    py_robot.py  # robotframework导入python文件的方法</span><br><span class="line">Library    JSONSchemaLibrary    test_schema</span><br><span class="line"><span class="comment">***Test Cases***</span></span><br><span class="line"><span class="keyword">test</span> case01:测试百度返回状态码</span><br><span class="line">    [Documentation]    <span class="keyword">test</span> GET Baidu</span><br><span class="line">    <span class="variable">$&#123;resp&#125;</span>=    py_robot.getbaidu  # 调用文件.函数</span><br><span class="line">    Should Be Equal <span class="keyword">As</span> Strings    <span class="variable">$&#123;resp</span>.status_code&#125;    200</span><br><span class="line"></span><br><span class="line"><span class="keyword">test</span> case02:测试百度返回错误状态码</span><br><span class="line">    <span class="variable">$&#123;resp&#125;</span>=    py_robot.getbaidu</span><br><span class="line">    Should Be Equal <span class="keyword">As</span> Strings    <span class="variable">$&#123;resp</span>.status_code&#125;    404</span><br><span class="line"></span><br><span class="line">#<span class="keyword">test</span> case03:测试和风天气接口API</span><br><span class="line">#    [Documentation]    测试和风天气接口的返回数据</span><br><span class="line">#    <span class="variable">$&#123;resp&#125;</span>=    py_robot.hefeng</span><br><span class="line">#    Should Be Equal <span class="keyword">As</span> Strings    <span class="variable">$&#123;resp</span>.status_code&#125;    200</span><br><span class="line">#    <span class="variable">$&#123;response&#125;</span>    To Json    <span class="variable">$&#123;resp</span>.text&#125;</span><br><span class="line">#    <span class="variable">$&#123;loca&#125;</span>    <span class="keyword">Set</span> Variable    <span class="variable">$&#123;response</span>['HeWeather6'][0]['basic']['location']&#125;</span><br><span class="line">#    Should Be Equal <span class="keyword">As</span> Strings    <span class="variable">$&#123;loca&#125;</span>    武汉</span><br></pre></td></tr></table></figure>
+同目录下打开命令行，运行<code>robot py_robot.robot</code>命令，同目录下会生成三个测试报告文件，用浏览器打开log.html文件，就能看到本次测试结果。</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>teryt_fu
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://teryt-fu.github.io/2019/12/30/py-robot/" title="给二弟三弟">https://teryt-fu.github.io/2019/12/30/py-robot/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/python/" rel="tag"># python</a>
+              <a href="/tags/robotframework/" rel="tag"># robotframework</a>
+              <a href="/tags/schema/" rel="tag"># schema</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/12/30/work-code/" rel="prev" title="工作笔记">
+      <i class="fa fa-chevron-left"></i> 工作笔记
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/12/30/hexo-gitpage/" rel="next" title="基于hexo搭建静态网站">
+      基于hexo搭建静态网站 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      
+      
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+        
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简要介绍"><span class="nav-number">1.</span> <span class="nav-text">简要介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#接口测试背景介绍"><span class="nav-number">1.1.</span> <span class="nav-text">接口测试背景介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#利用python访问url，利用robotframework编写测试用例"><span class="nav-number">1.2.</span> <span class="nav-text">利用python访问url，利用robotframework编写测试用例</span></a></li></ol></li></ol></div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="teryt_fu"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">teryt_fu</p>
+  <div class="site-description" itemprop="description">本职是测试开发，兼爱读书唱歌</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+
+        
+      </div>
+
+      
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+      
+
+      
+      <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+      <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+      <div class="widget-wrap">
+          <h3 class="widget-title">标签云图</h3>
+          <div id="myCanvasContainer" class="widget tagcloud">
+              <canvas width="250" height="250" id="resCanvas" style="width=100%">
+                  <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/" rel="tag">docker</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gitpage/" rel="tag">gitpage</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/robotframework/" rel="tag">robotframework</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/schema/" rel="tag">schema</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/video/" rel="tag">video</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web/" rel="tag">web</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%B6%E4%BB%96/" rel="tag">其他</a><span class="tag-list-count">1</span></li></ul>
+              </canvas>
+          </div>
+      </div>
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">teryt_fu</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.6.0
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.getAttribute('pjax') !== null) {
+      element.setAttribute('pjax', '');
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+
+  
+
+    </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

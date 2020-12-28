@@ -1,0 +1,861 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/12/28/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><a id="more"></a>
+
+<h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>bilibili-video</title>
+    <url>/2020/04/24/bilibili-video/</url>
+    <content><![CDATA[<h1 id="简要介绍"><a href="#简要介绍" class="headerlink" title="简要介绍"></a>简要介绍</h1><p>   b站汇总视频</p>
+<a id="more"></a>
+]]></content>
+      <categories>
+        <category>video</category>
+      </categories>
+      <tags>
+        <tag>video</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>markdown语法</title>
+    <url>/2019/12/31/markdown-syntax/</url>
+    <content><![CDATA[<h1 id="简要介绍"><a href="#简要介绍" class="headerlink" title="简要介绍"></a>简要介绍</h1><p>   markdown语法的简单使用</p>
+<a id="more"></a>
+<h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1>  <figure class="highlight clean"><table><tr><td class="code"><pre><span class="line"># 这是一级标题</span><br><span class="line">## 这是二级标题</span><br><span class="line">### 这是三级标题</span><br><span class="line">#### 这是四级标题</span><br><span class="line">##### 这是五级标题</span><br><span class="line">###### 这是六级标题</span><br></pre></td></tr></table></figure>
+<h1 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h1><ul>
+<li>加粗<br>  要加粗的文字左右分别用两个*号包起来</li>
+<li>斜体<br>  要倾斜的文字左右分别用一个*号包起来</li>
+<li>斜体加粗<br>  要倾斜和加粗的文字左右分别用三个*号包起来</li>
+<li>删除线<br>  要加删除线的文字左右分别用两个~~号包起来<figure class="highlight asciidoc"><table><tr><td class="code"><pre><span class="line">*<span class="strong">*这是加粗的文字*</span><span class="strong">*</span></span><br><span class="line"><span class="strong">*</span>这是倾斜的文字<span class="strong">*`</span></span><br><span class="line"><span class="strong">*</span>*<span class="strong">*这是斜体加粗的文字*</span>*<span class="strong">*</span></span><br><span class="line"><span class="strong">~~这是加删除线的文字~~</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1>  <figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line">&gt;这是引用的内容</span><br><span class="line"><span class="meta">&gt;&gt;</span>这是嵌套引用的内容</span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;这是嵌套嵌套引用的内容</span><br></pre></td></tr></table></figure>
+<h1 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h1><p>  三个或者三个以上的 - 或者 * 都可以<br>  <figure class="highlight asciidoc"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">----</span><br><span class="line">**<span class="strong">*</span></span><br><span class="line"><span class="strong">*</span>***<span class="strong">*</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h1>  <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">图片alt</span>](<span class="link">图片地址 ''图片title''</span>)</span><br><span class="line">图片alt就是显示在图片下面的文字，相当于对图片内容的解释。</span><br><span class="line">图片title是图片的标题，当鼠标移到图片上时显示的内容。title可加可不加</span><br><span class="line"></span><br><span class="line">![<span class="string">blockchain</span>](<span class="link">https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=702257389,1274025419&amp;fm=27&amp;gp=0.jpg "区块链"</span>)</span><br></pre></td></tr></table></figure>
+<h1 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h1>  <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">[<span class="string">超链接名</span>](<span class="link">超链接地址 "超链接title"</span>)</span><br><span class="line">title可加可不加</span><br><span class="line"></span><br><span class="line">[<span class="string">简书</span>](<span class="link">http://jianshu.com</span>)</span><br><span class="line">[<span class="string">百度</span>](<span class="link">http://baidu.com</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>注：Markdown本身语法不支持链接在新页面中打开，貌似简书做了处理，是可以的。别的平台可能就不行了，如果想要在新页面中打开的话可以用html语言的a标签代替。
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">&lt;a <span class="attribute">href</span>=<span class="string">"超链接地址"</span> <span class="attribute">target</span>=<span class="string">"_blank"</span>&gt;超链接名&lt;/a&gt;</span><br><span class="line">示例</span><br><span class="line">&lt;a <span class="attribute">href</span>=<span class="string">"https://www.jianshu.com/u/1f5ac0cf6a8b"</span> <span class="attribute">target</span>=<span class="string">"_blank"</span>&gt;简书&lt;/a&gt;</span><br></pre></td></tr></table></figure></code></pre><h1 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h1><ul>
+<li>无序列表<br>无序列表用 - + * 任何一种都可以<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">- </span>列表内容</span><br><span class="line"><span class="bullet">+ </span>列表内容</span><br><span class="line"><span class="bullet">* </span>列表内容</span><br><span class="line"></span><br><span class="line">注意：- + * 跟内容之间都要有一个空格</span><br></pre></td></tr></table></figure></li>
+<li>有序列表<br>数字加点<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span>列表内容</span><br><span class="line"><span class="number">2.</span>列表内容</span><br><span class="line"><span class="number">3.</span>列表内容</span><br><span class="line"></span><br><span class="line">注意：序号跟内容之间要有空格</span><br></pre></td></tr></table></figure></li>
+<li>列表嵌套<br>上一级和下一级之间敲三个空格即可</li>
+</ul>
+<h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h1><p>  语法<br>  <figure class="highlight gherkin"><table><tr><td class="code"><pre><span class="line">表头|<span class="string">表头</span>|<span class="string">表头</span></span><br><span class="line"><span class="string">---</span>|<span class="string">:--:</span>|<span class="string">---:</span></span><br><span class="line"><span class="string">内容</span>|<span class="string">内容</span>|<span class="string">内容</span></span><br><span class="line"><span class="string">内容</span>|<span class="string">内容</span>|<span class="string">内容</span></span><br><span class="line"></span><br><span class="line"><span class="string">第二行分割表头和内容。</span></span><br><span class="line"><span class="string">- 有一个就行，为了对齐，多加了几个</span></span><br><span class="line"><span class="string">文字默认居左</span></span><br><span class="line"><span class="string">-两边加：表示文字居中</span></span><br><span class="line"><span class="string">-右边加：表示文字居右</span></span><br><span class="line"><span class="string">注：原生的语法两边都要用 </span>|<span class="string"> 包起来。此处省略</span></span><br></pre></td></tr></table></figure><br>  示例：<br>  <figure class="highlight gherkin"><table><tr><td class="code"><pre><span class="line">姓名|<span class="string">技能</span>|<span class="string">排行</span></span><br><span class="line"><span class="string">--</span>|<span class="string">:--:</span>|<span class="string">--:</span></span><br><span class="line"><span class="string">刘备</span>|<span class="string">哭</span>|<span class="string">大哥</span></span><br><span class="line"><span class="string">关羽</span>|<span class="string">打</span>|<span class="string">二哥</span></span><br><span class="line"><span class="string">张飞</span>|<span class="string">骂</span>|<span class="string">三弟</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><ul>
+<li>单行代码：代码之间分别用一个反引号包起来</li>
+<li>代码块：代码之间分别用三个反引号包起来，且两边的反引号单独占一行</li>
+</ul>
+<h1 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">st&#x3D;&gt;start: 开始</span><br><span class="line">op&#x3D;&gt;operation: My Operation</span><br><span class="line">cond&#x3D;&gt;condition: Yes or No?</span><br><span class="line">e&#x3D;&gt;end</span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">cond(yes)-&gt;e</span><br><span class="line">cond(no)-&gt;op</span><br><span class="line">&amp;</span><br></pre></td></tr></table></figure>
+
+
+<pre><code>注：实际测试github不支持表格和流程图的markdown语法。</code></pre>]]></content>
+      <categories>
+        <category>其他</category>
+      </categories>
+      <tags>
+        <tag>其他</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>基于hexo搭建静态网站</title>
+    <url>/2019/12/30/hexo-gitpage/</url>
+    <content><![CDATA[<h1 id="简要介绍"><a href="#简要介绍" class="headerlink" title="简要介绍"></a>简要介绍</h1><p>  基于Hexo博客框架，使用markdown语法写文章，通过hexo编译成静态网页，搭配GitHub Pages的{yourname}.github.io的仓库，来搭建自己的网站。</p>
+<a id="more"></a>
+<h1 id="准备步骤"><a href="#准备步骤" class="headerlink" title="准备步骤"></a>准备步骤</h1><ol>
+<li>创建github帐号。</li>
+<li>新建一个仓库(Repository)，名称必须为{yourname}.github.io，{yourname}必须为你github帐号的用户名。</li>
+<li>添加本地公钥<code>~/.ssh/id_rsa.pub</code>到github的settings中的ssh中，在本地适当位置clone刚新建的库。</li>
+<li>安装Node.js<br>安装方式多样，最简单使用apt-get安装<br>   <code>sudo apt-get install nodejs</code><br>   <code>sudo apt-get install npm</code><br>检查npm是否能正常使用。npm类似pip，是node.js的安装工具</li>
+<li>安装Hexo<br><code>npm install -g hexo-cli</code></li>
+</ol>
+<h1 id="开始搭建"><a href="#开始搭建" class="headerlink" title="开始搭建"></a>开始搭建</h1><ol>
+<li>cd进clone下来以你用户名.github.io命名的文件夹</li>
+<li>新建项目：<br><code>hexo init {name}</code><br> 注：name就是项目名</li>
+<li>编译+本地运行：<br>先cd进生成的文件夹，编译：<code>hexo generate</code>，运行：<code>hexo serve</code>，会将服务部署在本地的4000端口上，浏览器访问localhost:4000就能查看刚新建的项目。</li>
+</ol>
+<h1 id="部署项目"><a href="#部署项目" class="headerlink" title="部署项目"></a>部署项目</h1><ol>
+<li>修改配置文件：<br>编辑根目录下的_config.yml文件，找到Deployment，将你的Repository地址贴到repo:后，修改branch: master，效果如下：   <figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="meta"># Deployment</span></span><br><span class="line"><span class="meta">## Docs: https:<span class="comment">//hexo.io/docs/deployment.html</span></span></span><br><span class="line"><span class="symbol">deploy:</span></span><br><span class="line"><span class="symbol">  type:</span> git</span><br><span class="line"><span class="symbol">  repo:</span> git@github.com:username/username.github.io.git</span><br><span class="line"><span class="symbol">  branch:</span> master</span><br></pre></td></tr></table></figure></li>
+<li>安装git部署插件hexo-deployer-git：<br><code>npm install hexo-deployer-git --save</code><pre><code>注：在项目根目录下执行此命令，如未安装则部署时会报错：
+   Deployer not found: git</code></pre></li>
+<li>部署命令：<br><code>hexo deploy</code><br>出现如下结果说明部署成功：   <figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">INFO  Deploying: git</span><br><span class="line">INFO  Clearing .deploy_git folder...</span><br><span class="line">INFO  Copying files <span class="keyword">from</span> <span class="keyword">public</span> folder...</span><br><span class="line">INFO  Copying files <span class="keyword">from</span> extend dirs...</span><br><span class="line">On branch master</span><br><span class="line">nothing to commit, working directory clean</span><br><span class="line">Counting objects: <span class="number">46</span>, done.</span><br><span class="line">Delta compression using up to <span class="number">8</span> threads.</span><br><span class="line">Compressing objects: <span class="number">100</span>% (<span class="number">36</span>/<span class="number">36</span>), done.</span><br><span class="line">Writing objects: <span class="number">100</span>% (<span class="number">46</span>/<span class="number">46</span>), <span class="number">507.66</span> KiB | <span class="number">0</span> bytes/s, done.</span><br><span class="line">Total <span class="number">46</span> (delta <span class="number">3</span>), reused <span class="number">0</span> (delta <span class="number">0</span>)</span><br><span class="line">remote: Resolving deltas: <span class="number">100</span>% (<span class="number">3</span>/<span class="number">3</span>), done.</span><br><span class="line">To <span class="symbol">git@</span>github.com:NightTeam/nightteam.github.io.git</span><br><span class="line">* [new branch]      HEAD -&gt; master</span><br><span class="line">Branch master <span class="keyword">set</span> up to track remote branch master <span class="keyword">from</span> <span class="symbol">git@</span>github.com:NightTeam/nightteam.github.io.git.</span><br><span class="line">INFO  Deploy done: git</span><br></pre></td></tr></table></figure>
+此时访问username.github.io，就可以查看刚部署的博客。</li>
+</ol>
+<h1 id="优化博客"><a href="#优化博客" class="headerlink" title="优化博客"></a>优化博客</h1><ol>
+<li><p>配置博客信息<br>修改根目录下的_config.yml文件，找到Site，修改相关内容：</p>
+<figure class="highlight avrasm"><table><tr><td class="code"><pre><span class="line"><span class="meta"># Site</span></span><br><span class="line"><span class="symbol">title:</span> 你的博客名字</span><br><span class="line"><span class="symbol">subtitle:</span> 博客的子标题</span><br><span class="line"><span class="symbol">description:</span> 简要的描述信息</span><br><span class="line"><span class="symbol">keywords:</span> 关键字</span><br><span class="line"><span class="symbol">author:</span> 作者名</span><br><span class="line"><span class="symbol">language:</span> <span class="built_in">zh</span>-CN</span><br><span class="line"><span class="symbol">timezone:</span> Asia/Shanghai</span><br></pre></td></tr></table></figure>
+<pre><code>注：可以运行`hexo serve`开启一个本地服务，实时访问localhost:4000查看修改后的样式</code></pre></li>
+<li><p>修改主题<br>推荐Next主题</p>
+<ul>
+<li>安装：进入项目根目录，运行：<code>git clone https://github.com/theme-next/hexo-theme-next themes/next</code>，会在项目的themes/next文件夹下安装Next主题源码。</li>
+<li>修改配置文件：根目录下的_config.yml文件中找到theme字段，修改为next：<figure class="highlight autoit"><table><tr><td class="code"><pre><span class="line">theme: <span class="keyword">next</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>主题配置</p>
+<pre><code>注：对主题的配置修改的文件在themes/next文件夹下的_config.yml</code></pre><ul>
+<li><p>样式<br>修改配置文件中的scheme字段，选择一个样式即可。可选项有：</p>
+<figure class="highlight vala"><table><tr><td class="code"><pre><span class="line">scheme: Muse</span><br><span class="line"><span class="meta">#scheme: Mist</span></span><br><span class="line"><span class="meta">#scheme: Pisces</span></span><br><span class="line"><span class="meta">#scheme: Gemini</span></span><br></pre></td></tr></table></figure></li>
+<li><p>favicon<br>标签栏的小图标，可以自己定制后将图标放在themes/next/source/images目录下面，然后修改配置文件，找到favicon，配置路径：</p>
+<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="symbol">favicon:</span></span><br><span class="line"><span class="symbol">  small:</span> <span class="meta-keyword">/images/</span>favicon<span class="number">-16</span>x16.png</span><br><span class="line"><span class="symbol">  medium:</span> <span class="meta-keyword">/images/</span>favicon<span class="number">-32</span>x32.png</span><br><span class="line"><span class="symbol">  apple_touch_icon:</span> <span class="meta-keyword">/images/</span>apple-touch-icon.png</span><br><span class="line"><span class="symbol">  safari_pinned_tab:</span> <span class="meta-keyword">/images/</span>safari-pinned-tab.svg</span><br></pre></td></tr></table></figure></li>
+<li><p>avatar<br>作者头像，放置路径为themes/next/source/images/avatar.png，修改配置文件，找到Sidebar Avatar，修改正确路径：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Sidebar Avatar</span></span><br><span class="line"><span class="attr">avatar:</span></span><br><span class="line">  <span class="comment"># In theme directory (source/images): /images/avatar.gif</span></span><br><span class="line">  <span class="comment"># In site directory (source/uploads): /uploads/avatar.gif</span></span><br><span class="line">  <span class="comment"># You can also use other linking images.</span></span><br><span class="line">  <span class="attr">url:</span> <span class="string">/images/avatar.png</span></span><br><span class="line">  <span class="comment"># If true, the avatar would be dispalyed in circle.</span></span><br><span class="line">  <span class="attr">rounded:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># If true, the avatar would be rotated with the cursor.</span></span><br><span class="line">  <span class="attr">rotated:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<pre><code>注：rounded选项是是否显示圆形，rotated是是否带旋转效果，可自选true或false。</code></pre></li>
+<li><p>rss订阅<br>需安装插件hexo-generator-feed，命令为：<code>npm install hexo-generator-feed --save</code>，在项目根目录下运行此命令，完成后无需其他配置，站点会自动生成RSS Feed文件。</p>
+</li>
+<li><p>code<br>代码块的显示样式。修改配置文件，找到codeblock，更改选项：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">codeblock:</span></span><br><span class="line">  <span class="comment"># Code Highlight theme</span></span><br><span class="line">  <span class="comment"># Available values: normal | night | night eighties | night blue | ight bright</span></span><br><span class="line">  <span class="comment"># See: https://github.com/chriskempson/tomorrow-theme</span></span><br><span class="line">  <span class="attr">highlight_theme:</span> <span class="string">night</span> <span class="string">bright</span></span><br><span class="line">  <span class="comment"># Add copy button on codeblock</span></span><br><span class="line">  <span class="attr">copy_button:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment"># Show text copy result.</span></span><br><span class="line">    <span class="attr">show_result:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment"># Available values: default | flat | mac</span></span><br><span class="line">    <span class="attr">style:</span> <span class="string">mac</span></span><br></pre></td></tr></table></figure>
+<pre><code>注：可根据喜好自由选择。</code></pre></li>
+<li><p>top<br>返回页面顶端的按钮。修改配置文件，找到back2top，更改选项：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">back2top:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># Back to top in sidebar.</span></span><br><span class="line">  <span class="attr">sidebar:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment"># Scroll percent label in b2t button.</span></span><br><span class="line">  <span class="attr">scrollpercent:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<pre><code>注：enable默认为true，即显示。sidebar为true则按钮会出现在侧栏下方。scrollpercent显示阅读百分比。</code></pre></li>
+<li><p>reading_process<br>阅读进度。最上侧显示的进度条。在配置文件中找到reading_progress，修改选项：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">reading_progress:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># Available values: top | bottom</span></span><br><span class="line">  <span class="attr">position:</span> <span class="string">top</span></span><br><span class="line">  <span class="attr">color:</span> <span class="string">"#222"</span></span><br><span class="line">  <span class="attr">height:</span> <span class="string">2px</span></span><br></pre></td></tr></table></figure></li>
+<li><p>bookmark<br>书签，记录阅读记录，下次打开页面可快速定位上次阅读位置。在配置文件中找到bookmark，修改选项：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">bookmark:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment"># Customize the color of the bookmark.</span></span><br><span class="line">  <span class="attr">color:</span> <span class="string">"#222"</span></span><br><span class="line">  <span class="comment"># If auto, save the reading progress when closing the page or clicking the bookmark-icon.</span></span><br><span class="line">  <span class="comment"># If manual, only save it by clicking the bookmark-icon.</span></span><br><span class="line">  <span class="attr">save:</span> <span class="string">auto</span></span><br></pre></td></tr></table></figure></li>
+<li><p>github_banner<br>右上角显示github图标，在配置文件中找到github_banner，修改选项：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># `Follow me on GitHub` banner in the top-right corner.</span></span><br><span class="line"><span class="attr">github_banner:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">permalink:</span> <span class="string">https://github.com/yourname/yourname.github.io</span></span><br><span class="line">  <span class="attr">title:</span> <span class="string">yourname</span> <span class="string">GitHub</span></span><br></pre></td></tr></table></figure></li>
+<li><p>gitalk<br>评论功能。Next主题中有多种评论插件，如changyan | disqus | disqusjs | facebook_comments_plugin | gitalk | livere | valine | vkontakte。示例用gittalk，首先需要在github上注册一个OAuth Application，链接为：<code>https://github.com/settings/applications/new</code>，注册完毕之后拿到 Client ID、Client Secret。在配置文件中找到comments，修改配置：</p>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Multiple Comment System Support</span></span><br><span class="line">comments:</span><br><span class="line">  # Available values: tabs | buttons</span><br><span class="line">  style: tabs</span><br><span class="line">  # Choose a comment<span class="built_in"> system </span><span class="keyword">to</span> be displayed by default.</span><br><span class="line">  # Available values: changyan | disqus | disqusjs | facebook_comments_plugin | gitalk | livere | valine | vkontakte</span><br><span class="line">  active: gitalk</span><br></pre></td></tr></table></figure>
+<p>然后找到Gitalk，修改配置：</p>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Gitalk</span></span><br><span class="line"><span class="comment"># Demo: https://gitalk.github.io</span></span><br><span class="line"><span class="comment"># For more information: https://github.com/gitalk/gitalk</span></span><br><span class="line">gitalk:</span><br><span class="line">  enable: <span class="literal">true</span></span><br><span class="line">  github_id: &#123;yourname&#125;</span><br><span class="line">  repo: &#123;yourname&#125;.github.io # Repository name <span class="keyword">to</span> store issues</span><br><span class="line">  client_id: &#123;your<span class="built_in"> client </span>id&#125; # GitHub Application<span class="built_in"> Client </span>ID</span><br><span class="line">  client_secret: &#123;your<span class="built_in"> client </span>secret&#125; # GitHub Application<span class="built_in"> Client </span>Secret</span><br><span class="line">  admin_user: germey # GitHub repo owner <span class="keyword">and</span> collaborators, only these guys can initialize gitHub issues</span><br><span class="line">  distraction_free_mode: <span class="literal">true</span> # Facebook-like distraction free mode</span><br><span class="line">  # Gitalk<span class="string">'s display language depends on user'</span>s browser <span class="keyword">or</span><span class="built_in"> system </span>environment</span><br><span class="line">  # <span class="keyword">If</span> you want everyone visiting your site <span class="keyword">to</span> see a uniform language, you can <span class="builtin-name">set</span> a force language value</span><br><span class="line">  # Available values: en | es-ES | fr | ru | zh-CN | zh-TW</span><br><span class="line">  language: zh-CN</span><br></pre></td></tr></table></figure></li>
+<li><p>pangu<br>中英文间自动加间距。在配置文件中找到pangu，值修改为true即可。</p>
+</li>
+<li><p>math<br>公式展示效果。在配置文件中找到math，修改配置：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">math:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Default (true) will load mathjax / katex script on demand.</span></span><br><span class="line">  <span class="comment"># That is it only render those page which has `mathjax: true` in Front-matter.</span></span><br><span class="line">  <span class="comment"># If you set it to false, it will load mathjax / katex srcipt EVERY PAGE.</span></span><br><span class="line">  <span class="attr">per_page:</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># hexo-renderer-pandoc (or hexo-renderer-kramed) required for full MathJax support.</span></span><br><span class="line">  <span class="attr">mathjax:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment"># See: https://mhchem.github.io/MathJax-mhchem/</span></span><br><span class="line">    <span class="attr">mhchem:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<pre><code>注：mathjax使用需要安装插件hexo-renderer-kramed，也可以安装hexo-renderer-pandoc，命令为：
+<figure class="highlight ada"><table><tr><td class="code"><pre><span class="line">npm un hexo-renderer-marked <span class="comment">--save</span></span><br><span class="line">npm i hexo-renderer-kramed <span class="comment">--save</span></span><br></pre></td></tr></table></figure></code></pre></li>
+<li><p>pjax<br>类似ajax，首先在配置文件中修改pjax的值为true，再切换到next主题下安装依赖库:</p>
+<figure class="highlight crystal"><table><tr><td class="code"><pre><span class="line">$ cd themes/<span class="keyword">next</span></span><br><span class="line">$ git clone <span class="symbol">https:</span>/<span class="regexp">/github.com/theme</span>-<span class="keyword">next</span>/theme-<span class="keyword">next</span>-pjax source/<span class="class"><span class="keyword">lib</span>/<span class="title">pjax</span></span></span><br></pre></td></tr></table></figure></li>
+<li><p>访问量统计<br>使用主题集成的不蒜子统计，在配置文件中找到busuanzi_count，修改配置：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">busuanzi_count:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">total_visitors:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">total_visitors_icon:</span> <span class="string">user</span></span><br><span class="line">  <span class="attr">total_views:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">total_views_icon:</span> <span class="string">eye</span></span><br><span class="line">  <span class="attr">post_views:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">post_views_icon:</span> <span class="string">eye</span></span><br></pre></td></tr></table></figure>
+<p>此时页面最下文会用icon显示总访问人数和人次，如想自定义，则将<code>total_visitors</code>和<code>total_views</code>的值改为:false，进入/themes/next/layout/_partials/footer.swig，在最后添加内容如下：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_container_site_uv"</span>&gt;</span></span><br><span class="line">  本站访问次数：<span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"busuanzi-value"</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_site_pv"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Canvas-nest动画风格<br>在theme/next目录下执行<code>git clone https://github.com/theme-next/theme-next-canvas-nest source/lib/canvas-nest</code>,打开主题配置文件_config.yml，找到<code>Canvas-nest</code>，设置enable值为true：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">canvas_nest:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">onmobile:</span> <span class="literal">true</span> <span class="comment"># Display on mobile or not</span></span><br><span class="line">  <span class="attr">color:</span> <span class="string">"0,0,255"</span> <span class="comment"># RGB values, use `,` to separate</span></span><br><span class="line">  <span class="attr">opacity:</span> <span class="number">0.5</span> <span class="comment"># The opacity of line: 0~1</span></span><br><span class="line">  <span class="attr">zIndex:</span> <span class="number">-1</span> <span class="comment"># z-index property of the background</span></span><br><span class="line">  <span class="attr">count:</span> <span class="number">99</span> <span class="comment"># The number of lines</span></span><br></pre></td></tr></table></figure></li>
+<li><p>live2d看板娘<br>在主目录下运行<code>npm install --save hexo-helper-live2d</code>，下一步可自己去<code>https://github.com/xiazeyu/live2d-widget-models.git</code>下载动画model，将packages里的所有动画模板复制到主目录的node_modules目录中。或者从</p>
+<blockquote>
+<p>Epsilon2.1,Gantzert_Felixande,haru,haruto,hibiki,hijiki,koharu,miku,ni-j,nico,nietzche,nipsilon,nito,shizuku,tororo,tsumiki,Unitychan,z16</p>
+</blockquote>
+<p>中选择一个名字，在主题配置文件中添加：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">live2d:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">scriptFrom:</span> <span class="string">local</span></span><br><span class="line">  <span class="attr">pluginRootPath:</span> <span class="string">live2dw/</span></span><br><span class="line">  <span class="attr">pluginJsPath:</span> <span class="string">lib/</span></span><br><span class="line">  <span class="attr">pluginModelPath:</span> <span class="string">assets/</span></span><br><span class="line">  <span class="attr">tagMode:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">log:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">model:</span></span><br><span class="line">    <span class="attr">use:</span> <span class="string">live2d-widget-model-&#123;你选的名字&#125;</span></span><br><span class="line">  <span class="attr">display:</span></span><br><span class="line">    <span class="attr">position:</span> <span class="string">right</span></span><br><span class="line">    <span class="attr">width:</span> <span class="number">150</span></span><br><span class="line">    <span class="attr">height:</span> <span class="number">300</span></span><br><span class="line">  <span class="attr">mobile:</span></span><br><span class="line">    <span class="attr">show:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>再运行<code>npm install --save live2d-widget-model-{你选的名字}</code>即可。</p>
+<pre><code>注：如直接下载复制到node_modules中，则直接在里面找个名字放在配置文件中，且无需再运行npm下载对应名字的model。</code></pre></li>
+<li><p>版权声明<br>配置文件中找到creative_commons，修改配置：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">creative_commons:</span></span><br><span class="line">  <span class="attr">license:</span> <span class="string">by-nc-sa</span></span><br><span class="line">  <span class="attr">sidebar:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">post:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">language:</span></span><br></pre></td></tr></table></figure></li>
+<li><p>tag cloud<br>标签云图展示。</p>
+<ol>
+<li>项目目录下的<code>package.json</code>中添加依赖<code>&quot;hexo-tag-cloud&quot;: &quot;2.0.*&quot;</code>。</li>
+<li>进入node_modules中，运行<code>git clone https://github.com/MikeCoder/hexo-tag-cloud</code>。<pre><code>注：也可以在项目目录下运行`npm install hexo-tag-cloud@^2.0.* --save`，但网上说很可能会出现各种问题，故未尝试。
+注：如在项目根目录再次运行过npm命令会导致git clone的hexo-tag-cloud丢失，云图无法显示，可再次git clone。</code></pre></li>
+<li>在next主题文件夹下的<code>layout/_macro/sidebar.swig</code>中，同其他if-endif一样，将<code></code>一段加入到末尾：<figure class="highlight twig"><table><tr><td class="code"><pre><span class="line"><span class="xml">      </span><span class="template-tag">&#123;% <span class="name"><span class="keyword">if</span></span> site.tags.length &gt; 1 %&#125;</span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span> <span class="attr">src</span>=<span class="string">"/js/tagcloud.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span> <span class="attr">src</span>=<span class="string">"/js/tagcanvas.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"widget-wrap"</span>&gt;</span></span></span><br><span class="line"><span class="xml">         <span class="tag">&lt;<span class="name">h3</span> <span class="attr">class</span>=<span class="string">"widget-title"</span>&gt;</span>标签云图<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span></span><br><span class="line"><span class="xml">         <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"myCanvasContainer"</span> <span class="attr">class</span>=<span class="string">"widget tagcloud"</span>&gt;</span></span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;<span class="name">canvas</span> <span class="attr">width</span>=<span class="string">"250"</span> <span class="attr">height</span>=<span class="string">"250"</span> <span class="attr">id</span>=<span class="string">"resCanvas"</span> <span class="attr">style</span>=<span class="string">"width=100%"</span>&gt;</span></span></span><br><span class="line"><span class="xml">                  </span><span class="template-variable">&#123;&#123; list_tags() &#125;&#125;</span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></span></span><br><span class="line"><span class="xml">         <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">      </span><span class="template-tag">&#123;% <span class="name"><span class="keyword">endif</span></span> %&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="xml">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">aside</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"sidebar-dimmer"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="template-tag">&#123;% <span class="name"><span class="keyword">endmacro</span></span> %&#125;</span></span><br></pre></td></tr></table></figure></li>
+<li>在项目目录下的_config.yml配置文件中在最后添加配置：<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># hexo-tag-cloud</span></span><br><span class="line"><span class="attr">tag_cloud:</span></span><br><span class="line">  <span class="attr">textFont:</span> <span class="string">Trebuchet</span> <span class="string">MS,</span> <span class="string">Helvetica</span></span><br><span class="line">  <span class="attr">textColor:</span> <span class="string">'#c6d9f1'</span></span><br><span class="line">  <span class="attr">textHeight:</span> <span class="number">30</span></span><br><span class="line">  <span class="attr">outlineColor:</span> <span class="string">'#e2e1d1'</span></span><br><span class="line">  <span class="attr">maxSpeed:</span> <span class="number">0.1</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li><p>hexo-blog-encrypt文章加密</p>
+<ol>
+<li>安装插件<code>npm install --save hexo-blog-encrypt</code>(注意是项目根目录下运行)</li>
+<li>打开根目录配置文件，在末尾添加<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">encrypt:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure></li>
+<li>在需加密的文章头部添加<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">文章加密</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2020</span><span class="number">-04</span><span class="number">-17</span> <span class="number">14</span><span class="string">:42:12</span></span><br><span class="line"><span class="attr">category:</span> <span class="string">教程</span></span><br><span class="line"><span class="attr">tags:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">博客</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">Hexo</span></span><br><span class="line"><span class="attr">keywords:</span> <span class="string">博客文章密码</span></span><br><span class="line"><span class="attr">password:</span> <span class="string">test</span></span><br><span class="line"><span class="attr">abstract:</span> <span class="string">一些需保密的内容</span></span><br><span class="line"><span class="attr">message:</span>  <span class="string">输入密码，查看文章</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+<pre><code>注：网上这种说法无法成功或无法保证每次成功，且造成词云不显示。。。</code></pre></li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+<h1 id="日常使用"><a href="#日常使用" class="headerlink" title="日常使用"></a>日常使用</h1><ol>
+<li>新建文章<ul>
+<li>在项目根目录运行<code>hexo new 文章名</code>，新建的文章在<code>source/_posts</code>文件夹下，文章开头格式为:<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">标题</span> <span class="comment"># 自动创建，如 hello-world</span></span><br><span class="line"><span class="attr">date:</span> <span class="string">日期</span> <span class="comment"># 自动创建，如 2019-12-31 23:59:59</span></span><br><span class="line"><span class="attr">tags:</span> </span><br><span class="line"><span class="bullet">-</span> <span class="string">标签1</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">标签2</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">标签3</span></span><br><span class="line"><span class="attr">categories:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">分类1</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">分类2</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+开头下方撰写正文，markdown格式书写。用此开头格式则编译的时候会自动识别标题、时间、类别等信息。</li>
+</ul>
+</li>
+<li>标签页<ul>
+<li>在项目根目录运行<code>hexo new page tags</code>，会自动生成<code>source/tags/index.md</code>文件，内容为:<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">tags</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2019</span><span class="number">-12</span><span class="number">-31</span> <span class="number">23</span><span class="string">:59:59</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+可在后面自行添加type字段来指定页面的类型：<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">type:</span> <span class="string">tags</span></span><br><span class="line"><span class="attr">comments:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+然后在next主题的_config.yml文件中将页面链接添加到主菜单页面即可，找到menu，修改配置：<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="symbol">menu:</span></span><br><span class="line"><span class="symbol">  home:</span> / || home</span><br><span class="line">  <span class="meta">#about: /about/ || user</span></span><br><span class="line"><span class="symbol">  tags:</span> <span class="meta-keyword">/tags/</span> || tags</span><br><span class="line">  <span class="meta">#categories: /categories/ || th</span></span><br><span class="line"><span class="symbol">  archives:</span> <span class="meta-keyword">/archives/</span> || archive</span><br><span class="line">  <span class="meta">#schedule: /schedule/ || calendar</span></span><br><span class="line">  <span class="meta">#sitemap: /sitemap.xml || sitemap</span></span><br><span class="line">  <span class="meta">#commonweal: /404/ || heartbeat</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>分类页<ul>
+<li>在项目根目录运行<code>hexo new page categories</code>，会自动生成<code>source/categories/index.md</code>文件，在文件中添加type字段：<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">type:</span> <span class="string">categories</span></span><br><span class="line"><span class="attr">comments:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+再修改next主题的_config.yml文件，找到menu:<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="symbol">menu:</span></span><br><span class="line"><span class="symbol">  home:</span> / || home</span><br><span class="line">  <span class="meta">#about: /about/ || user</span></span><br><span class="line"><span class="symbol">  tags:</span> <span class="meta-keyword">/tags/</span> || tags</span><br><span class="line"><span class="symbol">  categories:</span> <span class="meta-keyword">/categories/</span> || th</span><br><span class="line"><span class="symbol">  archives:</span> <span class="meta-keyword">/archives/</span> || archive</span><br><span class="line">  <span class="meta">#schedule: /schedule/ || calendar</span></span><br><span class="line">  <span class="meta">#sitemap: /sitemap.xml || sitemap</span></span><br><span class="line">  <span class="meta">#commonweal: /404/ || heartbeat</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>搜索页<ul>
+<li>搜索功能需要安装插件hexo-generator-searchdb，在项目根目录运行<code>npm install hexo-generator-searchdb --save</code>，然后修改项目根目录的_config.yml，找到search，修改配置：<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">search:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">search.xml</span></span><br><span class="line">  <span class="attr">field:</span> <span class="string">post</span></span><br><span class="line">  <span class="attr">format:</span> <span class="string">html</span></span><br><span class="line">  <span class="attr">limit:</span> <span class="number">10000</span></span><br></pre></td></tr></table></figure>
+再修改next主题的_config.yml，找到local_search，修改配置：<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Local search</span></span><br><span class="line"><span class="comment"># Dependencies: https://github.com/wzpan/hexo-generator-search</span></span><br><span class="line"><span class="attr">local_search:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># If auto, trigger search by changing input.</span></span><br><span class="line">  <span class="comment"># If manual, trigger search by pressing enter key or search button.</span></span><br><span class="line">  <span class="attr">trigger:</span> <span class="string">auto</span></span><br><span class="line">  <span class="comment"># Show top n results per article, show all results by setting to -1</span></span><br><span class="line">  <span class="attr">top_n_per_article:</span> <span class="number">5</span></span><br><span class="line">  <span class="comment"># Unescape html strings to the readable one.</span></span><br><span class="line">  <span class="attr">unescape:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment"># Preload the search data when the page loads.</span></span><br><span class="line">  <span class="attr">preload:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>404页<ul>
+<li>直接在根目录的source文件夹新建一个404.md文件，内容示例：<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="number">404</span> <span class="string">Not</span> <span class="string">Found</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2019</span><span class="number">-12</span><span class="number">-31</span> <span class="number">23</span><span class="string">:59:59</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"></span><br><span class="line"><span class="string">&lt;center&gt;</span></span><br><span class="line"><span class="string">对不起，您所访问的页面不存在或者已删除。</span></span><br><span class="line"><span class="string">您可以&lt;a</span> <span class="string">href="https://yourname.github.io&gt;"&gt;点击此处&lt;/a&gt;返回首页。</span></span><br><span class="line"><span class="string">&lt;/center&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="string">&lt;blockquote</span> <span class="string">class="blockquote-center"&gt;</span></span><br><span class="line">    <span class="string">yourname</span></span><br><span class="line"><span class="string">&lt;/blockquote&gt;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ol>
+<h1 id="部署脚本"><a href="#部署脚本" class="headerlink" title="部署脚本"></a>部署脚本</h1><p>  在根目录新建deploy.sh脚本文件，内容为：<br>  <figure class="highlight verilog"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo <span class="keyword">generate</span></span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure><br>  在需要部署发布时只需要在根目录执行<code>sh deploy.sh</code>即可。</p>
+<h1 id="自定义域名"><a href="#自定义域名" class="headerlink" title="自定义域名"></a>自定义域名</h1><p>  在github的Repository里，即你的gitpage主页面，在Settings中拉到最下面，有个GitHub Pages配置项，<img src="/images/gitpage.jpg" alt="github pages"><br>  在Custom domain中输入你想自定义的域名地址，然后添加CNAME解析。<br>     - 注：在目前情况，每次部署会处置为原域名，所以需在根目录下的source文件夹下新建CNAME文件，内容为自定义的域名。</p>
+]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>web</tag>
+        <tag>hexo</tag>
+        <tag>gitpage</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>给二弟三弟</title>
+    <url>/2019/12/30/py-robot/</url>
+    <content><![CDATA[<h1 id="简要介绍"><a href="#简要介绍" class="headerlink" title="简要介绍"></a>简要介绍</h1><p>   python+robotframework测试接口</p>
+<a id="more"></a>
+<h2 id="接口测试背景介绍"><a href="#接口测试背景介绍" class="headerlink" title="接口测试背景介绍"></a>接口测试背景介绍</h2><p>   接口测试全流程扫盲<br>   扫盲内容：</p>
+<p>   1.什么是接口？</p>
+<p>   2.接口都有哪些类型？</p>
+<p>   3.接口的本质是什么？</p>
+<p>   4.什么是接口测试？</p>
+<p>   5.问什么要做接口测试？</p>
+<p>   6.怎样做接口测试？</p>
+<p>   7.接口测测试点是什么？</p>
+<p>   8.接口测试都要掌握哪些知识？</p>
+<p>   9.其他相关知识？</p>
+<p>   一.什么是接口？</p>
+<p>   接口测试主要用于外部系统与系统之间以及内部各个子系统之间的交互点，定义特定的交互点，然后通过这些交互点来，通过一些特殊的规则也就是协议，来进行数据之间的交互。</p>
+<p>   二.接口都有哪些类型？</p>
+<p>   接口一般分为两种：</p>
+<p>   1.程序内部的接口</p>
+<p>   2.系统对外的接口</p>
+<p>   系统对外的接口：比如你要从别的网站或服务器上获取资源或信息，别人肯定不会把数据库共享给你，他只能给你提供一个他们写好的方法来获取数据，你引用他提供的接口就能使用他写好的方法，从而达到数据共享的目的。</p>
+<p>   程序内部的接口：方法与方法之间，模块与模块之间的交互，程序内部抛出的接口，比如bbs系统，有登录模块、发帖模块等等，那你要发帖就必须先登录，那么这两个模块就得有交互，它就会抛出一个接口，供内部系统进行调用。</p>
+<p>   接口的分类：</p>
+<p>   1.webservice接口</p>
+<p>   2.http api接口</p>
+<p>   webService接口是走soap协议通过http传输，请求报文和返回报文都是xml格式的，我们在测试的时候都用通过工具才能进行调用，测试。</p>
+<p>   http api接口是走http协议，通过路径来区分调用的方法，请求报文都是key-value形式的，返回报文一般都是json串，有get和post等方法，这也是最常用的两种请求方式。</p>
+<p>   json是一种通用的数据类型，所有的语言都认识它。（json的本质是字符串，他与其他语言无关，只是可以经过稍稍加工可以转换成其他语言的数据类型，比如可以转换成Python中的字典，key-value的形式，可以转换成JavaScript中的原生对象，可以转换成java中的类对象等。）</p>
+<p>   三.接口的本质及其工作原理是什么？</p>
+<p>   接口你可以简单的理解他就是URL，工作原理就会说URL通过get或者post请求像服务器发送一些东西，然后得到一些相应的返回值，本质就是数据的传输与接收。</p>
+<p>   四.什么是接口测试？</p>
+<p>   简答的说就是通过URL像服务器或者其他模块等，传输我们想传输的数据，然后看看他们返回的是不是我们预期想要的。</p>
+<p>   五.问什么要做接口测试？</p>
+<p>   ①.越底层发现bug，它的修复成本是越低的。</p>
+<p>   ②.前端随便变，接口测好了，后端不用变，前后端是两拨人开发的。</p>
+<p>   ③.检查系统的安全性、稳定性，前端传参不可信，比如京东购物，前端价格不可能传入-1元，但是通过接口可以传入-1元。</p>
+<p>   ④.如今的系统复杂度不断上升，传统的测试方法成本急剧增加且测试效率大幅下降，接口测试可以提供这种情况下的解决方案。</p>
+<p>   ⑤. 接口测试相对容易实现自动化持续集成，且相对UI自动化也比较稳定，可以减少人工回归测试人力成本与时间，缩短测试周期，支持后端快速发版需求。接口持续集成是为什么能低成本高收益的根源。</p>
+<p>   ⑥. 现在很多系统前后端架构是分离的，从安全层面来说：</p>
+<p>   (1)、只依赖前端进行限制已经完全不能满足系统的安全要求（绕过前面实在太容易）， 需要后端同样进行控制，在这种情况下就需要从接口层面进行验证。</p>
+<p>   (2)、前后端传输、日志打印等信息是否加密传输也是需要验证的，特别是涉及到用户的隐私信息，如身份证，银行卡等。</p>
+<p>   六.怎样做接口测试？</p>
+<p>   工具有很多如：postman、jmeter、soupUI、java+httpclient、robotframework+httplibrary等。</p>
+<p>   –也可以用 接口自动化来实现，就是用代码实现，框架和UI自动化差不多，发送请求用断言来判断。</p>
+<p>   七.接口测测试点是什么？</p>
+<p>   目的：测试接口的正确性和稳定性；</p>
+<p>   原理：模拟客户端向服务器发送请求报文，服务器接收请求报文后对相应的报文做处理并向客户端返回应答，客户端接收应答的过程；</p>
+<p>   重点：检查数据的交换，传递和控制管理过程，还包括处理的次数；</p>
+<p>   核心：持续集成是接口测试的核心；</p>
+<p>   优点：为高复杂性的平台带来高效的缺陷监测和质量监督能力，平台越复杂，系统越庞大，接口测试的效果越明显（提高测试效率，提升用户体验，降低研发成本）；</p>
+<p>   用例设计重点：通常情况下主要测试最外层的两类接口:数据进入系统接口（调用外部系统的参数为本系统使用）和数据流出系统接口（验证系统处理后的数据是否正常）；</p>
+<p>   PS：设计用例时还需要注意外部接口提供给使用这些接口的外部用户什么功能，外部用户真正需要什么功能；</p>
+<p>   1、基本功能测试：</p>
+<p>   由于是针对基本业务功能进行测试，所以这部分是两种测试重合度最高的一块，开发同学通常所指的也主要是这部分的内容。</p>
+<p>   2、边界分析测试：</p>
+<p>   在基本功能测试的基础上考虑输入输出的边界条件，这部分内容也会有重复的部分（比如业务规则的边界）。但是，前端的输入输出很多时候都是提供固守的值让用户选择（如下拉框），在这种情况下测试的边界范围就非常有限，但接口测试就不存在这方面的限制，相对来说接口可以覆盖的范围更广，同样的，接口出现问题的概率也更高。</p>
+<p>   3、性能测试：</p>
+<p>   这个比较容易区分，虽然都需要做性能测试，但关注点确大不相同。App端性能主要关注与手机相关的特性，如手机cpu、内存、流量、fps等。而接口性能主要关注接口响应时间、并发、服务端资源的使用情况等。两种测试时的策略和方法都有很大区别，所以这部分内容是需要分开单独进行测试的，理论上来说这也是不同的部分。</p>
+<p>   综论：</p>
+<p>   1、接口测试和app测试的活动有部分重复的内容，主要集中在业务功能测试方面。除此之外，针对各自特性的测试都不一样，需要分别进行有针对性的测试，才能确保整个产品的质量。</p>
+<p>   2、接口测试可以关注于服务器逻辑验证，而UI测试可以关注于页面展示逻辑及界面前端与服务器集成验证</p>
+<p>   3、接口测试持续集成：</p>
+<p>   对接口测试而言，持续集成自动化是核心内容，通过持自动化的手段我们才能做到低成本高收益。目前我们已经实现了接口自动化，主要应用于回归阶段，后续还需要加强自动化的程度，包括但不限于下面的内容：</p>
+<p>   a) 流程方面：在回归阶段加强接口异常场景的覆盖度，并逐步向系统测试，冒烟测试阶段延伸，最终达到全流程自动化。</p>
+<p>   b) 结果展示：更加丰富的结果展示、趋势分析，质量统计和分析等</p>
+<p>   c) 问题定位：报错信息、日志更精准，方便问题复现与定位。</p>
+<p>   d) 结果校验：加强自动化校验能力，如数据库信息校验。</p>
+<p>   e) 代码覆盖率：不断尝试由目前的黑盒向白盒下探，提高代码覆盖率。</p>
+<p>   f) 性能需求：完善性能测试体系，通过自动化的手段监控接口性能指标是否正常。</p>
+<p>   4、接口测试质量评估标准：</p>
+<p>   a) 业务功能覆盖是否完整</p>
+<p>   b) 业务规则覆盖是否完整</p>
+<p>   c) 参数验证是否达到要求（边界、业务规则）</p>
+<p>   d) 接口异常场景覆盖是否完整</p>
+<p>   e) 接口覆盖率是否达到要求</p>
+<p>   f) 代码覆盖率是否达到要求</p>
+<p>   g) 性能指标是否满足要求</p>
+<p>   h) 安全指标是否满足要求</p>
+<p>   八.接口测试都要掌握哪些知识？</p>
+<p>   ①了解系统及内部各个组件之间的业务逻辑交互；</p>
+<p>   ②了解接口的I/O（input/output：输入输出）；</p>
+<p>   ③了解协议的基本内容，包括：通信原理、三次握手、常用的协议类型、报文构成、数据传输方式、常见的状态码、URL构成等；</p>
+<p>   ④常用的接口测试工具，比如：jmeter、loadrunner、postman、soapUI等；</p>
+<p>   ⑤数据库基础操作命令（检查数据入库、提取测试数据等）；</p>
+<p>   ⑥常见的字符类型，比如：char、varchar、text、int、float、datatime、string等；</p>
+<p>   如何获取接口相关信息？</p>
+<p>   一般的企业，都会由开发或者对应的技术负责人员编写接口文档，里面会注明接口相关的地址、参数类型、方法、输入、输出等信息，如果没有，想办法获取。。。</p>
+<p>   接口文档八要素：</p>
+<p>   封面：封面最好是本公司规定的封面，有logo，内容标题，版本号，公司名称，文档产生日期；</p>
+<p>   修订历史：表格形式较好些，包括：版本、修订说明、修订日期、修订人、审核时间审核人等；</p>
+<p>   接口信息：接口调用方式，常用的GET/POST方式，接口地址；</p>
+<p>   功能描述：简洁清晰的描述接口功能，比如：接口获取的信息不包括哪些；</p>
+<p>   接口参数说明：每个参数都要和实际中调用的一样，包括大小写；参数的含义言简意赅的说明，格式，是string 还是int 还是long等格式；</p>
+<p>   说明部分，说明参数值是需要哪里提供，并详细说明参数怎么生成的，例如时间戳，是哪个时间段的，参数是否必填，一些参数是必须要有的，有些是可选参数等；</p>
+<p>   返回值说明：</p>
+<p>   ①最好有一个模板返回值，并说明每个返回参数的意义；</p>
+<p>   ②提供一个真实的调用接口，真实的返回值；</p>
+<p>   调用限制，安全方面：</p>
+<p>   加密方式，或者自己公司一个特殊的加密过程，只要双方采用一致的加密算法就可以调用接口，保证了接口调用的安全性，比如常见的md5；</p>
+<p>   文档维护：文档在维护的时候，如有修改一定要写上修改日期，修改人，对大的修改要有版本号变更；</p>
+<p>   九.其他相关知识？</p>
+<p>   get请求，post请求的区别：</p>
+<p>   1、GET使用URL或Cookie传参。而POST将数据放在BODY中。</p>
+<p>   2、GET的URL会有长度上的限制，则POST的数据则可以非常大。</p>
+<p>   3、POST比GET安全，因为数据在地址栏上不可见。</p>
+<p>   4、一般get请求用来获取数据，post请求用来发送数据。</p>
+<p>   其实上面这几点，只有最后一点说的是比较靠谱的，第一点post请求也可以把数据放到url里面，get请求其实也没长度限制，post请求看起来参数是隐式的，稍微安全那么一些些，但是那只是对于小白用户来说的，就算post请求，你通过抓包也是可以抓到参数的。（唯一区别就是这一点，上面3点区别都是不准确的）</p>
+<p>   http状态码：</p>
+<p>   1、200 2开头的都表示这个请求发送成功，最常见的就是200，就代表这个请求是ok的，服务器也返回了。</p>
+<p>   2、300 3开头的代表重定向，最常见的是302，把这个请求重定向到别的地方了。</p>
+<p>   3、400 400代表客户端发送的请求有语法错误，401代表访问的页面没有授权，403表示没有权限访问这个页面，404代表没有这个页面。</p>
+<p>   4、500 5开头的代表服务器有异常，500代表服务器内部异常，504代表服务器端超时，没返回结果。</p>
+<p>   webservice接口怎么测试：</p>
+<p>   它不需要你在拼报文了，会给一个webservice的地址，或者wsdl文件，直接在soapui导入，就可以看到这个webservice里面的所有接口，也有报文，直接填入参数调用，看返回结果就可以了。</p>
+<p>   天气预报wsdl地址：<a href="http://www.webservicex.net/globalweather.asmx?wsdl" target="_blank" rel="noopener">http://www.webservicex.net/globalweather.asmx?wsdl</a></p>
+<p>   cookie与session的区别：</p>
+<p>   1、cookie数据存放在客户的浏览器上，session数据放在服务器上。</p>
+<p>   2、cookie不是很安全，别人可以分析存放在本地的cookie并进行cookie欺骗考虑到安全应当使用session。</p>
+<p>   3、session会在一定时间内保存在服务器上。当访问增多，会比较占用你服务器的性能考虑到减轻服务器性能方面，应当使用cookie。</p>
+<p>   4、单个cookie保存的数据不能超过4K，很多浏览器都限制一个站点最多保存20个cookie。</p>
+<p>   5、所以个人建议：</p>
+<p>   将登陆信息等重要信息存放为session</p>
+<p>   其他信息如果需要保留，可以放在cookie中</p>
+<h2 id="利用python访问url，利用robotframework编写测试用例"><a href="#利用python访问url，利用robotframework编写测试用例" class="headerlink" title="利用python访问url，利用robotframework编写测试用例"></a>利用python访问url，利用robotframework编写测试用例</h2><p>   <code>http://www.testclass.net/rf/</code>，robotframework教程链接</p>
+<ol>
+<li><strong>python安装库</strong><ul>
+<li><code>pip install requests</code>  python发送http请求，访问网页的库</li>
+<li><code>pip install robotframework</code></li>
+<li><code>pip install robotframework-requests</code></li>
+<li><code>pip install robotframework-jsonschemalibrary</code></li>
+<li><code>pip install robotframework-jsonvalidator</code></li>
+</ul>
+</li>
+<li><strong>python利用requests库访问网址代码示例</strong><br>新建py_robot.py文件，内容如下：<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getbaidu</span><span class="params">()</span>:</span></span><br><span class="line">    url = <span class="string">"http://www.baidu.com"</span></span><br><span class="line">    response = requests.get(url)</span><br><span class="line">    print(response.status_code)</span><br><span class="line">    <span class="comment"># print(response.text)</span></span><br><span class="line">    <span class="keyword">return</span> response</span><br><span class="line"></span><br><span class="line"><span class="comment">#def hefeng():</span></span><br><span class="line"><span class="comment">#    url = "https://free-api.heweather.net/s6/weather/now?key=yourkey&amp;location=wuhan"</span></span><br><span class="line"><span class="comment">#    response = requests.get(url)</span></span><br><span class="line"><span class="comment">#    return response</span></span><br></pre></td></tr></table></figure></li>
+<li><strong>robot文件编写测试用例代码示例</strong><br>同目录下新建py_robot.robot文件，内容如下：<figure class="highlight stata"><table><tr><td class="code"><pre><span class="line"><span class="comment">***Settings***</span></span><br><span class="line">Documentation    <span class="keyword">Test</span></span><br><span class="line">Library    RequestsLibrary</span><br><span class="line">Library    OperatingSystem</span><br><span class="line">Library    Collections</span><br><span class="line">Library    json</span><br><span class="line">Library    py_robot.py  # robotframework导入python文件的方法</span><br><span class="line">Library    JSONSchemaLibrary    test_schema</span><br><span class="line"><span class="comment">***Test Cases***</span></span><br><span class="line"><span class="keyword">test</span> case01:测试百度返回状态码</span><br><span class="line">    [Documentation]    <span class="keyword">test</span> GET Baidu</span><br><span class="line">    <span class="variable">$&#123;resp&#125;</span>=    py_robot.getbaidu  # 调用文件.函数</span><br><span class="line">    Should Be Equal <span class="keyword">As</span> Strings    <span class="variable">$&#123;resp</span>.status_code&#125;    200</span><br><span class="line"></span><br><span class="line"><span class="keyword">test</span> case02:测试百度返回错误状态码</span><br><span class="line">    <span class="variable">$&#123;resp&#125;</span>=    py_robot.getbaidu</span><br><span class="line">    Should Be Equal <span class="keyword">As</span> Strings    <span class="variable">$&#123;resp</span>.status_code&#125;    404</span><br><span class="line"></span><br><span class="line">#<span class="keyword">test</span> case03:测试和风天气接口API</span><br><span class="line">#    [Documentation]    测试和风天气接口的返回数据</span><br><span class="line">#    <span class="variable">$&#123;resp&#125;</span>=    py_robot.hefeng</span><br><span class="line">#    Should Be Equal <span class="keyword">As</span> Strings    <span class="variable">$&#123;resp</span>.status_code&#125;    200</span><br><span class="line">#    <span class="variable">$&#123;response&#125;</span>    To Json    <span class="variable">$&#123;resp</span>.text&#125;</span><br><span class="line">#    <span class="variable">$&#123;loca&#125;</span>    <span class="keyword">Set</span> Variable    <span class="variable">$&#123;response</span>['HeWeather6'][0]['basic']['location']&#125;</span><br><span class="line">#    Should Be Equal <span class="keyword">As</span> Strings    <span class="variable">$&#123;loca&#125;</span>    武汉</span><br></pre></td></tr></table></figure>
+同目录下打开命令行，运行<code>robot py_robot.robot</code>命令，同目录下会生成三个测试报告文件，用浏览器打开log.html文件，就能看到本次测试结果。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>测试</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>robotframework</tag>
+        <tag>schema</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>工作笔记</title>
+    <url>/2019/12/30/work-code/</url>
+    <content><![CDATA[<h1 id="简要介绍"><a href="#简要介绍" class="headerlink" title="简要介绍"></a>简要介绍</h1><p>   工作中常见或遇到过的问题汇总</p>
+<a id="more"></a>
+<h1 id="1-monitor平台zookeeper平台kibana平台"><a href="#1-monitor平台zookeeper平台kibana平台" class="headerlink" title="1. monitor平台zookeeper平台kibana平台"></a>1. <strong>monitor平台zookeeper平台kibana平台</strong></h1><ul>
+<li><ol>
+<li>系统传参。<br>在monitor平台中通过接口管理传递参数时，在robot测试用例中必须包含<strong>* Variables *</strong>字段，哪怕用例中实际用不到也得添加。传递其他参数时同样通过接口管理的param下的param里添加key-value的形式添加参数名和值，然后在测试计划的配置列表中添加param字段，在里面的value字段中添加key-value，同样测试用例中需有Variables，用例中使用${key}来使用此参数。</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>基本操作。<br>添加的测试用例必须符合格式，具体为[]括起，每句用例用””括起，除最后一句外，句尾加’，’号。句中注意特殊字符需要\转义。目前已知”和\两个需要转义。</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>本地monitor平台。<br>本地平台地址：<code>http://host:8080/result/prod/6</code>, 其中host根据丽姐本地url变化。访问时需手动两次更改localhost为实际url，登录名密码均为邮箱前缀。</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>zk获取各环境路径。<figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line"><span class="string">product:</span>c4/services下搜thrift文件中定义的service名字</span><br><span class="line"><span class="string">staging:</span>staging/services下搜thrift文件中定义的service名字</span><br><span class="line">preview<span class="regexp">/prod_c3:c3/</span>services下搜thrift文件中定义的service名字，点进去的Pool中各个host详情里的server.service.level字段=<span class="number">1</span>是preview，server.service.level=<span class="number">10</span>是prod_c3</span><br><span class="line"><span class="string">prod_c6:</span>c6cloudsrv/services下搜thrift文件中定义的service名字</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li><ol start="5">
+<li>Elasticsearch深度分页解决：scroll游标。包括初始化和遍历两部分。<blockquote>
+<p>初始化。</p>
+</blockquote>
+<figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line">POST <span class="string">ip:</span>port<span class="regexp">/my_index/</span>my_type/_search?scroll=1m</span><br><span class="line">&#123;</span><br><span class="line">   "query": &#123; <span class="string">"match_all"</span>: &#123;&#125;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>遍历。</p>
+</blockquote>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">POST /_search?<span class="attribute">scroll</span>=1m</span><br><span class="line">&#123;</span><br><span class="line">   <span class="string">"scroll_id"</span>:<span class="string">"XXXXXXXXXXXXXXXXXXXXXXX I am scroll id XXXXXXXXXXXXXXX"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+说明：初始化时请求体中数据照常，只需在search后加上<code>?scroll=1m</code>，初始化返回一个_scroll_id，_scroll_id 用来下次取数据用。遍历里的的 scroll_id 即 上一次遍历取回的 _scroll_id 或者是初始化返回的 _scroll_id，同样的，需要带 scroll 参数。 重复这一步骤，直到返回的数据为空，即遍历完成。注意，每次都要传参数 scroll，刷新搜索结果的缓存时间。设置scroll的时候，需要使搜索结果缓存到下一次遍历完成，同时，也不能太长，毕竟空间有限。</li>
+</ol>
+</li>
+</ul>
+<h1 id="2-jenkins平台"><a href="#2-jenkins平台" class="headerlink" title="2. jenkins平台"></a>2. <strong>jenkins平台</strong></h1><ul>
+<li><ol>
+<li>python版本选择<br><code>ln -s /usr/bin/python3.6 /usr/bin/python</code> 通过这条命令，把需要jenkins使用的pythonX 变更为python</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>环境依赖<br>jenkins和本地环境不一致，可直接使用jenkins shell脚本在jenkins添加环境</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>全局配置<ol>
+<li>安装java：<code>sudo apt-get install openjdk-8-jdk</code>，下载war包，运行<code>java -jar jenkins.war</code>。</li>
+<li>安装完下面提示的插件后，在系统配置中需要配置git和mail相关。其中如是gitlab，则先在gitlab中获取访问令牌，再添加ssh-key。在mail配置中需要选择smtp，填写邮箱用户名密码，再在计划的设置中的mail配置中设置相关选项才能正确发送邮件。</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>邮件模板配置<br>将run.template模板文件放在<code>$JENKINS_HOME/email-templates</code>目录下，如不存在则创建此目录。在job配置的<code>Editable Email Notification</code>中，配置<code>Content Type</code>为<code>HTML(text/html)</code>，<code>Default Subject</code>为<code>XX测试报告：${BUILD_STATUS} - ${PROJECT_NAME} - Build # ${BUILD_NUMBER}!</code>，<code>Default Content</code>为<code>${SCRIPT, template=&quot;run.template&quot;}</code>。<pre><code>注：如不行，则将jenkins配置中的`Default Subject`和`Default Content`值也改为如上。</code></pre> 附:run.template <figure class="highlight erb"><table><tr><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">%</span></span></span></span><br><span class="line"><span class="ruby">import java.text.DateFormat</span></span><br><span class="line"><span class="ruby">import java.text.SimpleDateFormat</span></span><br><span class="line"><span class="xml">%&gt;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">STYLE</span>&gt;</span></span></span><br><span class="line"><span class="xml">BODY, TABLE, TD, TH, P &#123;</span></span><br><span class="line"><span class="xml">font-family:Verdana,Helvetica,sans serif;</span></span><br><span class="line"><span class="xml">font-size:11px;</span></span><br><span class="line"><span class="xml">color:black;</span></span><br><span class="line"><span class="xml">&#125;</span></span><br><span class="line"><span class="xml">h1 &#123; color:black; &#125;</span></span><br><span class="line"><span class="xml">h2 &#123; color:black; &#125;</span></span><br><span class="line"><span class="xml">h3 &#123; color:black; &#125;</span></span><br><span class="line"><span class="xml">TD.bg1 &#123; color:white; background-color:#0000C0; font-size:120% &#125;</span></span><br><span class="line"><span class="xml">TD.bg2 &#123; color:white; background-color:#4040FF; font-size:110% &#125;</span></span><br><span class="line"><span class="xml">TD.bg3 &#123; color:white; background-color:#8080FF; &#125;</span></span><br><span class="line"><span class="xml">TD.test_passed &#123; color:blue; &#125;</span></span><br><span class="line"><span class="xml">TD.test_failed &#123; color:red; &#125;</span></span><br><span class="line"><span class="xml">TD.console &#123; font-family:Courier New; &#125;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">STYLE</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">BODY</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">TABLE</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">TR</span>&gt;</span><span class="tag">&lt;<span class="name">TD</span> <span class="attr">align</span>=<span class="string">"right"</span>&gt;</span><span class="tag">&lt;<span class="name">IMG</span> <span class="attr">SRC</span>=<span class="string">"$&#123;rooturl&#125;&lt;%=</span></span></span><span class="ruby"> build.result == hudson.model.Result.SUCCESS  ? <span class="string">"static/e59dfe28/images/32x32/blue.gif"</span> : <span class="string">"static/e59dfe28/images/32x32/red.gif"</span> </span><span class="xml"><span class="tag"><span class="string">%&gt;"</span> /&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">TD</span>&gt;</span><span class="tag">&lt;<span class="name">TD</span> <span class="attr">valign</span>=<span class="string">"center"</span>&gt;</span><span class="tag">&lt;<span class="name">B</span> <span class="attr">style</span>=<span class="string">"font-size: 150%;"</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span></span></span><span class="ruby"> build.result == hudson.model.Result.SUCCESS ? <span class="string">"TESTSRUN $&#123;build.result&#125;"</span> : <span class="string">"TESTRUN $&#123;build.result&#125;"</span> </span><span class="xml"><span class="tag">%&gt;</span><span class="tag">&lt;/<span class="name">B</span>&gt;</span><span class="tag">&lt;/<span class="name">TD</span>&gt;</span><span class="tag">&lt;/<span class="name">TR</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">TR</span>&gt;</span><span class="tag">&lt;<span class="name">TD</span>&gt;</span>项目名称:<span class="tag">&lt;/<span class="name">TD</span>&gt;</span><span class="tag">&lt;<span class="name">TD</span>&gt;</span>$&#123;project.name&#125;<span class="tag">&lt;/<span class="name">TD</span>&gt;</span><span class="tag">&lt;/<span class="name">TR</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">TR</span>&gt;</span><span class="tag">&lt;<span class="name">TD</span>&gt;</span>运行日期:<span class="tag">&lt;/<span class="name">TD</span>&gt;</span><span class="tag">&lt;<span class="name">TD</span>&gt;</span>$&#123;it.timestampString&#125;<span class="tag">&lt;/<span class="name">TD</span>&gt;</span><span class="tag">&lt;/<span class="name">TR</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">TR</span>&gt;</span><span class="tag">&lt;<span class="name">TD</span>&gt;</span>测试时间:<span class="tag">&lt;/<span class="name">TD</span>&gt;</span><span class="tag">&lt;<span class="name">TD</span>&gt;</span>$&#123;build.durationString&#125;<span class="tag">&lt;/<span class="name">TD</span>&gt;</span><span class="tag">&lt;/<span class="name">TR</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">TR</span>&gt;</span><span class="tag">&lt;<span class="name">TD</span>&gt;</span>构建URL:<span class="tag">&lt;/<span class="name">TD</span>&gt;</span><span class="tag">&lt;<span class="name">TD</span>&gt;</span><span class="tag">&lt;<span class="name">A</span> <span class="attr">href</span>=<span class="string">"http://10.234.30.24:8080/$&#123;build.url&#125;"</span>&gt;</span>http://10.234.30.24:8080/$&#123;build.url&#125;<span class="tag">&lt;/<span class="name">A</span>&gt;</span><span class="tag">&lt;/<span class="name">TD</span>&gt;</span><span class="tag">&lt;/<span class="name">TR</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">TR</span>&gt;</span><span class="tag">&lt;<span class="name">TD</span>&gt;</span>测试报告:<span class="tag">&lt;/<span class="name">TD</span>&gt;</span><span class="tag">&lt;<span class="name">TD</span>&gt;</span><span class="tag">&lt;<span class="name">A</span> <span class="attr">href</span>=<span class="string">"http://10.234.30.24:8080/$&#123;build.url&#125;robot/report/report.html"</span>&gt;</span>打开 report.html<span class="tag">&lt;/<span class="name">A</span>&gt;</span><span class="tag">&lt;/<span class="name">TD</span>&gt;</span><span class="tag">&lt;/<span class="name">TR</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">BR</span>/&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="comment">&lt;!-- 自动化测试汇总报告 --&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">%</span></span></span></span><br><span class="line"><span class="ruby"><span class="function"><span class="keyword">def</span> <span class="title">robotResults</span> = <span class="title">false</span></span></span></span><br><span class="line"><span class="ruby"><span class="function"><span class="keyword">def</span> <span class="title">actions</span> = <span class="title">build</span>.<span class="title">actions</span> <span class="title">/</span><span class="title">/</span> <span class="title">List</span><span class="title">&lt;</span><span class="title">hudson</span>.<span class="title">model</span>.<span class="title">Action</span><span class="title">&gt;</span></span></span></span><br><span class="line"><span class="ruby">actions.each() &#123; action -&gt;</span></span><br><span class="line"><span class="ruby"><span class="keyword">if</span>( action<span class="class">.<span class="keyword">class</span>.<span class="title">simpleName</span>.<span class="title">equals</span>("<span class="title">RobotBuildAction</span>") ) &#123; // <span class="title">hudson</span>.<span class="title">plugins</span>.<span class="title">robot</span>.<span class="title">RobotBuildAction</span></span></span></span><br><span class="line"><span class="ruby">   robotResults = <span class="literal">true</span> </span><span class="xml">%&gt;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">h4</span>&gt;</span>Robot Framework Results<span class="tag">&lt;/<span class="name">h4</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">table</span> <span class="attr">cellspacing</span>=<span class="string">"0"</span> <span class="attr">cellpadding</span>=<span class="string">"4"</span> <span class="attr">border</span>=<span class="string">"1"</span> <span class="attr">align</span>=<span class="string">"left"</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">thead</span>&gt;</span></span></span><br><span class="line"><span class="xml">         <span class="tag">&lt;<span class="name">tr</span> <span class="attr">bgcolor</span>=<span class="string">"#87CEFA"</span>&gt;</span></span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">b</span>&gt;</span>类型<span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">b</span>&gt;</span>用例总数<span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">b</span>&gt;</span>通过<span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">b</span>&gt;</span>不通过<span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">b</span>&gt;</span>通过率<span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">         <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml">      <span class="tag">&lt;/<span class="name">thead</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">tbody</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml">         <span class="tag">&lt;<span class="name">tr</span>&gt;</span><span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">b</span>&gt;</span>所有测试<span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span></span></span><span class="ruby"> action.result.overallTotal </span><span class="xml"><span class="tag">%&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">b</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">"color:#66CC00"</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span></span></span><span class="ruby"> action.result.overallPassed </span><span class="xml"><span class="tag">%&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">b</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">"color:#FF3333"</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span></span></span><span class="ruby"> action.result.overallFailed </span><span class="xml"><span class="tag">%&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span></span></span><span class="ruby"> action.overallPassPercentage </span><span class="xml"><span class="tag">%&gt;</span>%<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">         <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml">         <span class="tag">&lt;<span class="name">tr</span>&gt;</span><span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">b</span>&gt;</span>关键测试<span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span></span></span><span class="ruby"> action.result.criticalTotal </span><span class="xml"><span class="tag">%&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">b</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">"color:#66CC00"</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span></span></span><span class="ruby"> action.result.overallPassed </span><span class="xml"><span class="tag">%&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">b</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">"color:#FF3333"</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span></span></span><span class="ruby"> action.result.overallFailed </span><span class="xml"><span class="tag">%&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span></span></span><span class="ruby"> action.overallPassPercentage </span><span class="xml"><span class="tag">%&gt;</span>%<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">         <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml">      <span class="tag">&lt;/<span class="name">tbody</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;/<span class="name">table</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">br</span> /&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">br</span> /&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">br</span> /&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">br</span> /&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">br</span> /&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">br</span> /&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">table</span> <span class="attr">cellspacing</span>=<span class="string">"0"</span> <span class="attr">cellpadding</span>=<span class="string">"4"</span> <span class="attr">border</span>=<span class="string">"1"</span> <span class="attr">align</span>=<span class="string">"left"</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">thead</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">tr</span> <span class="attr">bgcolor</span>=<span class="string">"#87CEFA"</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">td</span> <span class="attr">colspan</span>=<span class="string">"2"</span>&gt;</span><span class="tag">&lt;<span class="name">b</span>&gt;</span>测试名称<span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">b</span>&gt;</span>状态<span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">b</span>&gt;</span>执行时间<span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">thead</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">tbody</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">%</span></span></span><span class="ruby">  <span class="function"><span class="keyword">def</span> <span class="title">suites</span> = <span class="title">action</span>.<span class="title">result</span>.<span class="title">allSuites</span></span></span></span><br><span class="line"><span class="ruby">   suites.each() &#123; suite -&gt; </span></span><br><span class="line"><span class="ruby">      <span class="function"><span class="keyword">def</span> <span class="title">currSuite</span> = <span class="title">suite</span></span></span></span><br><span class="line"><span class="ruby">      <span class="function"><span class="keyword">def</span> <span class="title">suiteName</span> = <span class="title">currSuite</span>.<span class="title">displayName</span></span></span></span><br><span class="line"><span class="ruby">      /<span class="regexp">/ ignore top 2 elements in the structure as they are placeholders</span></span></span><br><span class="line"><span class="ruby">      <span class="keyword">while</span> (currSuite.parent != null &amp;&amp; currSuite.parent.parent != null ) &#123;</span></span><br><span class="line"><span class="ruby">      currSuite = currSuite.parent</span></span><br><span class="line"><span class="ruby">      suiteName = currSuite.displayName + <span class="string">"."</span> + suiteName</span></span><br><span class="line"><span class="ruby">      &#125; </span><span class="xml">%&gt;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">tr</span>&gt;</span><span class="tag">&lt;<span class="name">td</span> <span class="attr">colspan</span>=<span class="string">"3"</span>&gt;</span><span class="tag">&lt;<span class="name">b</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span></span></span><span class="ruby"> suiteName </span><span class="xml"><span class="tag">%&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">%</span></span></span><span class="ruby">    DateFormat format = new SimpleDateFormat(<span class="string">"yyyyMMdd HH:mm:ss.SS"</span>)</span></span><br><span class="line"><span class="ruby">      <span class="function"><span class="keyword">def</span> <span class="title">execDateTcPairs</span> = <span class="title">[]</span></span></span></span><br><span class="line"><span class="ruby">      suite.caseResults.each() &#123; tc -&gt;</span></span><br><span class="line"><span class="ruby">      Date execDate = format.parse(tc.starttime)</span></span><br><span class="line"><span class="ruby">      execDateTcPairs &lt;&lt; [execDate, tc]</span></span><br><span class="line"><span class="ruby">      &#125;</span></span><br><span class="line"><span class="ruby">      /<span class="regexp">/ primary sort execDate, secondary displayName</span></span></span><br><span class="line"><span class="ruby">   execDateTcPairs = execDateTcPairs.sort&#123; a,b -&gt; a[<span class="number">1</span>].displayName &lt;=&gt; b[<span class="number">1</span>].displayName &#125;</span></span><br><span class="line"><span class="ruby">   execDateTcPairs = execDateTcPairs.sort&#123; a,b -&gt; a[<span class="number">0</span>] &lt;=&gt; b[<span class="number">0</span>] &#125;</span></span><br><span class="line"><span class="ruby">   execDateTcPairs.each() &#123;</span></span><br><span class="line"><span class="ruby">      <span class="function"><span class="keyword">def</span> <span class="title">execDate</span> = <span class="title">it</span>[0]</span></span></span><br><span class="line"><span class="ruby">      <span class="function"><span class="keyword">def</span> <span class="title">tc</span> = <span class="title">it</span>[1]  </span></span><span class="xml">%&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="xml">                           <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span></span><br><span class="line"><span class="xml">                              <span class="tag">&lt;<span class="name">td</span> <span class="attr">colspan</span>=<span class="string">"2"</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span></span></span><span class="ruby"> tc.displayName </span><span class="xml"><span class="tag">%&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">                              <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">b</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">"color:&lt;%=</span></span></span><span class="ruby"> tc.isPassed() ? <span class="string">"#66CC00"</span> : <span class="string">"#FF3333"</span> </span><span class="xml"><span class="tag"><span class="string">%&gt;"</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span></span></span><span class="ruby"> tc.isPassed() ? <span class="string">"PASS"</span> : <span class="string">"FAIL"</span> </span><span class="xml"><span class="tag">%&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">                              <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span></span></span><span class="ruby"> tc.getDuration().intdiv(<span class="number">60000</span>)+<span class="string">"分"</span>+(tc.getDuration()-tc.getDuration().intdiv(<span class="number">60000</span>)*<span class="number">60000</span>).intdiv(<span class="number">1000</span>)+<span class="string">"秒"</span> </span><span class="xml"><span class="tag">%&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">                           <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span></span><br><span class="line"><span class="xml">                           <span class="tag">&lt;<span class="name">%</span></span></span><span class="ruby"> <span class="keyword">if</span>(tc.errorMsg != null) &#123;</span><span class="xml"><span class="tag">%&gt;</span></span></span><br><span class="line"><span class="xml">                           <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span></span><br><span class="line"><span class="xml">                              <span class="tag">&lt;<span class="name">td</span> &gt;</span><span class="tag">&lt;<span class="name">b</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">"font-size:10px;color:#FF3333"</span>&gt;</span>错误描述：<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">                              <span class="tag">&lt;<span class="name">td</span> <span class="attr">colspan</span>=<span class="string">"3"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">"font-size:10px"</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span></span></span><span class="ruby"> tc.errorMsg</span><span class="xml"><span class="tag">%&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml">                           <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span></span><br><span class="line"><span class="xml">                           <span class="tag">&lt;<span class="name">%</span></span></span></span><br><span class="line"><span class="ruby">                           &#125;</span><span class="xml">%&gt;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">%</span></span></span><span class="ruby">  &#125; /<span class="regexp">/ tests</span></span></span><br><span class="line"><span class="ruby">   &#125; /<span class="regexp">/ suites </span></span><span class="xml">%&gt;</span></span><br><span class="line"><span class="xml">                        <span class="tag">&lt;/<span class="name">tbody</span>&gt;</span></span></span><br><span class="line"><span class="xml">                  <span class="tag">&lt;/<span class="name">table</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="xml">                     <span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">"color:#AE0000;clear:both"</span>&gt;</span>*这个是通过Jenkins自动构建得出的报告，仅供参考。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="xml">                  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">                  <span class="tag">&lt;<span class="name">%</span></span></span></span><br><span class="line"><span class="ruby">&#125; /<span class="regexp">/ robot results</span></span></span><br><span class="line"><span class="ruby">&#125;</span></span><br><span class="line"><span class="ruby"><span class="keyword">if</span> (!robotResults) &#123; </span><span class="xml">%&gt;</span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">p</span>&gt;</span>No Robot Framework test results found.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">%</span></span></span></span><br><span class="line"><span class="ruby">&#125; </span><span class="xml">%&gt;</span></span><br><span class="line"><span class="xml">o</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><ol start="5">
+<li>robotframework工作环境<br>thrift安装：<br> 安装thrift依赖： <figure class="highlight q"><table><tr><td class="code"><pre><span class="line">sudo apt-<span class="built_in">get</span> install libboost-<span class="built_in">dev</span> libboost-test-<span class="built_in">dev</span> libboost-program-options-<span class="built_in">dev</span> libevent-<span class="built_in">dev</span> automake libtool flex bison pkg-config g++ libssl-<span class="built_in">dev</span></span><br></pre></td></tr></table></figure>
+ 解压编译： <figure class="highlight jboss-cli"><table><tr><td class="code"><pre><span class="line">tar -zxvf thrift-0.11.0.tar.gz</span><br><span class="line"><span class="keyword">cd</span> thrift-0.11.0</span><br><span class="line"><span class="string">./configure</span> <span class="params">--with-cpp</span> <span class="params">--with-boost</span> <span class="params">--with-python</span> <span class="params">--without-csharp</span> <span class="params">--with-java</span> <span class="params">--without-erlang</span> <span class="params">--without-perl</span> <span class="params">--with-php</span> <span class="params">--without-php_extension</span> <span class="params">--without-ruby</span> <span class="params">--without-haskell</span>  <span class="params">--without-go</span></span><br><span class="line">make</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ </span>pip isntall thrift                <span class="comment"># 如有thrift接口</span></span><br><span class="line"><span class="variable">$ </span>pip install robotframework</span><br><span class="line"><span class="variable">$ </span>pip install robotframework-requests</span><br><span class="line"><span class="variable">$ </span>pip install robotframework-jsonschemalibrary</span><br><span class="line"><span class="variable">$ </span>pip install robotframework-jsonvalidator</span><br></pre></td></tr></table></figure>
+<pre><code>注：若有报错，可能是more-itertools版本过高，网上有人说python2.7最高支持5.0.0</code></pre></li>
+</ol>
+</li>
+<li><ol start="6">
+<li>robotframework运行报错:<code>UnicodeEncodeError: &#39;ascii&#39; codec can&#39;t encode characters in position 0-1: ordinal not in range(128)</code>，一般是代码在windows平台运行过，此时需在py文件中加入：<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 解决中文编码报错</span></span><br><span class="line"><span class="attribute">default_encoding</span> = <span class="string">'utf-8'</span></span><br><span class="line">if sys.getdefaultencoding() != default_encoding:</span><br><span class="line">   reload(sys)</span><br><span class="line">   sys.setdefaultencoding(default_encoding)</span><br></pre></td></tr></table></figure>
+才能在robotframework中传递中文参数。<pre><code>另注：rf的报告中只会打印rf直接调用的函数里的Print语句的内容，故如需调试应在client.py文件中添加print，ms.py中添加的无效。</code></pre></li>
+</ol>
+</li>
+<li><ol start="7">
+<li>robotframework中tag用法。加在<code>*** Settings ***</code>下的<code>Default Tags    jokesAPI</code>，或加在case用例中的<code>[Tags]    fw</code>，运行robot时的参数：<blockquote>
+<p>-i –include tag *    Select test cases to run by tag<br>-e –exclude tag *    Select test cases not to run by tag<br>如<code>robot -i dog -e cat animals.robot</code>则执行animals.robot文件中tag为dog但不执行tag为cat的测试用例。</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><ol start="8">
+<li>robotframework中Run Keyword If判断时，当变量值为字符串时，需用引号将变量引起来，或者使用变量时不加{}，与变量对比的字符常量也需用引号引起来。例：<figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">Run</span><span class="bash"> Keyword IF    <span class="string">'$&#123;resp[5]&#125;'</span>==<span class="string">'morning'</span></span></span><br><span class="line"><span class="keyword">Run</span><span class="bash"> Keyword IF    <span class="variable">$resp</span>[5]==<span class="string">'evening'</span></span></span><br></pre></td></tr></table></figure>
+当使用了Run Keyword If关键字时，后面的ELSE IF必须大写，且每个ELSE IF语句判断后面需跟动作，例如Log或Fail，不然会报<code>&#39;Else If&#39; is a reserved keyword. It must be in uppercase (ELSE IF) when used as a marker with &#39;Run Keyword If&#39;.</code></li>
+</ol>
+</li>
+<li><ol start="9">
+<li>robotframework导入python库。<figure class="highlight gauss"><table><tr><td class="code"><pre><span class="line"><span class="meta"># 如果类的 __init__ 初始化方法需要传参，则在导入库后面跟对应的参数列表</span></span><br><span class="line"><span class="keyword">Library</span> path/python_class_name.py    argument</span><br><span class="line"><span class="meta"># 用路径法导入Python模块需要有文件后缀，且用 / 来表示目录下</span></span><br><span class="line">     <span class="meta"># 重点：使用路径法，只能导入和模块名相同的类名！</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>python扩展库搜索规则：<blockquote>
+<p>先根据 robot 文件自身当前目录下查找库文件<br>如果没有找到则再根据 <code>--pythonpath</code> 和 <code>-P</code> 提供的搜索路径进行搜索<br>最后找 Python 安装的路径</p>
+</blockquote>
+</li>
+<li>python库引入了其他模块：<blockquote>
+<p>当 robot 文件导入的 Python 测试库引入了其他模块时，确保导入的模块路径和RF导入的模块起始路径统一。</p>
+</blockquote>
+</li>
+<li>python库中的class存在继承：<blockquote>
+<p>当 robot 文件导入 Python 测试库的类继承了另一个类，确保导入的模块路径和RF导入的模块起始路径统一，使用的时候 RF 文件只需导入子类即可。</p>
+</blockquote>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><ol start="10">
+<li>robotframework跳过执行关键字、for循环嵌套if判断。<blockquote>
+<p>BuiltIn_ 关键字 <code>Pass Execution</code> 和 <code>Pass Execution If</code> 以PASS状态结束执行, 同时跳过剩下的关键字。</p>
+  <figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line"><span class="builtin-name">Run</span> Keyword <span class="keyword">IF</span>    <span class="variable">$&#123;num1&#125;</span>&lt;<span class="variable">$&#123;num2&#125;</span>    Pass Execution    测试通过</span><br><span class="line"><span class="built_in">..</span>.    <span class="keyword">ELSE</span> <span class="keyword">IF</span>    <span class="variable">$&#123;num1&#125;</span>==<span class="variable">$&#123;num2&#125;</span>    Fail    读取历史数据对比全部失败</span><br></pre></td></tr></table></figure>
+<p>循环嵌套判断，只要保证循环体内语句缩进两个空格以上。</p>
+  <figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line"><span class="keyword">FOR</span>    <span class="variable">$&#123;m&#125;</span>    <span class="keyword">IN</span>    @&#123;msg&#125;</span><br><span class="line">    <span class="variable">$&#123;num2&#125;</span>=    Evaluate    <span class="variable">$&#123;num2&#125;</span> + 1</span><br><span class="line">    <span class="variable">$&#123;low&#125;</span>    Evaluate    float(<span class="variable">$&#123;m * 0.2&#125;</span>)</span><br><span class="line">    <span class="variable">$&#123;high&#125;</span>    Evaluate    float(<span class="variable">$&#123;m * 3.9&#125;</span>)</span><br><span class="line">    <span class="builtin-name">Run</span> Keyword <span class="keyword">IF</span>    <span class="variable">$&#123;low&#125;</span>&lt;=<span class="variable">$&#123;current&#125;</span>&lt;=<span class="variable">$&#123;high&#125;</span>    Log    失败次数:<span class="variable">$&#123;current&#125;</span>在配置文件同比数据:<span class="variable">$&#123;m&#125;</span>的0.2到3.9倍范围内</span><br><span class="line">    <span class="built_in">..</span>.    <span class="keyword">ELSE</span> <span class="keyword">IF</span>    <span class="variable">$&#123;-500&#125;</span>&lt;=<span class="variable">$&#123;current&#125;</span>-<span class="variable">$&#123;m&#125;</span>&lt;=<span class="variable">$&#123;500&#125;</span>    Log    小数值差值范围在500以内</span><br><span class="line">    <span class="built_in">..</span>.    <span class="keyword">ELSE</span>    AddNum</span><br><span class="line">END</span><br></pre></td></tr></table></figure>
+<pre><code>1.如果  IN 后面跟的是一个 List 变量，必须用 @{list} 的格式哦！
+2.循环体内的语句需要缩进两个空格以上
+3.如果 IN 后面接的值太多，可以换行，需要通过 ... 来表示接着上一行的内容
+4.注意：  FOR  和  IN 都不能小写哦</code></pre></blockquote>
+</li>
+</ol>
+</li>
+<li><ol start="11">
+<li>jenkins+gitlab配置webhook<br>首先确认<code>Gitlab Hook Plugin</code>和<code>Build Authorization Token Root Plugin</code>插件已安装。然后在job配置中勾选<code>Build when a change is pushed to GitLab. GitLab webhook URL: http://10.234.30.24:8080/project/test_suite</code>选项，保存GitLab webhook URL待用。在<code>Enabled GitLab triggers</code>中勾选第三个<code>Accepted Merge Request Events</code>，在高级选项中点<code>Secret token</code>后的<code>Genrate</code>会生成token，保存待用。在gitlab项目中选settings-&gt;Intergrations(集成)，粘贴保存的URL和Secret Token，点击Add webhook，点击Test测试连接即可。</li>
+</ol>
+</li>
+<li><ol start="12">
+<li>jenkins托管flask服务的shell脚本<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="built_in">pwd</span></span><br><span class="line"><span class="built_in">source</span> /home/mi/abc_issues_wsgi/venv/bin/activate</span><br><span class="line"><span class="built_in">cd</span> /home/mi/.jenkins/workspace/apidata/</span><br><span class="line">a=$(ps -aux|grep uwsgi)</span><br><span class="line">str=$<span class="string">"\n"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$&#123;a&#125;</span></span><br><span class="line"><span class="keyword">if</span> [ <span class="variable">$&#123;#a&#125;</span> -lt 350 ]</span><br><span class="line"><span class="keyword">then</span></span><br><span class="line">   nohup uwsgi config.ini &amp;</span><br><span class="line">   sstr=$(<span class="built_in">echo</span> -e <span class="variable">$str</span>)</span><br><span class="line">   <span class="built_in">echo</span> <span class="variable">$sstr</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">   b=<span class="variable">$&#123;a:9:5&#125;</span></span><br><span class="line">   s=`<span class="built_in">echo</span> <span class="variable">$&#123;b&#125;</span>`</span><br><span class="line">   <span class="built_in">echo</span> <span class="variable">$&#123;s&#125;</span></span><br><span class="line">   <span class="built_in">kill</span> -9 <span class="variable">$&#123;s&#125;</span></span><br><span class="line">   sleep 3</span><br><span class="line">   nohup uwsgi config.ini &amp;</span><br><span class="line">   sstr=$(<span class="built_in">echo</span> -e <span class="variable">$str</span>)</span><br><span class="line">   <span class="built_in">echo</span> <span class="variable">$sstr</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"><span class="built_in">jobs</span> -l</span><br></pre></td></tr></table></figure>
+更新版本，防止ps查询的命令的进程id在首位：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="built_in">pwd</span></span><br><span class="line"><span class="built_in">source</span> /home/mi/abc_issues_wsgi/venv/bin/activate</span><br><span class="line"><span class="built_in">cd</span> /home/mi/.jenkins/workspace/apidata/</span><br><span class="line">a=$(ps -aux|grep uwsgi)</span><br><span class="line">str=$<span class="string">"\n"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$&#123;a&#125;</span></span><br><span class="line">arr=(<span class="variable">$&#123;a&#125;</span>)</span><br><span class="line"><span class="keyword">if</span> [ <span class="variable">$&#123;#a&#125;</span> -lt 350 ]</span><br><span class="line"><span class="keyword">then</span></span><br><span class="line">   nohup uwsgi config.ini &amp;</span><br><span class="line">   sstr=$(<span class="built_in">echo</span> -e <span class="variable">$str</span>)</span><br><span class="line">   <span class="built_in">echo</span> <span class="variable">$sstr</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">   <span class="keyword">if</span> [ <span class="variable">$&#123;arr[7]&#125;</span> = <span class="string">"S+"</span> ]</span><br><span class="line">   <span class="keyword">then</span></span><br><span class="line">      s=<span class="variable">$&#123;arr[13]&#125;</span></span><br><span class="line">   <span class="keyword">else</span></span><br><span class="line">      s=<span class="variable">$&#123;arr[1]&#125;</span></span><br><span class="line">   <span class="keyword">fi</span></span><br><span class="line">   <span class="comment">#b=$&#123;a:9:5&#125;</span></span><br><span class="line">   <span class="comment">#s=`echo $&#123;b&#125;`</span></span><br><span class="line">   <span class="built_in">echo</span> <span class="variable">$&#123;s&#125;</span></span><br><span class="line">   <span class="built_in">kill</span> -9 <span class="variable">$&#123;s&#125;</span></span><br><span class="line">   sleep 3</span><br><span class="line">   nohup uwsgi config.ini &amp;</span><br><span class="line">   sstr=$(<span class="built_in">echo</span> -e <span class="variable">$str</span>)</span><br><span class="line">   <span class="built_in">echo</span> <span class="variable">$sstr</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"><span class="built_in">jobs</span> -l</span><br></pre></td></tr></table></figure>
+再次更新脚本，发现当kill值为’Sl’那栏的id时只会杀死单个进程，不会停止整个服务。<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="built_in">pwd</span></span><br><span class="line"><span class="built_in">source</span> /home/mi/abc_issues_wsgi/venv/bin/activate</span><br><span class="line"><span class="built_in">cd</span> /home/mi/.jenkins/workspace/apidata/</span><br><span class="line">a=$(ps -aux|grep uwsgi)</span><br><span class="line">str=$<span class="string">"\n"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$&#123;a&#125;</span></span><br><span class="line">arr=(<span class="variable">$&#123;a&#125;</span>)</span><br><span class="line"><span class="keyword">if</span> [ <span class="variable">$&#123;#a&#125;</span> -lt 350 ]</span><br><span class="line"><span class="keyword">then</span></span><br><span class="line">   nohup uwsgi config.ini &amp;</span><br><span class="line">   sstr=$(<span class="built_in">echo</span> -e <span class="variable">$str</span>)</span><br><span class="line">   <span class="built_in">echo</span> <span class="variable">$sstr</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">   index=7</span><br><span class="line">   until [ <span class="string">"<span class="variable">$&#123;arr[index]&#125;</span>"</span> = <span class="string">"S"</span> ]</span><br><span class="line">   <span class="keyword">do</span></span><br><span class="line">      <span class="built_in">echo</span> <span class="variable">$&#123;arr[index]&#125;</span></span><br><span class="line">      index=$((<span class="variable">$index</span> + 12))</span><br><span class="line">   <span class="keyword">done</span></span><br><span class="line">   <span class="built_in">echo</span> <span class="variable">$index</span></span><br><span class="line">   indexId=$((<span class="variable">$index</span> - 6))</span><br><span class="line">   <span class="built_in">echo</span> <span class="variable">$indexId</span></span><br><span class="line">   s=<span class="variable">$&#123;arr[$indexId]&#125;</span></span><br><span class="line">   <span class="built_in">echo</span> <span class="variable">$&#123;s&#125;</span></span><br><span class="line">   <span class="built_in">kill</span> -9 <span class="variable">$&#123;s&#125;</span></span><br><span class="line">   sleep 3</span><br><span class="line">   nohup uwsgi config.ini &amp;</span><br><span class="line">   sstr=$(<span class="built_in">echo</span> -e <span class="variable">$str</span>)</span><br><span class="line">   <span class="built_in">echo</span> <span class="variable">$sstr</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"><span class="built_in">jobs</span> -l</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li><ol start="13">
+<li>jenkins添加用户及配置权限<br>前提是已创建管理员账户，在管理中选择<code>Manage Users</code>，可以新建用户。<br>再在管理中选择<code>Configure Global Security</code>，启用安全，安全域为<code>Jenkins own user database</code>，在授权策略中选择<code>项目矩阵授权策略</code>，添加用户，配置读权限。再在各job设置中启用项目安全，添加用户，配置各项权限。</li>
+</ol>
+</li>
+</ul>
+<h1 id="3-python相关"><a href="#3-python相关" class="headerlink" title="3. python相关"></a>3. <strong>python相关</strong></h1><ul>
+<li><ol>
+<li>在 python2中，str 其实是 bytes，而不是 unicode，在代码中声明了编码方式为 utf-8，并将该参数存入到了 DB 中，导致下次请求传递的还是 DB 中的 utf-8 类型的 port，而不是 int 或者 string，port给int型</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>配置文件ini中不得加上<code>coding: utf-8</code>。python函数获取当前文件名的方法是：<code>os.path.basename(sys.argv[0]).split(&#39;.&#39;)[0]</code>，但当用其他文件中方法调用此函数时不能返回当前文件名，此时需用：<code>__file__.split(&#39;/&#39;)[-1].split(&#39;.&#39;)[0]</code>。</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>对于windows系统，python2会产生编码问题，此时需加上：<code>reload(sys)  \ sys.setdefaultencoding(&#39;utf-8&#39;)</code>来重置系统默认编码。</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>对于配置文件，当调用时<code>config.read(filename)</code>，此时可用<code>os.path.dirname(os.path.realpath(__file__)) + filename</code>来获取绝对的文件路径。</li>
+</ol>
+</li>
+<li><ol start="5">
+<li>requests访问https时，如遇SSL或CA证书验证失败，可在发送请求时将verify参数设置为False，默认为True，开启证书验证。对于有登录要求的，可以抓包后将cookie放置在headers里，实例化requests.session()对象后通过session对象发请求。</li>
+</ol>
+</li>
+<li><ol start="6">
+<li>python调用java的jpype模块安装及使用注意：<ul>
+<li>安装：<code>pip install jpype1</code></li>
+<li>使用：<br>这里的ext_classpath指的是.class文件的的引用路径之前的路径，如：Javatest.class文件的全路径是：<code>D:\code\H5\run\demo\src\com\Javatest.class</code>，Javatest类的包路径（看上面的目录结构）是com，所以此处<code>ext_classpath=&#39;D:\code\H5\run\demo\src&#39;</code>；JClass的路径就是Javatest类的包路径：JClass(‘com.Javatest’)<br><img src="/images/carbon11.png" alt="解释1"><br><img src="/images/carbon12.png" alt="解释2"></li>
+</ul>
+</li>
+</ol>
+</li>
+<li><ol start="7">
+<li>python写入文件按照列表的方式读取， 每写入一条数据需写入一个换行符隔开，读取出来则是以列表的格式，filehandle.write(‘\n’)</li>
+</ol>
+</li>
+<li><ol start="8">
+<li>thrift接口，客服端调用报错 ’‘TSocket’‘读取0字节，服务端报错 ‘’No handlens could be found for logger ‘Thrift.server.TServer’’’，只要是Handlens类报错，提示全都是这个，实际最后找到报错为返回类型和idl文件定义不一致，包括某些变量拼写错误也会出现这种情况</li>
+</ol>
+</li>
+<li><ol start="9">
+<li>flask-sqlalchemy对已生成的表字段做修改，在migrations/env.py文件，在run_migrations_online函数加入<img src="/images/carbon18.png" alt="图"><br>flask-sqlalchemy中不常用的类型，Text(16777216)在mysql中属于longtext<code>变长字符串，max32M</code>，Text(65536)属于mediumtext<code>变长字符串，max16M</code>，Text属于tinytext<code>变长字符串，64K</code>。<br>  数据迁移migrate的<code>flask db migrate -m &quot;Datetime some change&quot;</code>迁移命令带上-m选项后可用来添加迁移备注，在项目的<code>migrations/versions/</code>文件夹下的迁移记录名会带上备注，方便查询迁移顺序等。</li>
+</ol>
+</li>
+<li><ol start="10">
+<li>flask_sqlalchemy使用query.filter()查询数据库/filter()和filter_by()<ul>
+<li>使用query.filter().all()返回列表，列表中为数据对象，使用<code>object.字段名</code>来取值</li>
+<li>使用query.filter().first()返回数据对象，同样使用<code>object.字段名</code>来取值</li>
+<li>filter_by用于查询简单的列名，不支持比较运算符。语法：<code>column = expression</code>传入参数的写法，只需要用：<code>（不带类名的）列名 单个等号</code> 就可以判断。</li>
+<li>filter中，语法更加贴近于，类似于，Python的语法。比filter_by的功能更强大，且更复杂的查询的语法，比如and()，or()等多个条件的查询，只支持filter。语法：<code>column == expression</code>传入参数的写法，要用：<code>类名.列名 两个等号</code> 去判断</li>
+<li>字段模糊查询，<code>filter(类名.字段名.like(&#39;%&#39; + 精准字段值 + &#39;%&#39;))</code></li>
+</ul>
+</li>
+</ol>
+</li>
+<li><ol start="11">
+<li>robot对python2的thrift接口返回response做To Json处理时报<code>UnicodeDecodeError: &#39;utf8&#39; codec can&#39;t decode byte 0xb7 in position 0: invalid start byte</code>，此时可对被解析对象重编码.encode(‘utf-8’)，如仍报<code>UnicodeDecodeError: &#39;ascii&#39; codec can&#39;t decode byte 0xb7 in position 263: ordinal not in range(128)</code>，则用<code>.decode(&#39;gbk&#39;).encode(&#39;utf-8&#39;)</code>重编码，python2的代码示例如下：<figure class="highlight taggerscript"><table><tr><td class="code"><pre><span class="line">import json</span><br><span class="line">s = '&#123;"_srcdata":"&#123;<span class="symbol">\\</span>"updateDate<span class="symbol">\\</span>":<span class="symbol">\\</span>"20200103<span class="symbol">\\</span>",<span class="symbol">\\</span>"keywords<span class="symbol">\\</span>":[<span class="symbol">\\</span>"<span class="symbol">\u</span>5927<span class="symbol">\u</span>536b<span class="symbol">\u</span>65af<span class="symbol">\u</span>7279<span class="symbol">\u</span>6069<span class="symbol">\\</span>",<span class="symbol">\\</span>"mvp<span class="symbol">\\</span>",<span class="symbol">\\</span>"nba<span class="symbol">\\</span>",<span class="symbol">\\</span>"NBA<span class="symbol">\\</span>",<span class="symbol">\\</span>"<span class="symbol">\u</span>9ec4<span class="symbol">\u</span>91d1<span class="symbol">\\</span>",<span class="symbol">\\</span>"<span class="symbol">\u</span>62c9<span class="symbol">\u</span>91cc<span class="symbol">\\</span>"],<span class="symbol">\\</span>"cpId<span class="symbol">\\</span>":<span class="symbol">\\</span>"20200103A07HEN00<span class="symbol">\\</span>",<span class="symbol">\\</span>"updateTime<span class="symbol">\\</span>":1578019149000,<span class="symbol">\\</span>"title<span class="symbol">\\</span>":<span class="symbol">\\</span>"<span class="symbol">\u</span>4f17<span class="symbol">\u</span>7403<span class="symbol">\u</span>661f<span class="symbol">\u</span>7f05<span class="symbol">\u</span>6000<span class="symbol">\u</span>5927<span class="symbol">\u</span>536b<span class="symbol">\x</span>b7<span class="symbol">\u</span>65af<span class="symbol">\u</span>7279<span class="symbol">\u</span>6069<span class="symbol">\u</span>ff0c<span class="symbol">\u</span>4ed6<span class="symbol">\u</span>662fNBA<span class="symbol">\u</span>9ec4<span class="symbol">\u</span>91d130<span class="symbol">\u</span>5e74<span class="symbol">\u</span>91cc<span class="symbol">\u</span>771f<span class="symbol">\u</span>6b63<span class="symbol">\u</span>7684MVP<span class="symbol">\\</span>",<span class="symbol">\\</span>"cp<span class="symbol">\\</span>":<span class="symbol">\\</span>"qqnews<span class="symbol">\\</span>",<span class="symbol">\\</span>"playLength<span class="symbol">\\</span>":67,<span class="symbol">\\</span>"playUrl<span class="symbol">\\</span>":<span class="symbol">\\</span>"http://files.ai.xiaomi.com/aiservice/aiservice/qqnews/276102adb35b72723a1abe0a0a39a941.mp3<span class="symbol">\\</span>",<span class="symbol">\\</span>"audio_id<span class="symbol">\\</span>":337697176311300121,<span class="symbol">\\</span>"id<span class="symbol">\\</span>":<span class="symbol">\\</span>"ai-audio-news_4628730706182661528<span class="symbol">\\</span>",<span class="symbol">\\</span>"categories<span class="symbol">\\</span>":[<span class="symbol">\\</span>"<span class="symbol">\u</span>4f53<span class="symbol">\u</span>80b2<span class="symbol">\\</span>"],<span class="symbol">\\</span>"category<span class="symbol">\\</span>":<span class="symbol">\\</span>"<span class="symbol">\u</span>4f53<span class="symbol">\u</span>80b2<span class="symbol">\\</span>",<span class="symbol">\\</span>"isHot<span class="symbol">\\</span>":<span class="symbol">\\</span>"0<span class="symbol">\\</span>",<span class="symbol">\\</span>"simHash<span class="symbol">\\</span>":[<span class="symbol">\\</span>"t-9197614281938041715<span class="symbol">\\</span>",<span class="symbol">\\</span>"b-2886507832045461559<span class="symbol">\\</span>",<span class="symbol">\\</span>"b383678740477312137<span class="symbol">\\</span>",<span class="symbol">\\</span>"t3500282104762336264<span class="symbol">\\</span>",<span class="symbol">\\</span>"b-7491421025233353511<span class="symbol">\\</span>",<span class="symbol">\\</span>"b-8069685134151215735<span class="symbol">\\</span>",<span class="symbol">\\</span>"t2310628634316906393<span class="symbol">\\</span>",<span class="symbol">\\</span>"b-2285480801161917239<span class="symbol">\\</span>"],<span class="symbol">\\</span>"status<span class="symbol">\\</span>":1&#125;","updateTime":1578019149000,"id":"ai-audio-news_4628730706182661528"&#125;'</span><br><span class="line">sj = json.loads(s.decode('gbk').encode('utf-8'))</span><br><span class="line">print(sj['_srcdata'])</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li><ol start="12">
+<li>thrift文件生成后运行时报<code>SyntaxError: Non-ASCII character &#39;\xe8&#39; in file gen-py/ai_course/ttypes.py on line 23, but no encoding declared</code>，是因为thrift文件中的中文注释用了<code>/**/</code>，将所有注释改为<code>//</code>再重新生成即可。</li>
+</ol>
+</li>
+<li><ol start="13">
+<li>flask使用Bokeh保存图片和plotly保存图片。<br>此两种绘图库将所绘制图形保存为图片所依赖的库不同，分述如下：<ul>
+<li>Bokeh<br>依赖PhantomJS，需用<code>conda install phantomjs</code>或<code>npm install -g phantomjs-prebuilt</code>命令。实测用的npm，如报错则执行命令<code>sudo apt install nodejs-legacy</code><figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line">Bokeh启用WebGL加速：</span><br><span class="line">p = figure(output_backend=<span class="string">"webgl"</span>)  <span class="comment"># for the plotting API</span></span><br><span class="line">p = Plot(output_backend=<span class="string">"webgl"</span>)  <span class="comment"># for the glyph API</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Bokeh将生成内容嵌入html：</p>
+</blockquote>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">from bokeh.embed <span class="keyword">import</span> components</span><br><span class="line">...</span><br><span class="line">p_script, p_div = components(p)</span><br><span class="line">p_html = p_script + p_div</span><br><span class="line"><span class="keyword">return</span> render_template(<span class="string">'example.html'</span>, p_html=p_html)</span><br><span class="line"># 或者</span><br><span class="line"># <span class="keyword">return</span> jsonify(&#123;<span class="string">'status'</span>: <span class="number">200</span>, <span class="string">'p_html'</span>: p_html&#125;)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Bokeh画图自适应宽度：在figure中添加<code>sizing_mode=&#39;scale_width&#39;</code>参数，同时给出<code>plot_height=300</code>参数，不然高度也会自适应屏幕。</p>
+</blockquote>
+</li>
+<li>plotly<br>依赖orca等。需执行<code>conda install -c plotly plotly-orca</code>或<code>npm install -g electron@6.1.4 orca</code>，此npm建议nodejs版本&gt;=6.0。实测npm一直报错找不到文件及权限等，即使在命令后加上<code>--unsafe-perm=true --allow-root</code>安装成功后依然无法保存plotly绘制的图形，最后安装miniconda使用conda命令安装后可使用。<br>plotly将生成内容嵌入到html：<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">import plotly</span><br><span class="line"><span class="built_in">..</span>.</span><br><span class="line">div = plotly.offline.plot(fig, <span class="attribute">auto_open</span>=<span class="literal">False</span>, <span class="attribute">output_type</span>=<span class="string">'div'</span>)</span><br><span class="line">return render_template(<span class="string">'example.html'</span>, <span class="attribute">plotly_div</span>=div)</span><br></pre></td></tr></table></figure></li>
+<li>jinja2<br>当html内容字符串作为数据传入到jinja2中时，如果要模板自动渲染，需要使用或者<figure class="highlight django"><table><tr><td class="code"><pre><span class="line"><span class="template-tag">&#123;% <span class="name"><span class="name">autoescape</span></span> false %&#125;</span></span><br><span class="line"><span class="template-variable">&#123;&#123; div &#125;&#125;</span></span><br><span class="line"><span class="template-tag">&#123;% <span class="name"><span class="name">endautoescape</span></span> %&#125;</span></span><br></pre></td></tr></table></figure>
+来自动渲染成html内容。</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><ol start="14">
+<li>plotly、Bokeh保存路径支持相对路径，但openpyxl保存excel表格的路径只能用绝对路径，且send_from_directory的第二个参数为excel文件名，获取当前绝对路径：<code>os.path.abspath(os.path.join(os.path.dirname(__file__), os.path.pardir))</code></li>
+</ol>
+</li>
+<li><ol start="15">
+<li>celery运行配置了redis，但实际尝试还是得装rabbitmq，不然会报连接不上，不知具体原因。安装rabbitmq前先得装erlang，具体可网上找。rabbitmq网上说的没成功，最后在官网下载的deb安装包，通过<code>sudo dpkg -i download_file\?file_path\=pool%2Frabbitmq-server%2Frabbitmq-server_3.7.23-1_all.deb</code>安装，如报依赖于socat，然而未安装，直接<code>apt-get install socat</code>，再运行上面命令安装rabbitmq，装好后运行<code>systemctl status rabbitmq-server</code>查看运行状态。重启<code>supervisorctl reload</code>后celery任务即可成功运行。</li>
+</ol>
+</li>
+<li><ol start="16">
+<li>flask中post传递的data，只需<code>req = request.form</code>后即可用<code>req.get(&#39;key&#39;)</code>取得表单中对应key的value，而无需<code>req = request.form()</code>，此时会报<code>&#39;ImmutableMultiDict&#39; object is not callable</code>。</li>
+</ol>
+</li>
+<li><ol start="17">
+<li>python异常捕获try…except语句捕获的异常打印出来信息太少，不利于调试，此时可用traceback模块，<code>traceback.print_exc()</code>直接打印出错误，<code>traceback.format_exc()</code>将返回字符串。例：<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">     traceback.print_exc()</span><br><span class="line">     <span class="keyword">return</span> render_template(<span class="string">'errorpage.html'</span>)</span><br></pre></td></tr></table></figure>
+因flask中uwsgi会将stdout标准输出的内容写入到日志中，故在flask项目中直接用<code>traceback.print_exc()</code>方法。<br>附try…except语句能调用的属性和方法：<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    <span class="number">1</span>/<span class="number">0</span></span><br><span class="line">except <span class="keyword">Exception</span> <span class="keyword">as</span> e:</span><br><span class="line">    <span class="keyword">print</span>(e.args)  <span class="comment"># 返回异常的错误编号和描述字符串</span></span><br><span class="line">    <span class="keyword">print</span>(str(e))  <span class="comment"># 返回异常信息，但不包括异常信息的类型</span></span><br><span class="line">    <span class="keyword">print</span>(repr(e))  <span class="comment"># 返回较全的异常信息，包括异常信息的类型</span></span><br><span class="line"></span><br><span class="line">输出结果：</span><br><span class="line">(<span class="string">'division by zero'</span>,)</span><br><span class="line">division by zero</span><br><span class="line">ZeroDivisionError(<span class="string">'division by zero'</span>,)</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li><ol start="18">
+<li>python2安装mysql官方提供的mysql-connector-python时<code>pip install mysql-connector-python</code>，如报setuptools版本错误，是版本必须小于45,此时可先卸载setuptools，再<code>pip install &quot;setuptools&lt;45&quot;</code>安装特定条件版本，或者在建虚拟环境时<code>py -2.7-32 -m virtualenv --no-setuptools venv</code>或<code>virtualenv --no-setuptools venv --python=python2</code><pre><code>注意：mysql-connector-python只有8.0的版本支持mysql8.0</code></pre></li>
+</ol>
+</li>
+<li><ol start="19">
+<li>python线程池的使用。通过<code>thread_count = multiprocessing.cpu_count()</code>获取cpu核心数作为线程池中线程个数，示例代码：<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">multiThread</span><span class="params">(Ids=[])</span>:</span></span><br><span class="line">    thread_count = multiprocessing.cpu_count() * <span class="number">2</span></span><br><span class="line">    <span class="keyword">with</span> ThreadPoolExecutor(max_workers=thread_count) <span class="keyword">as</span> t:</span><br><span class="line">        obj_list = []</span><br><span class="line">        begin = time.time()</span><br><span class="line">        <span class="comment"># all_task = [t.submit(exportResult, i) for i in Ids]</span></span><br><span class="line">        <span class="comment"># wait(all_task,)</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> Ids:</span><br><span class="line">            obj = t.submit(exportResult, i)</span><br><span class="line">            obj_list.append(obj)</span><br><span class="line">        <span class="keyword">for</span> future <span class="keyword">in</span> as_completed(obj_list):</span><br><span class="line">            data = future.result()</span><br><span class="line">            print(data)</span><br><span class="line">        times = time.time() - begin</span><br><span class="line">        print(<span class="string">f'总耗时：<span class="subst">&#123;times&#125;</span>'</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="string">f'<span class="subst">&#123;Ids&#125;</span>全部下载完成'</span></span><br></pre></td></tr></table></figure>
+<pre><code>注：其中exportResult为启动线程所需要运行的函数，i为该函数的入参。</code></pre></li>
+</ol>
+</li>
+<li><ol start="20">
+<li>python与js中获取当前ip。<blockquote>
+<p>python</p>
+</blockquote>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">import socket</span><br><span class="line">def getIp():</span><br><span class="line">    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)</span><br><span class="line">    s.connect((<span class="string">'8.8.8.8'</span>, 80))</span><br><span class="line">   <span class="built_in"> ip </span>= s.getsockname()[0]</span><br><span class="line">    s.close()</span><br><span class="line">    return ip</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>js</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    URI = <span class="built_in">window</span>.location.host;</span><br><span class="line">    <span class="built_in">console</span>.log(URI)</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// window.location.host 获取ip:port(不带http://，赋值给a标签的href或ajax的url时需手动带上)</span></span><br><span class="line"><span class="comment">// 其余方法另查</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+</li>
+</ul>
+<h1 id="4-MYSQL数据库"><a href="#4-MYSQL数据库" class="headerlink" title="4. MYSQL数据库"></a>4. <strong>MYSQL数据库</strong></h1><ul>
+<li><ol>
+<li>查询数据库中的状态<blockquote>
+<p>use databasename;<br>show processlist;  state显示lock或waiting的可以杀死<br>kill id;</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>导出数据表<blockquote>
+<p>mysql -uroot -ppasswd -e “select * from apipassrate” apidata &gt; ~/GitHub/apipassrate.xlsx</p>
+<pre><code>导出的xlsx文件不能直接被openpyxl模块识别，可通过excel或wps重新另存为。其中的时间字段如需还原成逗号分隔的文字，先把字段类型改为日期，语言选en-us或英国，在格式码处改为`YYYY,MM,DD,HH,MM,SS`，再复制到外部文本编辑器中，表格中另加一列，将外部数据复制进新加列，改字段类型为文本即可。</code></pre></blockquote>
+</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>对查询出的数据二次查询报错-ERROR 1248 (42000): Every derived table must have its own alias。原因是在多级查询时，需要给表一个别名。<br>错误示例：<pre><code>select avg(num_value) from (select distinct create_time,num_value from kibanadata where create_time like &quot;%00:30:00&quot; and aiservice_type=&apos;cpresource&apos; and cp_name=&apos;xiaowei&apos;);</code></pre>正确示例：<pre><code>select avg(num_value) from (select distinct create_time,num_value from kibanadata where create_time like &quot;%00:30:00&quot; and aiservice_type=&apos;cpresource&apos; and cp_name=&apos;xiaowei&apos;) as num;</code></pre></li>
+</ol>
+</li>
+<li><ol start="4">
+<li>mysql对json对象操作的json_extract函数<blockquote>
+<p>语法：select json_extract(data, ‘$.name’) from table_json;<br>注释：data为字段名，data字段里的数据为json对象，通过$表示该对象，.name表示键值对的key，得到的为键值对的value。</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><ol start="5">
+<li>mysql cast函数<blockquote>
+<p>语法：cast(expression as TYPE)<br>注释：cast()函数将任何类型的值转换为具有指定类型的值。目标类型可以是以下类型之一：BINARY、CHAR、DATE、DATETIME、TIME、DECIMAL、SIGNED、UNSIGNED。<br>例子：mysql中比较字符型的数字时，’999’是大于’1099’的，故此时需将此字段的类型转换为DECIMAL类型后再做比较或者直接max()取最大值。</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><ol start="6">
+<li>mysql各种连接查询<blockquote>
+<p>内连接：<code>select * from a_table (as) a inner join b_table (as) b on a.a_id=b.b_id;</code><br>左(外)连接：<code>select * from a_table (as) a left (outer) join b_table (as) b on a.a_id=b.b_id;</code><br>右(外)连接：<code>select * from a_table (as) a right (outer) join b_table (as) b on a.a_id=b.b_id;</code><br>全(外)连接：mysql不支持全外连接，full join，需要左连，右连后再union (all)。</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><ol start="7">
+<li>mysql备份及恢复<blockquote>
+<p>备份：<code>mysqldump -hHost -uroot -ppasswd -Pport 数据库名 &gt; test.sql</code>或<code>mysqldump -hHost -uroot -ppasswd -Pport 数据库名 数据表名 &gt; test.sql</code><br>恢复：<code>mysql -hHost -uroot -ppasswd -Pport 数据库名 &lt; test.sql</code></p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><ol start="8">
+<li>ubuntu命令行安装mysql时未提示输入密码，则可以在<code>/etc/mysql/debian.cnf</code>文件中找到用户名和密码，用此用户名密码登录mysql后，可重置密码，或添加一个root用户。成功后重启mysql服务即可。</li>
+</ol>
+</li>
+<li><ol start="9">
+<li>mysql将查询结果以逗号分隔一行打印，使用<code>group_concat()</code>函数，例：<code>select group_concat(cpname) from (select distinct(cpname) from kibanawow where aiservice_type=406 and value!=0 group by cpname) as name;</code>。</li>
+</ol>
+</li>
+<li><ol start="10">
+<li>mysql在linux环境自动备份脚本及自动任务。<blockquote>
+<p>备份脚本<code>dump_mysql.sh</code></p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/zsh</span></span><br><span class="line"><span class="comment">#保存备份个数，备份7天数据</span></span><br><span class="line">number=7</span><br><span class="line"><span class="comment">#备份保存路径</span></span><br><span class="line"><span class="comment"># backup_dir=/home/fuyu/GitHub/work-code/shell/mysql</span></span><br><span class="line">backup_dir=$(dirname $(readlink -f <span class="variable">$0</span>))/mysql</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$backup_dir</span></span><br><span class="line"><span class="comment">#日期</span></span><br><span class="line">dd=`date +%Y-%m-%d-%H-%M-%S`</span><br><span class="line"><span class="comment">#备份工具</span></span><br><span class="line">tool=mysqldump</span><br><span class="line"><span class="comment">#用户名</span></span><br><span class="line">username=root</span><br><span class="line"><span class="comment">#密码</span></span><br><span class="line">password=tarena</span><br><span class="line"><span class="comment">#将要备份的数据库</span></span><br><span class="line">database_name=apidata</span><br><span class="line"></span><br><span class="line"><span class="comment">#如果文件夹不存在则创建</span></span><br><span class="line"><span class="keyword">if</span> [ ! -d <span class="variable">$backup_dir</span> ]; </span><br><span class="line"><span class="keyword">then</span>     </span><br><span class="line">   mkdir -p <span class="variable">$backup_dir</span>; </span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#简单写法  mysqldump -u root -p123456 users &gt; /root/mysqlbackup/users-$filename.sql</span></span><br><span class="line"><span class="variable">$tool</span> -u <span class="variable">$username</span> -p<span class="variable">$password</span> <span class="variable">$database_name</span> &gt; <span class="variable">$backup_dir</span>/<span class="variable">$database_name</span>-<span class="variable">$dd</span>.sql</span><br><span class="line"></span><br><span class="line"><span class="comment">#写创建备份日志</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"create <span class="variable">$backup_dir</span>/<span class="variable">$database_name</span>-<span class="variable">$dd</span>.dupm"</span> &gt;&gt; <span class="variable">$backup_dir</span>/log.txt</span><br><span class="line"></span><br><span class="line"><span class="comment">#找出需要删除的备份</span></span><br><span class="line">delfile=`ls -l -crt  <span class="variable">$backup_dir</span>/*.sql | awk <span class="string">'&#123;print $9 &#125;'</span> | head -1`</span><br><span class="line"></span><br><span class="line"><span class="comment">#判断现在的备份数量是否大于$number</span></span><br><span class="line">count=`ls -l -crt  <span class="variable">$backup_dir</span>/*.sql | awk <span class="string">'&#123;print $9 &#125;'</span> | wc -l`</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [ <span class="variable">$count</span> -gt <span class="variable">$number</span> ]</span><br><span class="line"><span class="keyword">then</span></span><br><span class="line"><span class="comment">#删除最早生成的备份，只保留number数量的备份</span></span><br><span class="line">rm <span class="variable">$delfile</span></span><br><span class="line"><span class="comment">#写删除文件日志</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"delete <span class="variable">$delfile</span>"</span> &gt;&gt; <span class="variable">$backup_dir</span>/log.txt</span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>自动任务<code>dump_mysql.cron</code></p>
+</blockquote>
+<figure class="highlight basic"><table><tr><td class="code"><pre><span class="line"><span class="symbol">0 </span><span class="number">0</span> * * * /home/fuyu/GitHub/work-code/<span class="keyword">shell</span>/dump_mysql.sh</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>启动任务</p>
+</blockquote>
+<ol>
+<li>添加脚本执行权限：<code>chmod +x dump_mysql.sh</code></li>
+<li>启动crontab任务：<code>crontab dump_mysql.cron</code></li>
+<li>检查任务是否创建：<code>crontab -l</code><blockquote>
+<p>注意：cron文件中末尾必须有空行，否则报错</p>
+</blockquote>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><ol start="11">
+<li>mysql不支持<code>123&lt;=id&lt;=125</code>这类判断操作，在删除中带此类条件会清空数据表！！！使用<code>123&lt;=id and id&lt;=125</code>语句来判断。</li>
+</ol>
+</li>
+<li><ol start="12">
+<li>SQLite数据库<blockquote>
+<p>安装：ubuntu自带<br>使用：<br><code>sqlite3</code>进入操作界面，<code>sqlite3 filename.db</code>打开特定数据库，直接执行sql语句。<br>  如想格式化数据展示，则通过三步：</p>
+  <figure class="highlight applescript"><table><tr><td class="code"><pre><span class="line">.header <span class="keyword">on</span></span><br><span class="line">.mode column</span><br><span class="line">.timer <span class="keyword">on</span></span><br></pre></td></tr></table></figure>
+<pre><code>`.help`可打开帮助介绍。</code></pre><p>python操作sqlite：</p>
+</blockquote>
+<figure class="highlight pgsql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> sqlite3</span><br><span class="line">db = sqlite3.<span class="keyword">connect</span>(<span class="string">'path/filename.db'</span>)</span><br><span class="line">cur = db.<span class="keyword">cursor</span>()</span><br><span class="line">cur.<span class="keyword">execute</span>(<span class="string">'SQL语句'</span>)</span><br><span class="line"># 如是查询语句，则可获取查询到的内容</span><br><span class="line">print(cur.fetchall())</span><br><span class="line">cur.<span class="keyword">close</span>()</span><br><span class="line"># 如是增加、修改操作，则需提交更改</span><br><span class="line">db.<span class="keyword">commit</span>()</span><br><span class="line">db.<span class="keyword">close</span>()</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+</li>
+</ul>
+<h1 id="5-java、scala、安卓相关"><a href="#5-java、scala、安卓相关" class="headerlink" title="5. java、scala、安卓相关"></a>5. <strong>java、scala、安卓相关</strong></h1><ul>
+<li><ol>
+<li>maven项目需将所有依赖的jar包打包到lib目录：<code>mvn dependency:copy-dependencies -DoutputDirectory=target/lib</code></li>
+</ol>
+</li>
+<li><ol start="2">
+<li>java的 ‘==’和‘equals()’方法，== 对于基本类型来说是值比较，对于引用类型来说是比较的是引用；而 equals 默认情况下是引用比较，只是很多类重写了 equals 方法，比如 String、Integer 等把它变成了值比较，所以一般情况下 equals 比较的是值是否相等。</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>Android Retrofit网络请求<br>初始化Retrofit:<figure class="highlight armasm"><table><tr><td class="code"><pre><span class="line"><span class="keyword">String </span><span class="keyword">BASE_URL </span>= <span class="string">"http://102.10.10.132/api/"</span><span class="comment">;</span></span><br><span class="line"><span class="symbol">Retrofit</span> retrofit = new Retrofit.<span class="keyword">Builder()</span></span><br><span class="line"><span class="keyword"> </span>        .<span class="keyword">baseUrl(BASE_URL)</span></span><br><span class="line"><span class="keyword"> </span>        .<span class="keyword">build();</span></span><br></pre></td></tr></table></figure>
+GET请求:<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="variable">@GET</span>(<span class="string">"News/&#123;newsId&#125;"</span>)</span><br><span class="line">Call&lt;NewsBean&gt; getItem(<span class="variable">@Path</span>(<span class="string">"newsId"</span>) String newsId);</span><br></pre></td></tr></table></figure>
+<pre><code>则url：http://102.10.10.132/api/News/newsId</code></pre>参数在?之后：<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="variable">@GET</span>(<span class="string">"News"</span>)</span><br><span class="line">Call&lt;NewsBean&gt; getItem(<span class="variable">@Query</span>(<span class="string">"newsId"</span>) String newsId);</span><br></pre></td></tr></table></figure>
+<pre><code>则url：http://102.10.10.132/api/News?newsId=newsId</code></pre>附录：<blockquote>
+<p>@Path：网址中的参数，?前<br>@Query：?后的参数<br>@QueryMap：相当于多个@Query<br>@Field：Post提交单个数据<br>@Body：相当于多个@Field，以对象的形式提交</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>java项目打包成jar包，用到maven依赖的，需填写<code>pom.xml</code>依赖文件，其中需要定义包的结构和入口文件，<code>target/lib</code>文件夹下的依赖jar包在<code>~/.m2/repository</code>下找，可通过项目中pom.xml同级的<code>xxx.iml</code>文件所列路径和包名查找。<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">modelVersion</span>&gt;</span>4.0.0<span class="tag">&lt;/<span class="name">modelVersion</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.xiaomi<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>apus-server-example<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">project.build.sourceEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.build.sourceEncoding</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.maven.plugins<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>maven-jar-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.4<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">archive</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">manifest</span>&gt;</span></span><br><span class="line">                      <span class="tag">&lt;<span class="name">addClasspath</span>&gt;</span>true<span class="tag">&lt;/<span class="name">addClasspath</span>&gt;</span></span><br><span class="line">                      <span class="tag">&lt;<span class="name">classpathPrefix</span>&gt;</span>lib/<span class="tag">&lt;/<span class="name">classpathPrefix</span>&gt;</span>  <span class="comment">&lt;!--依赖jar包的存放目录，在target/lib下--&gt;</span></span><br><span class="line">                      <span class="tag">&lt;<span class="name">addDefaultImplementationEntries</span>&gt;</span>true<span class="tag">&lt;/<span class="name">addDefaultImplementationEntries</span>&gt;</span></span><br><span class="line">                      <span class="tag">&lt;<span class="name">mainClass</span>&gt;</span>client.Client<span class="tag">&lt;/<span class="name">mainClass</span>&gt;</span>  <span class="comment">&lt;!--入口文件名，在src/main/java下，从java目录下文件开始，即主文件的package路径加上.文件名--&gt;</span></span><br><span class="line">                  <span class="tag">&lt;/<span class="name">manifest</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">manifestEntries</span>&gt;</span></span><br><span class="line">                      <span class="tag">&lt;<span class="name">Class-Path</span>&gt;</span>lib/apus-server-example-1.0-SNAPSHOT.jar<span class="tag">&lt;/<span class="name">Class-Path</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;/<span class="name">manifestEntries</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;/<span class="name">archive</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+</li>
+</ul>
+<h1 id="6-docker相关"><a href="#6-docker相关" class="headerlink" title="6. docker相关"></a>6. <strong>docker相关</strong></h1><ul>
+<li>docker基础操作<ol>
+<li>查询镜像- 在docker hub中搜索，或者命令行<code>docker search imagename</code></li>
+<li>下载镜像-<code>docker pull imagename</code></li>
+<li>查询本地镜像-<code>docker images</code></li>
+<li>启动镜像-<code>docker run -it REPOSITORY:TAG bash</code>;  显式运行镜像bash命令行;  -i 表示持续打开 STDIN(标准输入);-t 表示申请一个 tty 给这个 docker 使用，同样是为了能够交互，所以一般情况下都是一起使用; -d后台运行。-p port:port（前面是宿主机端口，后面是容器里监听端口，例：<code>docker run -d -p 40000:40000 REPOSITORY:TAG python3 /home/mi/test/app.py</code>，此时可通过宿主机ip:40000端口访问容器里的:40000端口的web服务）</li>
+<li>退出容器-<code>exit</code>或者ctrl+d</li>
+<li>查看容器-<code>docker ps</code>(运行中);  <code>docker ps -a</code>(本地存在的容器)</li>
+<li>启动容器/进入后台容器/停止容器-<code>docker start CONTAINER ID</code>;  <code>docker exec -it CONTAINER ID bash</code>;  <code>docker stop CONTAINER ID</code>;   注：使用start启动的容器会进入后台运行状态</li>
+<li>删除容器-<code>docker rm CONTAINER ID</code></li>
+<li>删除镜像-<code>docker rmi REPOSITORY:TAG</code></li>
+</ol>
+</li>
+<li>windows10系统加速源填写的格式错误会导致docker不可用，正确方式为在系统右下角托盘 Docker 图标内右键菜单选择 Settings，打开配置窗口后左侧导航菜单选择 Daemon。在 Registrymirrors 一栏中填写加速器地址 <code>https://registry.docker-cn.com</code> ，之后点击 Apply 保存后 Docker 就会重启并应用配置的镜像地址<br>ubuntu系统加速方式为，更换为国内的镜像作为加速器，首先打开配置文件,配置文件如果不存在则新建：<code>vi /etc/docker/daemon.json</code> ;加入如下内容：<code>{ &quot;registry-mirrors&quot;: [&quot;https://docker.mirrors.ustc.edu.cn&quot;]}</code>;重启docker: <code>service docker restart</code></li>
+<li>ubuntu:16.04<ol>
+<li>运行：docker run -it ubuntu:16.04 bash;    注：-it是前端交互，:16.04是tag，不写默认latest，会重新从docker hub拉取最新的ubuntu镜像，bash指开启bash。</li>
+<li>安装python3：apt-get update(更新库);  apt-get install python3;  apt-get install python3-pip;<br> 安装pip3 install mysql时可能会报’Command “python setup.py egg_info” failed with error code 1 in /tmp/pip-install-d27dt_9j/mysqlclient/‘ 此时先：’pip3 install –upgrade setuptools’，再：’apt install libmysqlclient-dev python-mysqldb’，如还报：’’’Command “/usr/bin/python3 -u -c “import setuptools, tokenize;file=’/tmp/pip-install-agcpvfop/mysqlclient/setup.py’;f=getattr(tokenize, ‘open’, open)(file);code=f.read().replace(‘\r\n’, ‘\n’);f.close();exec(compile(code, file, ‘exec’))” install –record /tmp/pip-record-cuzgf87x/install-record.txt –single-version-externally-managed –compile” failed with error code 1 in /tmp/pip-install-agcpvfop/mysqlclient/‘’’，则再：’apt-get install libpcap-dev libpq-dev’，就可成功安装</li>
+<li>安装mysql：apt-get install mysql-server mysql-client;   如报错:ERROR 2002 (HY000): Can’t connect to local MySQL server through socket ‘/var/run/mysqld/mysqld.sock’，则：cd /etc/init.d;  service mysql stop;  service mysql start</li>
+<li>查询ip：ip address;</li>
+<li>保存容器：docker commit -m ‘解释语句’ CONTAINER ID REPOSITORY:TAG;     例如：docker commit -m ‘add python’ bac0551903dd yourname/ubuntu:1.0.0<br> 命令：-a :提交的镜像作者；-c :使用Dockerfile指令来创建镜像；-m :提交时的说明文字；-p :在commit时，将容器暂停</li>
+<li>推送到远程：注册账号，security里创建access token，命令行docker login –username yourname，提示输入password时贴入access token。docker push REPOSITORY:TAG。若repository不是以yourname命名，则需先docker tag REPOSITORY:TAG yourname/REPOSITORY:TAG</li>
+</ol>
+</li>
+<li>jenkins<ol>
+<li>拉取jenkins镜像：  $docker pull jenkinsci/jenkins  该版本为最新版本<br> 完成后使用docker images查看是否拉取成功运行jenkins容器： $docker run -p 10086:8080 -p 50000:50000  -v loaclpath:contatinerPath jenkinsci/jenkins   (-p选项，前面是宿主机映射的端口，后面是jenkins容器默认端口，-v选项，前面是本地目录，后面是jenkins容器默认目录，可以将本地目录挂载到容器里)在网页输入localhost:8080打开jenkins,输入控制台提示的administrator password，设置admin用户名和密码，进入jenkins图形界面，成功！！！</li>
+<li>安装插件，如果失败，两种解决方案<br> 一、更新下载插件镜像地址，点击Manage Jenkins→Manager Plugin→Advanced下面的Update site框输入新的镜像地址，镜像地址查询：<code>http://mirrors.jenkins-ci.org/status.html</code><br> 二、到<code>https://wiki.jenkins-ci.org/display/JENKINS/Plugins</code> 网站，手动下载需要的插件，然后在系统管理–管理插件–高级–上传插件即可，点击上传，然后它会自动上传及安装，待jenkins重启后插件即生效</li>
+<li>当前项目jenkins需要使用到的插件有：<br>   gitlab、Gitlab Authentication、Gitlab Hook Plugin、Groovy、Groovy Postbuild、Robot Framework（机器人日志）、Email Extension（邮件配置）、build timeout（构建超时）、（chinese可选）、Email Extension Template Plugin(邮件扩展模板插件)、HTML Publisher (发布HTML报告)、Post build task(该插件允许根据构建日志输出执行批处理/ shell任务)、Naginator（设置失败后重新构建或其他动作）、Startup Trigger（设置启动时构建）、Workspace Cleanup（删除项目工作区)、email-ext（邮件模板配置）、Matrix Authorization Strategy（设置项目矩阵授权策略）</li>
+<li>部分功能参考<a href="https://www.cnblogs.com/luchuangao/p/7748575.html#_label19" target="_blank" rel="noopener">https://www.cnblogs.com/luchuangao/p/7748575.html#_label19</a></li>
+</ol>
+</li>
+</ul>
+<h1 id="7-hexo搭建gitpage"><a href="#7-hexo搭建gitpage" class="headerlink" title="7. hexo搭建gitpage"></a>7. <strong>hexo搭建gitpage</strong></h1><ul>
+<li><ol>
+<li>md文章导入图片方法：在/目录source文件夹下新建images文件夹，将图片放入，md引用时使用<code>/images/..</code></li>
+</ol>
+</li>
+<li><ol start="2">
+<li>评论和自定义域名功能暂未实现。</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>推送源码到github。<br>使用hexo deploy推送到github的实现是hexo自动生成的public文件夹里的内容。如果想推送源码，可以先新建分支，然后再用git push提交。<br>  注：在根目录。<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="number">1</span><span class="string">.</span> <span class="string">git</span> <span class="string">checkout</span> <span class="string">-b</span> <span class="string">source</span>  <span class="comment"># 切换到一个新分支'source'</span></span><br><span class="line"><span class="number">2</span><span class="string">.</span> <span class="string">git</span> <span class="string">add</span> <span class="string">-A</span>  <span class="comment"># 添加源码</span></span><br><span class="line"><span class="number">3</span><span class="string">.</span> <span class="string">git</span> <span class="string">commit</span> <span class="string">-m</span> <span class="string">'commit'</span>  <span class="comment"># 提交</span></span><br><span class="line"><span class="number">4</span><span class="string">.</span> <span class="string">git</span> <span class="string">push</span> <span class="string">origin</span> <span class="string">source</span>  <span class="comment"># 提交分支</span></span><br></pre></td></tr></table></figure>
+推送后在仓库的Settings中的Branches中更改默认分支显示即可。</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>新电脑创建已有环境。<ol>
+<li>安装node，下载gitpage的main分支。</li>
+<li>进入项目主目录运行<code>npm install hexo-cli -g</code>及<code>npm install</code>命令安装博客环境。</li>
+<li>运行<code>hexo generate</code>。</li>
+<li>检查<code>themes/next</code>文件夹下是否有数据，此文件文件夹是项目主题，从其他已有环境中复制此文件夹下内容。</li>
+<li>运行<code>hexo server</code>即可打开本地服务。</li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+<h1 id="8-ubuntu-linux-相关"><a href="#8-ubuntu-linux-相关" class="headerlink" title="8. ubuntu(linux)相关"></a>8. <strong>ubuntu(linux)相关</strong></h1><ul>
+<li><ol>
+<li>ubuntu16.04系统，设置点击启动栏图标后应用最小化功能：<code>gsettings set org.compiz.unityshell:/org/compiz/profiles/unity/plugins/unityshell/ launcher-minimize-window true</code>，此方法已经过验证，如不行，则可以尝试<code>gsettings set org.gnome.shell.extensions.dash-to-dock click-action &#39;minimize&#39;</code>，如果要预览是否打开了相同应用程序的多个窗口，请改用以下命令：<code>gsettings set org.gnome.shell.extensions.dash-to-dock click-action &#39;minimize-or-overview&#39;</code>，如果想还原则使用：<code>gsettings reset org.gnome.shell.extensions.dash-to-dock click-action</code>。</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>ubuntu16.04系统显示隐藏文件方式为<code>ctrl + H</code>，如想永远显示则需另外设置。</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>ubuntu16.04系统开启ssh远程登录。先查看是否安装服务：<code>apt-cache policy openssh-client openssh-server</code>。ubuntu默认安装了openssh-client，openssh-server需手动安装：<code>apt-get install openssh-server</code>，查看ssh服务开启状况：<code>ps -e|grep ssh</code>，如出现sshd则说明服务开启，没有则执行<code>/etc/init.d/ssh start</code>开启。<pre><code>远程访问方法：`ssh username@host`</code></pre>将远程的文件/文件夹保存到本地，使用scp命令：<code>scp username@host:/home/username/somefile.xlsx /home/localusername/</code>；如将本地文件/文件夹上传到远程则反过来：<code>scp /home/localusername/somefile.xlsx username@host:/home/username/(文件保存路径)</code></li>
+</ol>
+</li>
+<li><ol start="4">
+<li>ubuntu16.04安装supervisor。<ul>
+<li>安装。<code>sudo apt install supervisor</code></li>
+<li>配置网页端访问supervisor。在<code>/etc/supervisor/supervisord.conf</code>中添加如下：<figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="section">[inet_http_server]</span></span><br><span class="line"><span class="attr">port</span>=<span class="number">10.234</span>.<span class="number">30.24</span>:<span class="number">9001</span></span><br><span class="line"><span class="attr">username</span>=user</span><br><span class="line"><span class="attr">password</span>=<span class="number">123</span></span><br></pre></td></tr></table></figure>
+并确保该文件中包含<code>[include]files = /etc/supervisor/conf.d/*.conf</code></li>
+<li>创建supervisor任务。在<code>/etc/supervisor/conf.d</code>中创建myflask.conf，内容如下：<figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="section">[program:myflask]</span></span><br><span class="line"><span class="attr">command</span>=/home/mi/myflask/venv/bin/uwsgi config.ini</span><br><span class="line"><span class="attr">directory</span>=/home/mi/myflask</span><br><span class="line"><span class="attr">user</span>=mi  <span class="comment"># 注：此处的user是ubuntu系统的用户名</span></span><br><span class="line"><span class="attr">autostart</span>=<span class="literal">true</span></span><br><span class="line"><span class="attr">autorestart</span>=<span class="literal">true</span></span><br><span class="line"><span class="attr">stopasgroup</span>=<span class="literal">true</span></span><br><span class="line"><span class="attr">killasgroup</span>=<span class="literal">true</span></span><br></pre></td></tr></table></figure>
+如有celery任务，则创建celery.conf，内容如下：<figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="section">[program:celery]</span></span><br><span class="line"><span class="attr">command</span>=/home/mi/myflask/venv/bin/celery -A app.celery worker -B -l info</span><br><span class="line"><span class="attr">directory</span>=/home/mi/myflask</span><br><span class="line"><span class="attr">user</span>=mi</span><br><span class="line"><span class="attr">autostart</span>=<span class="literal">true</span></span><br><span class="line"><span class="attr">autorestart</span>=<span class="literal">true</span></span><br><span class="line"><span class="attr">stopasgroup</span>=<span class="literal">true</span></span><br><span class="line"><span class="attr">killasgroup</span>=<span class="literal">true</span></span><br></pre></td></tr></table></figure></li>
+<li>重载supervisor服务：<code>sudo supervisorctl reload</code><pre><code>&gt;如报：unix:///var/run/supervisor.sock no such file
+    则：sudo touch /var/run/supervisor.sock
+       sudo chmod 777 /var/run/supervisor.sock
+       sudo service supervisor restart
+&gt;如报：unix:///var/run/supervisor.sock refused connection
+    则：sudo supervisord -c /etc/supervisor/supervisord.conf</code></pre></li>
+<li>查询supervisor开机自启：<code>systemctl is-enabled supervisord</code></li>
+<li>设置supervisor开机自启：<code>sudo systemctl enable supervisor</code></li>
+</ul>
+</li>
+</ol>
+</li>
+<li><ol start="5">
+<li>linux系统的nohup和&amp;后台运行。nohup，不挂断地运行命令。<code>nohup Command [Arg..] [ &amp;]</code>输出会附加到当前目录的nohup.out文件中，例<code>nohup java -jar jenkins.war &amp;</code>。查看运行的后台进程：<code>jobs -l</code><br>   注：jobs命令只看当前终端生效的，关闭终端后，在另一个终端jobs无法看到，此时利用ps(进程查看命令)<code>ps -aux|grep jenkins.war</code><br>终止后台运行的进程：<code>kill -9 进程号</code>。运行nohup命令后，再按下回车，退回命令提示符输入后再退出终端。</li>
+</ol>
+</li>
+<li><ol start="6">
+<li>ubuntu16.04下运行shell脚本(脚本中有字符串截取)报<code>Bad substitution</code>，网上解释：<figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">从 ubuntu <span class="number">6.10</span> 开始，ubuntu 就将先前默认的bash <span class="keyword">shell</span> 更换成了dash <span class="keyword">shell</span>；其表现为 /bin/<span class="keyword">sh</span> 链接倒了/bin/dash而不是传统的/bin/bash。</span><br><span class="line">ubuntu edgy是第一个将dash作为默认<span class="keyword">shell</span>来发行的版本，这似乎是受了debian的影响。wiki 里面有官方的解释，http<span class="variable">s:</span>//wiki.ubuntu.<span class="keyword">com</span>/DashAsBinSh，主要原因是dash更小，运行更快，还与POSIX兼容。</span><br><span class="line">但目前存在的问题是，由于<span class="keyword">shell</span>的更换，致使很多脚本出错，毕竟现在的很多脚本不是<span class="number">100</span>%POSIX兼容。</span><br><span class="line">在wiki里面也说到，如何将默认的<span class="keyword">shell</span>改回bash，方法就是</span><br><span class="line">在终端执行</span><br><span class="line">sudo dpkg-reconfigure dash</span><br><span class="line">然后选 择 <span class="keyword">no</span></span><br></pre></td></tr></table></figure>
+也可以将运行命令改为<code>bash test.sh</code>或<code>zsh test.sh</code>，或者直接更改test.sh脚本文件为可执行，直接<code>./test.sh</code>运行。</li>
+</ol>
+</li>
+<li><ol start="7">
+<li>git相关<ol>
+<li>git submodule 子模块<ul>
+<li>为项目添加子模块：<code>git submodule add https://github.com/somename/</code></li>
+<li>克隆带子模块的项目：<code>git clone --recurse-submodule https://github.com/somename/</code><pre><code>如果给 git clone 命令传递 --recurse-submodules 选项，它就会自动初始化并更新仓库中的每一个子模块， 包括可能存在的嵌套子模块。</code></pre></li>
+<li>更新子模块：<code>git submodule update --init --recursive</code></li>
+<li>拉取项目并更新子模块：<code>git pull --recurse-submodules</code></li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>work-code</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>python</tag>
+        <tag>robotframework</tag>
+        <tag>java</tag>
+        <tag>docker</tag>
+      </tags>
+  </entry>
+</search>
