@@ -387,6 +387,7 @@ categories:
    - 5. requests访问https时，如遇SSL或CA证书验证失败，可在发送请求时将verify参数设置为False，默认为True，开启证书验证。对于有登录要求的，可以抓包后将cookie放置在headers里，实例化requests.session()对象后通过session对象发请求。
    - 6. python调用java的jpype模块安装及使用注意：
       - 安装：`pip install jpype1`
+               注意:当使用python2时,需使用`pip install jpype1==0.7.1`,这是最后一个支持py2的版本!
       - 使用：
          这里的ext_classpath指的是.class文件的的引用路径之前的路径，如：Javatest.class文件的全路径是：`D:\code\H5\run\demo\src\com\Javatest.class`，Javatest类的包路径（看上面的目录结构）是com，所以此处`ext_classpath='D:\code\H5\run\demo\src'`；JClass的路径就是Javatest类的包路径：JClass('com.Javatest')
          ![解释1](/images/carbon11.png)
@@ -515,6 +516,13 @@ categories:
       // window.location.host 获取ip:port(不带http://，赋值给a标签的href或ajax的url时需手动带上)
       // 其余方法另查
       ```
+   - 21. python导出&安装依赖。
+      1. 导出`pip freeze > requirements.txt`。
+      2. 安装`pip install -r requirements.txt`。
+      3. conda安装`conda install --yes --file requirements.txt`，如果requirements.txt中的包不可用，则会抛出“无包错误”，此时可用`while read requirement; do conda install --yes $requirement; done < requirements.txt`。
+      4. 在conda命令无效时使用pip命令来代替`while read requirement; do conda install --yes $requirement || pip install $requirement; done < requirements.txt`。
+      5. conda使用yaml文件，先激活环境，再导出`conda env export > py37.yaml`，使用`conda env create -f py37.yaml`。
+                注意：以上只会导出conda命令直接安装的包。
 
 # 4. **MYSQL数据库**
    - 1. 查询数据库中的状态
@@ -543,7 +551,7 @@ categories:
      > 全(外)连接：mysql不支持全外连接，full join，需要左连，右连后再union (all)。
    - 7. mysql备份及恢复
      > 备份：`mysqldump -hHost -uroot -ppasswd -Pport 数据库名 > test.sql`或`mysqldump -hHost -uroot -ppasswd -Pport 数据库名 数据表名 > test.sql`
-     > 恢复：`mysql -hHost -uroot -ppasswd -Pport 数据库名 < test.sql`
+     > 恢复：`mysql -hHost -uroot -ppasswd -Pport 数据库名 < test.sql`，或者在需要恢复的机器上进mysql后`source test.sql`，或者运行`mysqldump -h10.224.104.124 -uroot -pXIAOMI apidata coveragedata | mysql -h10.38.154.14 -udb_monitor_staging -pdb_monitor_staging db_monitor`将124机器上apidata数据库中coveragedata表导入到14机器上的db_monitor数据库中，db_monitor数据库需存在
    - 8. ubuntu命令行安装mysql时未提示输入密码，则可以在`/etc/mysql/debian.cnf`文件中找到用户名和密码，用此用户名密码登录mysql后，可重置密码，或添加一个root用户。成功后重启mysql服务即可。
    - 9. mysql将查询结果以逗号分隔一行打印，使用`group_concat()`函数，例：`select group_concat(cpname) from (select distinct(cpname) from kibanawow where aiservice_type=406 and value!=0 group by cpname) as name;`。
    - 10. mysql在linux环境自动备份脚本及自动任务。
@@ -659,6 +667,42 @@ categories:
      > @QueryMap：相当于多个@Query
      > @Field：Post提交单个数据
      > @Body：相当于多个@Field，以对象的形式提交
+   - 4. java项目打包成jar包，用到maven依赖的，需填写`pom.xml`依赖文件，其中需要定义包的结构和入口文件，`target/lib`文件夹下的依赖jar包在`~/.m2/repository`下找，可通过项目中pom.xml同级的`xxx.iml`文件所列路径和包名查找。也可以通过maven命令导出到自定义文件夹`mvn dependency:copy-dependencies -DoutputDirectory=target/lib`
+      ```
+      <modelVersion>4.0.0</modelVersion>
+      <groupId>com.xiaomi</groupId>
+      <artifactId>apus-server-example</artifactId>
+      <version>1.0-SNAPSHOT</version>
+
+      <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      </properties>
+
+      <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.4</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <classpathPrefix>lib/</classpathPrefix>  <!--依赖jar包的存放目录，在target/lib下-->
+                            <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                            <mainClass>client.Client</mainClass>  <!--入口文件名，在src/main/java下，从java目录下文件开始，即主文件的package路径加上.文件名-->
+                        </manifest>
+                        <manifestEntries>
+                            <Class-Path>lib/apus-server-example-1.0-SNAPSHOT.jar</Class-Path>
+                        </manifestEntries>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+      </build>
+      ```
+   - 5. spring相关。
+        1. velocity，后缀为.vm，是java-spring框架的模板文件，类似flask的jinja2模板，语法需详查。
 
 # 6. **docker相关**
    - docker基础操作
@@ -705,13 +749,19 @@ ubuntu系统加速方式为，更换为国内的镜像作为加速器，首先�
        4. git push origin source  # 提交分支
       ```
       推送后在仓库的Settings中的Branches中更改默认分支显示即可。
+   - 4. 新电脑创建已有环境。
+       1. 安装node，下载gitpage的main分支。
+       2. 进入项目主目录运行`npm install hexo-cli -g`及`npm install`命令安装博客环境。
+       3. 运行`hexo generate`。
+       4. 检查`themes/next`文件夹下是否有数据，此文件文件夹是项目主题，从其他已有环境中复制此文件夹下内容。
+       5. 运行`hexo server`即可打开本地服务。
 
 # 8. **ubuntu(linux)相关**
    - 1. ubuntu16.04系统，设置点击启动栏图标后应用最小化功能：`gsettings set org.compiz.unityshell:/org/compiz/profiles/unity/plugins/unityshell/ launcher-minimize-window true`，此方法已经过验证，如不行，则可以尝试`gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'`，如果要预览是否打开了相同应用程序的多个窗口，请改用以下命令：`gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize-or-overview'`，如果想还原则使用：`gsettings reset org.gnome.shell.extensions.dash-to-dock click-action`。
    - 2. ubuntu16.04系统显示隐藏文件方式为`ctrl + H`，如想永远显示则需另外设置。
    - 3. ubuntu16.04系统开启ssh远程登录。先查看是否安装服务：`apt-cache policy openssh-client openssh-server`。ubuntu默认安装了openssh-client，openssh-server需手动安装：`apt-get install openssh-server`，查看ssh服务开启状况：`ps -e|grep ssh`，如出现sshd则说明服务开启，没有则执行`/etc/init.d/ssh start`开启。
             远程访问方法：`ssh username@host`
-   将远程的文件/文件夹保存到本地，使用scp命令：`scp username@host:/home/username/somefile.xlsx /home/localusername/`；如将本地文件/文件夹上传到远程则反过来：`scp /home/localusername/somefile.xlsx username@host:/home/username/(文件保存路径)`
+   将远程的文件/文件夹保存到本地，使用scp命令：`scp username@host:/home/username/somefile.xlsx /home/localusername/`；如将本地文件/文件夹上传到远程则反过来：`scp /home/localusername/somefile.xlsx username@host:/home/username/(文件保存路径)`。如需复制文件夹则添加`-r`参数以递归方式复制目录。
    - 4. ubuntu16.04安装supervisor。
          - 安装。`sudo apt install supervisor`
          - 配置网页端访问supervisor。在`/etc/supervisor/supervisord.conf`中添加如下：
@@ -774,3 +824,16 @@ ubuntu系统加速方式为，更换为国内的镜像作为加速器，首先�
                  如果给 git clone 命令传递 --recurse-submodules 选项，它就会自动初始化并更新仓库中的每一个子模块， 包括可能存在的嵌套子模块。
          - 更新子模块：`git submodule update --init --recursive`
          - 拉取项目并更新子模块：`git pull --recurse-submodules`
+   - 8. ssh相关
+      1. `ssh-keygen -t rsa`命令用于生成密码，`-t`参数指定加密算法为`rsa`。另有`-t dsa`可用。
+      2. 自动上传公钥。
+         `ssh-copy-id -i ~/.ssh/id_rsa user@host`命令会自动将本地公钥上传到服务器上的`~/.ssh/authorized_keys`文件中，然后使用`ssh user@host`命令登录远程服务器再不需要密码。
+
+# 9. **vue**
+   - 1. `vue-cli create`创建的项目，当运行`npm run serve`时报
+   ```
+      Error from chokidar (/home/teryt/gitlab/work-code/fuyu/VUE/uos_test_vue/abc_quality_backend/node_modules/webpack-dev-server/client/utils): Error: ENOSPC: System limit for number of file watchers reached, watch '/home/teryt/gitlab/work-code/fuyu/VUE/uos_test_vue/abc_quality_backend/node_modules/webpack-dev-server/client/utils/createSocketUrl.js'
+      Error from chokidar (/home/teryt/gitlab/work-code/fuyu/VUE/uos_test_vue/abc_quality_backend/node_modules/webpack-dev-server/client/utils): Error: ENOSPC: System limit for number of file watchers reached, watch '/home/teryt/gitlab/work-code/fuyu/VUE/uos_test_vue/abc_quality_backend/node_modules/webpack-dev-server/client/utils/getCurrentScriptSource.js'
+      Error from chokidar (/home/teryt/gitlab/work-code/fuyu/VUE/uos_test_vue/abc_quality_backend/node_modules/webpack-dev-server/client/utils): Error: ENOSPC: System limit for number of file watchers reached, watch '/home/teryt/gitlab/work-code/fuyu/VUE/uos_test_vue/abc_quality_backend/node_modules/webpack-dev-server/client/utils/log.js'
+   ```
+   类似的错误时，需在终端运行`echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p`即可，原因还需查询。
