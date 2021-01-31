@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Hello World</title>
-    <url>/2020/12/28/hello-world/</url>
+    <url>/2021/01/31/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><a id="more"></a>
 
@@ -671,7 +671,12 @@
 </ol>
 </li>
 <li><ol start="8">
-<li>ubuntu命令行安装mysql时未提示输入密码，则可以在<code>/etc/mysql/debian.cnf</code>文件中找到用户名和密码，用此用户名密码登录mysql后，可重置密码，或添加一个root用户。成功后重启mysql服务即可。</li>
+<li>ubuntu命令行安装mysql时未提示输入密码，则可以在<code>/etc/mysql/debian.cnf</code>文件中找到用户名和密码，用此用户名密码登录mysql后，可重置密码，或添加一个root用户。成功后重启mysql服务即可。<ol>
+<li>添加用户<code>CREATE USER &#39;username&#39;@&#39;host&#39; IDENTIFIED BY &#39;password&#39;;</code></li>
+<li>授权<code>GRANT all privileges ON dbname.tablename TO &#39;username&#39;@&#39;host&#39; identified by &quot;password&quot;;   flush privileges;</code></li>
+<li>修改密码<code>set password for 用户名@localhost = password(&#39;新密码&#39;);</code><pre><code>note:MySQL 5.7.22版本更新，原来user里的password字段已经变更为authentication_string，`update mysql.user set authentication_string=password(&apos;root&apos;) where user=&apos;root&apos; and Host = &apos;localhost&apos;;   flush privileges;`</code></pre></li>
+</ol>
+</li>
 </ol>
 </li>
 <li><ol start="9">
@@ -719,7 +724,7 @@
 </ul>
 <h1 id="5-java、scala、安卓相关"><a href="#5-java、scala、安卓相关" class="headerlink" title="5. java、scala、安卓相关"></a>5. <strong>java、scala、安卓相关</strong></h1><ul>
 <li><ol>
-<li>maven项目需将所有依赖的jar包打包到lib目录：<code>mvn dependency:copy-dependencies -DoutputDirectory=target/lib</code></li>
+<li>安装maven没有出现.m2文件夹，使用命令<code>mvn help:system</code>生成.m2文件夹。maven项目需将所有依赖的jar包打包到lib目录：<code>mvn dependency:copy-dependencies -DoutputDirectory=target/lib</code></li>
 </ol>
 </li>
 <li><ol start="2">
